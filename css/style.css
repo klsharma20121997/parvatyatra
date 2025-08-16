@@ -1413,6 +1413,7 @@
     align-items: center;
     margin-bottom: 10px;
     position:relative;
+    background-color: rgba(0, 0, 0, .01);
 }
 
 .card-header img {

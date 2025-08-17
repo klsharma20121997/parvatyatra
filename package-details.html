@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParvatYatra - Best Himalayan Trek & Tour Packages | Kasol, Manali, Kedarnath</title>
+    <meta name="description"
+        content="Explore the best trekking and tour packages for the Himalayas. Book affordable trips to Kasol, Manali, Kedarnath, and more with ParvatYatra." />
+    <meta property="og:title" content="ParvatYatra - Best Himalayan Trek & Tour Packages">
+    <meta property="og:description"
+        content="Affordable Himalayan trekking and tour packages for Manali, Kasol, Kedarnath & more.">
+    <meta property="og:image" content="https://www.parvatyatra.com/images/parvatyatralogowhite.png">
+    <meta property="og:url" content="https://www.parvatyatra.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://www.parvatyatra.com/" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <!-- <link rel="stylesheet" href="css/style_k.css"> -->
+     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (for down arrow) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            /* font-family: Arial, sans-serif;      */
+            background-color: #F5F5DC;
+            /* Beige background */
+            padding-top: 50px;
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            transition: all .2s linear;
+        }
+
+        .package-header {
+            background-color: #FFFFFF;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .package-header h2 {
+            color: #2C5F2D;
+            /* Dark Green */
+            font-size: 2.5rem;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: #2C5F2D;
+            margin-bottom: 10px;
+        }
+
+        .cost-section,
+        .upcoming-dates-section,
+        .inclusion-exclusion-section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .costing-table td,
+        .costing-table th {
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 1.7rem;
+        }
+
+        .costing-table th {
+            background-color: #2C5F2D;
+            color: #F5F5DC;
+            font-size: 1.7rem;
+        }
+
+        .costing-table tbody tr:nth-child(even) {
+            background-color: #F8F9FA;
+        }
+
+        .costing-table tbody tr:hover {
+            background-color: #E9ECEF;
+        }
+
+        .upcoming-dates-section ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .upcoming-dates-section li {
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: #F1F1F1;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .upcoming-dates-section li .month {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.7rem;
+        }
+
+        .upcoming-dates-section li .date {
+            font-size: 3.5rem;
+            color: #333;
+        }
+
+        /* Itinerary Section Styling */
+        .itinerary-section .card {
+            border: none;
+            margin-bottom: 20px;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .itinerary-section .card-header {
+            background-color: #F1F1F1;
+            color: #2C5F2D;
+            border: 2px solid #2C5F2D;
+            border-radius: 8px;
+            padding: 15px 20px;
+            font-size: 1.7rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .itinerary-section .card-header:hover {
+            background-color: #2C5F2D;
+            color: #F5F5DC;
+        }
+
+        .itinerary-section .card-header i {
+            font-size: 1.3rem;
+            transition: transform 0.3s ease;
+        }
+
+        .itinerary-section .card-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .itinerary-section .card-body {
+            background-color: #F5F5DC;
+            color: #333;
+            padding: 15px 20px;
+            font-size: 1rem;
+            display: none;
+            border-radius: 8px;
+            margin-top: 10px;
+            border: 1px solid #2C5F2D;
+        }
+
+        .itinerary-section .card-body ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Inclusion and Exclusion */
+        .inclusion-exclusion-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .inclusion-exclusion-section li {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Layout for Desktop */
+        @media (min-width: 768px) {
+            .package-section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                /* Left-align sections */
+            }
+
+            .itinerary-section,
+            .inclusion-exclusion-section {
+                flex: 1;
+                margin-right: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .inclusion-exclusion-section {
+                margin-right: 0;
+            }
+        }
+
+        /* Add space from both sides for the Itinerary section on large screens */
+        @media (min-width: 768px) {
+            .itinerary-section {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        /* Additional fixes for Costing Section */
+        .cost-section {
+            margin-top: 30px;
+            /* Added margin for better spacing */
+        }
+
+        .cost-section .section-title {
+            margin-bottom: 20px;
+            /* Added margin between title and table */
+        }
+
+        /* Table Styling */
+        .costing-table {
+            margin-top: 10px;
+            /* Added space between title and table */
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        .place-description {
+            font-size: 1.5rem;
+        }
+
+        .itinerary-points {
+            font-size: 1.5rem;
+        }
+
+        .related-Packages-title {
+            font-weight: bold;
+            font-size: 2.5rem;
+            color: #2C5F2D;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <!-- Google Analytics Code (Paste Here) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7168B665L6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7168B665L6');
+    </script>
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <img class="logo2" src="images/logo2.jpg" alt="ParvatYatra Logo" loading="lazy">
+
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#packages">packages</a>
+            <a href="index.html#services">services</a>
+            <a href="index.html#book">book</a>
+            <a href="index.html#about">about us</a>
+        </nav>
+
+    </header>
+
+    <div class="whatsapp whatsapp-package">
+        <a href="https://api.whatsapp.com/send/?phone=918295744218&text=Hello,+I+need+more+information+about+trip.!!"
+            target="_blank"><img src="images/whatsapp.png" alt="whatsapp" loading="lazy"></a>
+
+    </div>
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+
+        <div class="content">
+
+            <!-- <h1 class="headingh-package-title" style="color: white;">Best Himalayan Tour Packages & Trekking in India</h1> -->
+            <h1 class="headingh-package-title" id="package_alt" style="color: white;"></h1>
+            <br>
+            <a id="btnGetItinerary" class="btn itinerary-book-now" style="background-color: white; color: #2C5F2D;">
+                <i class="fas fa-download"></i> Get Itinerary
+            </a>
+
+            <a id="btnBookNow" class="btn itinerary-book-now" style="margin-left: 25px;">
+                <i class="fas fa-plane"></i> Book Now
+            </a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- <p>5 Days, 4 Nights | ₹6199.00 | Ex - Delhi</p> -->
+            <p><span id="Duration"></span> | <span id="Prize"></span> | Ex - Delhi</p>
+        </div>
+
+        <!-- <div class="video-container" id="back_img">
+            <img src="images/package_1.jpg" loading="lazy">
+        </div> -->
+        <div class="video-container" id="back_img">
+            <img loading="lazy" style="width:100%;">
+        </div>
+
+    </section>
+
+    <!-- packages section starts  -->
+
+    <section class="packages" id="packages">
+
+        <div class="container mt-5">
+            <!-- Package Header -->
+            <div class="package-header">
+                <h2>Explore Beautiful Places</h2>
+                <p class="place-description" id="placeDescription"></p>
+            </div>
+
+            <!-- Package Details Section (Responsive) -->
+            <div class="row package-section">
+                <!-- Itinerary Details Section -->
+                <div id="itineraryDetailsSection" class="col-12 col-md-6 itinerary-section">
+
+                </div>
+
+                <!-- Inclusions and Exclusions Section -->
+                <div class="col-12 col-md-6 inclusion-exclusion-section">
+                    <div class="section-title">Inclusions</div>
+                    <ul style="color:black;" id="InclusionsList">
+                    </ul>
+
+                    <div class="section-title">Exclusions</div>
+                    <ul id="ExclusionsList">
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Costing Section -->
+            <div class="package-section cost-section">
+                <div class="section-title">Costing</div>
+                <table class="table table-bordered costing-table">
+                    <thead>
+                        <tr>
+                            <th>Mode</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Upcoming Dates Section -->
+            <div class="package-section upcoming-dates-section">
+                <div class="section-title">Flexible Departure Dates</div>
+                <ul id="upCommingDateList">
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- packages section ends -->
+    <!-- Related Packages section starts  -->
+    <section class="packages" id="packages">
+
+        <h2 class="related-Packages-title">Related Trips</h2>
+
+        <div class="box-container" id="relatedPackageContainer">
+            <!-- Packages list -->
+        </div>
+
+    </section>
+
+    <!-- Fixed Bottom Buttons for Mobile/Tablet -->
+    <div class="mobile-bottom-buttons">
+        <a id="btnMobileGetItinerary" class="btn itinerary-btn">
+            <i class="fas fa-download"></i> Get Itinerary
+        </a>
+        <a id="btnMobileBookNow" class="btn booknow-btn">
+            <i class="fas fa-plane"></i> Book Now
+        </a>
+    </div>
+    <!-- Related Packages section End  -->
+
+    <!-- home section ends -->
+
+    <!-- contact section ends -->
+
+    <!-- footer section  -->
+
+    <div class="container-fluid footer py-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="itemc col-md-6 col-lg-6 col-xl-5">
+                    <div class="footer-item d-flex flex-column">
+                        <h2 class="mb-4 text-white">Get In Touch</h2>
+                        <a href="" class="h4"><i class="fas fa-home me-2"></i> Sector 12 gurugram,haryana
+                            122001 </a>
+                        <a href="" class="h4"><i class="fas fa-envelope me-2 mt-1"></i> support@parvatyatra.com</a>
+                        <a href="" class="h4"><i class="fas fa-phone me-2 mt-1"></i> 8295744218</a>
+                        <div class="d-flex align-items-center  mt-2 h2">
+                            <i class="fas fa-share fa-2x text-white me-2"></i>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemc col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h2 class="mb-4 text-white">Company</h2>
+                        <a href="" class="h4"><i class="fas fa-angle-right me-2"></i> About</a>
+                        <a href="#servicesection" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Service</a>
+                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Customize Tour</a>
+                    </div>
+                </div>
+                <div class="itemc col-md-6 col-lg-6 col-xl-4">
+                    <div class="footer-item d-flex flex-column">
+                        <h2 class="mb-4 text-white">Support</h2>
+                        <a href="" class="h4"><i class="fas fa-angle-right me-2"></i> Cancellation Policy</a>
+                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Booking / Payment Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="index.html#home">home</a>
+                <a href="index.html#packages">packages</a>
+                <a href="index.html#services">services</a>
+                <a href="index.html#book">book</a>
+                <a href="index.html#about">about us</a>
+            </div>
+            <div class="box">
+                <h3>office location</h3>
+                <P>sector 12 gurugram,haryana<br>122001</P>
+                <div class="box">
+                    <h3>contact</h3>
+                    <a class="fa fa-phone" href="tel:+91-8295744218"> 8295744218</a>
+                    <a href="https://wa.me/918295744218">whatsapp</a>
+                    <a id="email" class="fa fa-envelope" href="mailto:support@parvatyatra.com">
+                        support@parvatyatra.com</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="https://www.facebook.com/profile.php?id=61551375165454&mibextid=ZbWKwL">facebook</a>
+                <a href="https://www.instagram.com/parvatyatra?igsh=MXQxcnZpenNrYXVsag=="><i class=""></i>instagram</a>
+            </div>
+            <div class="box">
+                <h3>Certifications</h3>
+                <a href="#" class="logo"><img class="logoImage" style="height: 100px; width: 100px;"
+                        src="images/iso_logo_new.png" alt="ParvatYatra ISO Certificate"></a>
+                <a href="#" class="logo"><img class="logoImage" style="height: 100px; width: 100px; border-radius: 50%;"
+                        src="images/msme.png" alt="ParvatYatra MSME Certificate"></a>
+            </div>
+
+        </div>
+
+        <h1 class="credit"> © <span>ParvatYatra </span>Travels. All rights reserved 2024</h1>
+    </section> -->
+
+    <script src="packages.js"></script>
+    <script src="script.js"></script>
+    <script>
+
+        //fetch the perticular package through URL..
+        function getQueryParam(param) {
+            const urlparams = new URLSearchParams(window.location.search);
+            return urlparams.get(param);
+        }
+
+        const id = getQueryParam('tour');
+        const pkg = tourPackages.find(p => p.tour === id);
+
+        if (pkg != null) {
+            try {
+                const btnGetItinerary = document.getElementById("btnGetItinerary");
+                const btnBookNow = document.getElementById("btnBookNow");
+                const btnMobileGetItinerary = document.getElementById("btnMobileGetItinerary");
+                const btnMobileBookNow = document.getElementById("btnMobileBookNow");
+
+                if (btnGetItinerary) {
+                    btnGetItinerary.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        ItineraryAndBookNow(pkg.title, true); // replace with your function
+                    });
+                }
+
+                if (btnBookNow) {
+                    btnBookNow.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        ItineraryAndBookNow(pkg.title, false); // replace with your function
+                    });
+                }
+                if (btnMobileGetItinerary) {
+                    btnMobileGetItinerary.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        ItineraryAndBookNow(pkg.title, true); // replace with your function
+                    });
+                }
+
+                if (btnMobileBookNow) {
+                    btnMobileBookNow.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        ItineraryAndBookNow(pkg.title, false); // replace with your function
+                    });
+                }
+                document.getElementById('package_alt').innerText = pkg.alt;
+                document.getElementById('Duration').innerText = pkg.duration;
+                document.getElementById('Prize').innerText = pkg.price;
+                document.getElementById('placeDescription').innerText = pkg.place_description;
+                document.querySelector('#back_img img').src = pkg.image;
+
+
+                const itinerarySection = document.getElementById('itineraryDetailsSection');
+
+                const sectionTitle = document.createElement('div');
+                sectionTitle.className = 'section-title';
+                sectionTitle.innerText = 'Itinerary Details';
+                itinerarySection.appendChild(sectionTitle);
+
+                if (pkg.itineraryDayWiseList && pkg.itineraryDayWiseList.length > 0) {
+                    pkg.itineraryDayWiseList.forEach((item, index) => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        const headerId = `day${index + 1}`;
+                        card.innerHTML = `
+                        <div class="card-header" onclick="toggleAccordion('${headerId}')">
+                        <span>${item.day}: ${item.title}</span>
+                        <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div id="${headerId}" class="card-body">
+                        <ul>
+                            ${item.points.map(point => `<li class="itinerary-points">${point}</li>`).join('')}
+                        </ul>
+                        </div>
+                    `;
+
+                        itinerarySection.appendChild(card);
+                    });
+                }
+
+                // Handle inclusions
+                const InclusionsListUl = document.getElementById("InclusionsList");
+                if (pkg.inclusions && pkg.inclusions.length > 0) {
+                    pkg.inclusions.forEach(point => {
+                        const li = document.createElement("li");
+                        li.className = "itinerary-points";
+                        li.textContent = point;
+                        InclusionsListUl.appendChild(li);
+                    });
+                }
+
+                // Handle exclusions
+                const exclusionListUl = document.getElementById("ExclusionsList");
+                if (pkg.exclusions && pkg.exclusions.length > 0) {
+                    pkg.exclusions.forEach(point => {
+                        const li = document.createElement("li");
+                        li.className = "itinerary-points";
+                        li.textContent = point;
+                        exclusionListUl.appendChild(li);
+                    });
+                }
+
+
+                // === Costing Section ===
+                const tbody = document.getElementById("priceTableBody");
+                if (pkg.costing && pkg.costing.length > 0) {
+                    pkg.costing.forEach((item, index) => {
+                        const tr = document.createElement("tr");
+                        tr.innerHTML = `
+                        <td>${item.sharing_type}</td>
+                        <td>₹${parseInt(item.rate).toLocaleString("en-IN")}</td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+
+                // === Upcoming Dates Section ===
+                const dateList = document.getElementById('upCommingDateList');
+                if (pkg.upcommingDates && pkg.upcommingDates.length > 0) {
+                    pkg.upcommingDates.forEach((dateObj, index) => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<div class="month">${dateObj}</div>`;
+                        dateList.appendChild(li);
+                    });
+                }
+                FetchRelatedPackages(pkg.category.replace(/\s+/g, "_"));
+
+                // console.log(pkg);
+            } catch (err) {
+                console.error("error is coming", err);
+            }
+        }
+
+    </script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+
+
+    <!-- Bootstrap JS & Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        //fetch the perticular package from localstorage..close
+
+        // Toggle accordion visibility
+        function toggleAccordion(dayId) {
+            const accordionBody = document.getElementById(dayId);
+            const header = accordionBody.previousElementSibling;
+            const icon = header.querySelector('i');
+
+            if (accordionBody.style.display === 'block') {
+                accordionBody.style.display = 'none';
+                icon.classList.remove('active');
+            } else {
+                accordionBody.style.display = 'block';
+                icon.classList.add('active');
+            }
+        }
+        //FetchRelatedPackages();
+    </script>
+</body>
+
+</html>

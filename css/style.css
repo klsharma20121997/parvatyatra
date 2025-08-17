@@ -364,8 +364,7 @@
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    /* min-height: 100vh;  */
-    min-height: 87vh;
+    min-height: 75vh;
 }
 
 @media (max-width:768px){

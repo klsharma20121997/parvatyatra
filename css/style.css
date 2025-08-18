@@ -194,7 +194,7 @@
 
 @media (max-width:768px){
     .navbar-light .navbar-brand img {
-       max-height: 80px !important;
+       max-height: 50px !important;
        max-width:100px !important;
 }
 

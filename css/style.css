@@ -1305,7 +1305,7 @@
 @media only screen and (max-width:680px) {
     .carousel-header .scroll-wrapper .scroll-content {
         display: inline-flex;
-        animation: scroll-right-to-left 5s linear infinite;
+        animation: scroll-right-to-left 10s linear infinite;
         width: max-content;
     }
 

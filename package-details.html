@@ -69,7 +69,7 @@
         }
 
         .package-header h4 {
-            color: #2C5F2D;
+            color: var(--bs-primary);
             /* Dark Green */
             font-size: 1.4rem;
             font-weight: bold;
@@ -78,7 +78,7 @@
         .section-titles {
             font-weight: bold;
             font-size: 1.5rem;
-            color: #2C5F2D;
+            color: var(--bs-primary);
             margin-bottom: 10px;
         }
 
@@ -100,7 +100,7 @@
         }
 
         .costing-table th {
-            background-color: #2C5F2D;
+            background-color: var(--bs-primary);
             color: #F5F5DC;
             font-size: 1rem;
         }
@@ -152,8 +152,8 @@
 
         .itinerary-section .card-header {
             background-color: #F1F1F1;
-            color: #2C5F2D;
-            border: 2px solid #2C5F2D;
+            color: var(--bs-primary);
+            border: var(--bs-primary);
             border-radius: 8px;
             padding: 15px 20px;
             font-size: 1rem;
@@ -165,7 +165,7 @@
         }
 
         .itinerary-section .card-header:hover {
-            background-color: #2C5F2D;
+            background-color: var(--bs-primary);
             color: #F5F5DC;
         }
 
@@ -186,7 +186,7 @@
             display: none;
             border-radius: 8px;
             margin-top: 10px;
-            border: 1px solid #2C5F2D;
+            border: 1px solid var(--bs-primary);
         }
 
         .itinerary-section .card-body ul {
@@ -295,7 +295,7 @@
 
     <!-- header section starts  -->
 
-    <header>
+    <header style="background:#c3c8e0">
 
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-2 py-lg-0">
             <a href="" class="navbar-brand p-0">
@@ -353,9 +353,12 @@
             <!-- <h1 class="headingh-package-title" style="color: white;">Best Himalayan Tour Packages & Trekking in India</h1> -->
             <h1 class="headingh-package-title" id="package_alt" style="color: white;"></h1>
             <br>
-            <a id="btnGetItinerary" class="btn itinerary" style="background-color: white; color: #2C5F2D;">
+            <a id="btnGetItinerary" class="btn itinerary" style="background-color: white; color: var(--bs-primary);">
                 <i class="fas fa-download"></i> Get Itinerary
             </a>
+
+
+
 
             <a id="btnBookNow" class="btn itinerary-book-now" style="margin-left: 25px;">
                 <i class="fas fa-plane"></i> Book Now

@@ -102,7 +102,7 @@
 .itinerary-book-now {
   display: inline-block;
   margin-top: 1rem;
-  background: var(--blue) !important;
+  background: var(--bs-primary) !important;
   color: white !important;
   padding: .8rem 3rem;
   border: .2rem solid var(--blue);

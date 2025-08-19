@@ -1,0 +1,191 @@
+/* image section start */
+.home {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+
+.home .content {
+    text-align: center;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .1);
+}
+
+.home .content p {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 75vh;
+    /* Covers half of the screen */
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 75vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .logo2 {
+    height: 130px;
+    transform: scale(1.5);
+}
+
+/* image section end */
+
+/* whatsapp section start */
+.whatsapp {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    line-height: 40px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+}
+
+/* whatsapp section end*/
+
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+*::selection {
+  background: var(--orange);
+  color: #fff;
+}
+
+:root {
+  --orange: #ffb421;
+  /* --blue: #0077B6;
+  --white: white; */
+  --blue: #2C5F2D;
+  --white: #F5F5DC;
+  --btn_hover_color: #3D7A3D;
+}
+
+.itinerary-book-now {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--blue) !important;
+  color: white !important;
+  padding: .8rem 3rem;
+  border: .2rem solid var(--blue);
+  cursor: pointer;
+  font-size: 1.1rem !important;
+}
+
+.itinerary{
+    display: inline-block;
+     margin-top: 1rem;
+     padding: .8rem 3rem;
+     cursor: pointer;
+     font-size: 1.1rem !important;
+}
+
+.itinerary-book-now:hover {
+  background: var(--btn_hover_color);
+  /* color:var(--orange); */
+}
+
+.mobile-bottom-buttons {
+  display: none;
+  /* Hidden by default */
+}
+
+@media (max-width:768px) {
+
+  /* Bottom Button */
+  .mobile-bottom-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+  }
+
+  .mobile-bottom-buttons .btns {
+    flex: 1;
+    padding: 15px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .itinerary-btn {
+    background-color: #FFA500;
+    color: #ffffff;
+    border-right: 1px solid #ccc;
+  }
+
+  .booknow-btn {
+    background-color: #004AAD;
+    color: #ffffff;
+  }
+
+  .mobile-bottom-buttons .btn i {
+    margin-right: 8px;
+  }
+
+  .itinerary-book-now {
+    display: none !important;
+  }
+
+  .itinerary{
+    display: none !important;
+  }
+
+  .mobile-bottom-buttons .itinerary-btn:hover {
+    background-color: #FF8C00;
+    /* Darker orange */
+  }
+
+  .mobile-bottom-buttons .booknow-btn:hover {
+    background-color: #003380;
+    /* Deeper royal blue */
+  }
+
+  .whatsapp-package {
+    bottom: 60px !important;
+  }
+
+
+
+}

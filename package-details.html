@@ -23,12 +23,20 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+        <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
-    <!-- <link rel="stylesheet" href="css/style_k.css"> -->
-     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_k.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -60,15 +68,16 @@
             border-radius: 10px;
         }
 
-        .package-header h2 {
+        .package-header h4 {
             color: #2C5F2D;
             /* Dark Green */
-            font-size: 2.5rem;
+            font-size: 1.4rem;
+            font-weight: bold;
         }
 
-        .section-title {
+        .section-titles {
             font-weight: bold;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: #2C5F2D;
             margin-bottom: 10px;
         }
@@ -87,13 +96,13 @@
         .costing-table th {
             padding: 12px 20px;
             text-align: center;
-            font-size: 1.7rem;
+            font-size: 1rem;
         }
 
         .costing-table th {
             background-color: #2C5F2D;
             color: #F5F5DC;
-            font-size: 1.7rem;
+            font-size: 1rem;
         }
 
         .costing-table tbody tr:nth-child(even) {
@@ -125,7 +134,7 @@
         .upcoming-dates-section li .month {
             font-weight: bold;
             color: #333;
-            font-size: 1.7rem;
+            font-size: 1rem;
         }
 
         .upcoming-dates-section li .date {
@@ -134,7 +143,7 @@
         }
 
         /* Itinerary Section Styling */
-        .itinerary-section .card {
+        .itinerary-section .cards {
             border: none;
             margin-bottom: 20px;
             background-color: transparent;
@@ -147,7 +156,7 @@
             border: 2px solid #2C5F2D;
             border-radius: 8px;
             padding: 15px 20px;
-            font-size: 1.7rem;
+            font-size: 1rem;
             font-weight: bold;
             display: flex;
             justify-content: space-between;
@@ -173,7 +182,7 @@
             background-color: #F5F5DC;
             color: #333;
             padding: 15px 20px;
-            font-size: 1rem;
+            font-size: .4rem;
             display: none;
             border-radius: 8px;
             margin-top: 10px;
@@ -193,7 +202,7 @@
 
         .inclusion-exclusion-section li {
             margin-bottom: 10px;
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         /* Responsive Layout for Desktop */
@@ -232,7 +241,7 @@
             /* Added margin for better spacing */
         }
 
-        .cost-section .section-title {
+        .cost-section .section-titles {
             margin-bottom: 20px;
             /* Added margin between title and table */
         }
@@ -243,19 +252,29 @@
             /* Added space between title and table */
             width: 100%;
             border-spacing: 0;
+            border-collapse: separate;
+        }
+
+        .costing-table th,
+        .costing-table td {
+            border-right: none;
+        }
+
+        .table-bordered>:not(caption)>*>* {
+            border-width: 0 0px;
         }
 
         .place-description {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         .itinerary-points {
-            font-size: 1.5rem;
+            font-size: 1rem;
         }
 
         .related-Packages-title {
             font-weight: bold;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             color: #2C5F2D;
             margin-bottom: 10px;
         }
@@ -278,7 +297,35 @@
 
     <header>
 
-        <div id="menu-bar" class="fas fa-bars"></div>
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-2 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <!-- <h1 class="m-0"><i class="fa fa-map-marker-alt me-3"></i>Travela</h1> -->
+                <img src="img/logo2.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="#upcoming" class="nav-item nav-link active">Upcoming Trips</a>
+                    <a href="#weekend" class="nav-item nav-link">Weekend Trips</a>
+                    <a href="services.html" class="nav-item nav-link">Corporate Trips</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Customize Trips</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="destination.html" class="dropdown-item">Custom Honeymoon Packages</a>
+                            <a href="tour.html" class="dropdown-item">Corporate Group Tours</a>
+                            <a href="booking.html" class="dropdown-item">Family Holiday Packages</a>
+                            <a href="gallery.html" class="dropdown-item">Adventure & Offbeat Trips</a>
+                            <!-- <a href="guides.html" class="dropdown-item">Luxury & Wellness Retreats</a> -->
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4" data-bs-toggle="modal"
+                    data-bs-target="#bookingmodal">Book Now</button>
+            </div>
+        </nav>
+        <!-- <div id="menu-bar" class="fas fa-bars"></div>
         <img class="logo2" src="images/logo2.jpg" alt="ParvatYatra Logo" loading="lazy">
 
         <nav class="navbar">
@@ -287,7 +334,7 @@
             <a href="index.html#services">services</a>
             <a href="index.html#book">book</a>
             <a href="index.html#about">about us</a>
-        </nav>
+        </nav> -->
 
     </header>
 
@@ -306,7 +353,7 @@
             <!-- <h1 class="headingh-package-title" style="color: white;">Best Himalayan Tour Packages & Trekking in India</h1> -->
             <h1 class="headingh-package-title" id="package_alt" style="color: white;"></h1>
             <br>
-            <a id="btnGetItinerary" class="btn itinerary-book-now" style="background-color: white; color: #2C5F2D;">
+            <a id="btnGetItinerary" class="btn itinerary" style="background-color: white; color: #2C5F2D;">
                 <i class="fas fa-download"></i> Get Itinerary
             </a>
 
@@ -337,7 +384,7 @@
         <div class="container mt-5">
             <!-- Package Header -->
             <div class="package-header">
-                <h2>Explore Beautiful Places</h2>
+                <h4>Explore Beautiful Places</h4>
                 <p class="place-description" id="placeDescription"></p>
             </div>
 
@@ -350,11 +397,11 @@
 
                 <!-- Inclusions and Exclusions Section -->
                 <div class="col-12 col-md-6 inclusion-exclusion-section">
-                    <div class="section-title">Inclusions</div>
+                    <div class="section-titles">Inclusions</div>
                     <ul style="color:black;" id="InclusionsList">
                     </ul>
 
-                    <div class="section-title">Exclusions</div>
+                    <div class="section-titles">Exclusions</div>
                     <ul id="ExclusionsList">
                     </ul>
                 </div>
@@ -362,7 +409,7 @@
 
             <!-- Costing Section -->
             <div class="package-section cost-section">
-                <div class="section-title">Costing</div>
+                <div class="section-titles">Costing</div>
                 <table class="table table-bordered costing-table">
                     <thead>
                         <tr>
@@ -378,7 +425,7 @@
 
             <!-- Upcoming Dates Section -->
             <div class="package-section upcoming-dates-section">
-                <div class="section-title">Flexible Departure Dates</div>
+                <div class="section-titles">Flexible Departure Dates</div>
                 <ul id="upCommingDateList">
 
                 </ul>
@@ -388,22 +435,187 @@
 
     <!-- packages section ends -->
     <!-- Related Packages section starts  -->
-    <section class="packages" id="packages">
+
+    <!-- Weekend Trips Start -->
+    <div id="weekend" class="container-fluid packages py-2">
+        <div class="container py-3">
+            <div class="mx-auto text-center mb-5">
+                <h5 class="section-title px-3"> Trips </h5>
+                <h1 class="mb-0">Related Trips</h1>
+                <div class="d-flex justify-content-end" style="margin-bottom:55px; padding:0;">
+                    <button type="button" class="seeallbtn btn btn-outline-primary px-2">See
+                        All <span class="btnarrow ms-2 h5">&gt</span></button>
+                </div>
+            </div>
+            <div class="packages-carousel owl-carousel">
+                <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                            style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-calendar-alt me-2"></i>3 days</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
+                        </div>
+                        <div class="packages-price py-2 px-4">$349.00</div>
+                    </div>
+                    <div class="packages-content bg-light">
+                        <div class="p-4 pb-0">
+                            <h5 class="mb-0">Venice - Italy</h5>
+                            <small class="text-uppercase">Hotel Deals</small>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
+                                quae illum aperiam fugiat voluptatem repellat</p>
+                        </div>
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+                            <div class="col-6 text-end px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="img/packages-2.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                            style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-calendar-alt me-2"></i>3 days</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
+                        </div>
+                        <div class="packages-price py-2 px-4">$449.00</div>
+                    </div>
+                    <div class="packages-content bg-light">
+                        <div class="p-4 pb-0">
+                            <h5 class="mb-0">The New California</h5>
+                            <small class="text-uppercase">Hotel Deals</small>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
+                                quae illum aperiam fugiat voluptatem repellat</p>
+                        </div>
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+                            <div class="col-6 text-end px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="img/packages-3.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                            style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-calendar-alt me-2"></i>3 days</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
+                        </div>
+                        <div class="packages-price py-2 px-4">$549.00</div>
+                    </div>
+                    <div class="packages-content bg-light">
+                        <div class="p-4 pb-0">
+                            <h5 class="mb-0">Discover Japan</h5>
+                            <small class="text-uppercase">Hotel Deals</small>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
+                                quae illum aperiam fugiat voluptatem repellat</p>
+                        </div>
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+                            <div class="col-6 text-end px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="packages-item">
+                    <div class="packages-img">
+                        <img src="img/packages-1.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                        <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                            style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-map-marker-alt me-2"></i>Thayland</small>
+                            <small class="flex-fill text-center border-end py-2"><i
+                                    class="fa fa-calendar-alt me-2"></i>3 days</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
+                        </div>
+                        <div class="packages-price py-2 px-4">$649.00</div>
+                    </div>
+                    <div class="packages-content bg-light">
+                        <div class="p-4 pb-0">
+                            <h5 class="mb-0">Thayland Trip</h5>
+                            <small class="text-uppercase">Hotel Deals</small>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
+                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
+                                quae illum aperiam fugiat voluptatem repellat</p>
+                        </div>
+                        <div class="row bg-primary rounded-bottom mx-0">
+                            <div class="col-6 text-start px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            </div>
+                            <div class="col-6 text-end px-0">
+                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Weekend Trips End -->
+    <!-- <section class="packages" id="packages">
 
         <h2 class="related-Packages-title">Related Trips</h2>
 
         <div class="box-container" id="relatedPackageContainer">
-            <!-- Packages list -->
+            
         </div>
 
-    </section>
+    </section> -->
 
     <!-- Fixed Bottom Buttons for Mobile/Tablet -->
     <div class="mobile-bottom-buttons">
-        <a id="btnMobileGetItinerary" class="btn itinerary-btn">
+        <a id="btnMobileGetItinerary" class="btns itinerary-btn">
             <i class="fas fa-download"></i> Get Itinerary
         </a>
-        <a id="btnMobileBookNow" class="btn booknow-btn">
+        <a id="btnMobileBookNow" class="btns booknow-btn">
             <i class="fas fa-plane"></i> Book Now
         </a>
     </div>
@@ -420,34 +632,35 @@
             <div class="row">
                 <div class="itemc col-md-6 col-lg-6 col-xl-5">
                     <div class="footer-item d-flex flex-column">
-                        <h2 class="mb-4 text-white">Get In Touch</h2>
-                        <a href="" class="h4"><i class="fas fa-home me-2"></i> Sector 12 gurugram,haryana
+                        <h4 class="mb-4 text-white">Get In Touch</h4>
+                        <a href=""><i class="fas fa-home me-2"></i> Sector 12 gurugram,haryana
                             122001 </a>
-                        <a href="" class="h4"><i class="fas fa-envelope me-2 mt-1"></i> support@parvatyatra.com</a>
-                        <a href="" class="h4"><i class="fas fa-phone me-2 mt-1"></i> 8295744218</a>
-                        <div class="d-flex align-items-center  mt-2 h2">
+                        <a href=""><i class="fas fa-envelope me-2 mt-1"></i> support@parvatyatra.com</a>
+                        <a href=""><i class="fas fa-phone me-2 mt-1"></i> 8295744218</a>
+                        <div class="d-flex align-items-center  mt-2">
                             <i class="fas fa-share fa-2x text-white me-2"></i>
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                            <a class="btn-square btns btn-primary rounded-circle mx-1" href=""><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i
+                            <a class="btn-square btns btn-primary rounded-circle mx-1" href=""><i
                                     class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="itemc col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <h2 class="mb-4 text-white">Company</h2>
-                        <a href="" class="h4"><i class="fas fa-angle-right me-2"></i> About</a>
-                        <a href="#servicesection" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Service</a>
-                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Customize Tour</a>
+                        <h4 class="mb-4 text-white">Company</h4>
+                        <a href="index.html#about"><i class="fas fa-angle-right me-2"></i> About</a>
+                        <a href="index.html#service" class="mt-1"><i class="fas fa-angle-right me-2"></i> Service</a>
+                        <a href="" class="mt-1"><i class="fas fa-angle-right me-2"></i> Customize Tour</a>
+                        <a href="contact.html" class="mt-1"><i class="fas fa-angle-right me-2"></i> Contact</a>
                     </div>
                 </div>
                 <div class="itemc col-md-6 col-lg-6 col-xl-4">
                     <div class="footer-item d-flex flex-column">
-                        <h2 class="mb-4 text-white">Support</h2>
-                        <a href="" class="h4"><i class="fas fa-angle-right me-2"></i> Cancellation Policy</a>
-                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                        <a href="" class="mt-1 h4"><i class="fas fa-angle-right me-2"></i> Booking / Payment Policy</a>
+                        <h4 class="mb-4 text-white">Support</h4>
+                        <a href=""><i class="fas fa-angle-right me-2"></i> Cancellation Policy</a>
+                        <a href="" class="mt-1"><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
+                        <a href="" class="mt-1"><i class="fas fa-angle-right me-2"></i> Booking / Payment Policy</a>
                     </div>
                 </div>
             </div>
@@ -455,49 +668,11 @@
     </div>
 
 
-    <!-- <section class="footer">
-        <div class="box-container">
 
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="index.html#home">home</a>
-                <a href="index.html#packages">packages</a>
-                <a href="index.html#services">services</a>
-                <a href="index.html#book">book</a>
-                <a href="index.html#about">about us</a>
-            </div>
-            <div class="box">
-                <h3>office location</h3>
-                <P>sector 12 gurugram,haryana<br>122001</P>
-                <div class="box">
-                    <h3>contact</h3>
-                    <a class="fa fa-phone" href="tel:+91-8295744218"> 8295744218</a>
-                    <a href="https://wa.me/918295744218">whatsapp</a>
-                    <a id="email" class="fa fa-envelope" href="mailto:support@parvatyatra.com">
-                        support@parvatyatra.com</a>
-                </div>
-            </div>
+    <script src="js/packages.js"></script>
+    <script src="js/script.js"></script>
 
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="https://www.facebook.com/profile.php?id=61551375165454&mibextid=ZbWKwL">facebook</a>
-                <a href="https://www.instagram.com/parvatyatra?igsh=MXQxcnZpenNrYXVsag=="><i class=""></i>instagram</a>
-            </div>
-            <div class="box">
-                <h3>Certifications</h3>
-                <a href="#" class="logo"><img class="logoImage" style="height: 100px; width: 100px;"
-                        src="images/iso_logo_new.png" alt="ParvatYatra ISO Certificate"></a>
-                <a href="#" class="logo"><img class="logoImage" style="height: 100px; width: 100px; border-radius: 50%;"
-                        src="images/msme.png" alt="ParvatYatra MSME Certificate"></a>
-            </div>
-
-        </div>
-
-        <h1 class="credit"> © <span>ParvatYatra </span>Travels. All rights reserved 2024</h1>
-    </section> -->
-
-    <script src="packages.js"></script>
-    <script src="script.js"></script>
+   
     <script>
 
         //fetch the perticular package through URL..
@@ -552,16 +727,16 @@
                 const itinerarySection = document.getElementById('itineraryDetailsSection');
 
                 const sectionTitle = document.createElement('div');
-                sectionTitle.className = 'section-title';
+                sectionTitle.className = 'section-titles';
                 sectionTitle.innerText = 'Itinerary Details';
                 itinerarySection.appendChild(sectionTitle);
 
                 if (pkg.itineraryDayWiseList && pkg.itineraryDayWiseList.length > 0) {
                     pkg.itineraryDayWiseList.forEach((item, index) => {
-                        const card = document.createElement('div');
-                        card.className = 'card';
+                        const cards = document.createElement('div');
+                        cards.className = 'cards';
                         const headerId = `day${index + 1}`;
-                        card.innerHTML = `
+                        cards.innerHTML = `
                         <div class="card-header" onclick="toggleAccordion('${headerId}')">
                         <span>${item.day}: ${item.title}</span>
                         <i class="bi bi-chevron-down"></i>
@@ -573,7 +748,7 @@
                         </div>
                     `;
 
-                        itinerarySection.appendChild(card);
+                        itinerarySection.appendChild(cards);
                     });
                 }
 
@@ -622,7 +797,7 @@
                         dateList.appendChild(li);
                     });
                 }
-                FetchRelatedPackages(pkg.category.replace(/\s+/g, "_"));
+               // FetchRelatedPackages(pkg.category.replace(/\s+/g, "_"));
 
                 // console.log(pkg);
             } catch (err) {
@@ -661,6 +836,18 @@
         }
         //FetchRelatedPackages();
     </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+     <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

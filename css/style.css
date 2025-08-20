@@ -374,7 +374,11 @@
     }
 
     .whatsapp-package {
-        bottom: 60px !important;
+        bottom: 45px !important;
+    }
+
+    .back-to-top{
+        bottom:110px;
     }
 }
 

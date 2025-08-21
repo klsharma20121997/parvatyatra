@@ -567,6 +567,12 @@
 
 
 /*** Packages Start ***/
+.packages-item {
+  background: #fff; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
 .packages .packages-item .packages-img {
     position: relative;
     overflow: hidden;
@@ -630,7 +636,8 @@
 
 .packages .packages-item .packages-img .packages-price {
     position: absolute;
-    width: 100px;
+    padding: 6px 16px;
+    white-space: nowrap;
     top: 0;
     left: 50%;
     transform: translateX(-50%);

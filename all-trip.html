@@ -1,7 +1,11 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <title>All Trips</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -216,9 +220,9 @@
     </div>
 
     <!-- all trip section start -->
-    <div class="container-fluid my-5 d-flex package_main" style="width:100%; justify-content:space-evenly;">
-        <div>
-            <div class="criteria p-3" style="">
+    <div class="container-fluid my-5 d-flex package_main" style="justify-content:space-evenly;">
+        <div class="uppercriteria">
+            <div class="criteria p-3">
                 <div class="d-flex justify-content-between">
                     <h5 class="mt-1">Criteria</h5>
                     <buttton class="btn clearall">Clear all</buttton>
@@ -227,16 +231,27 @@
                 <details open>
                     <summary>Destination</summary>
                     <div class="dropdown-content">
-                        <label><input type="checkbox"> Europe</label><br>
-                        <label class="mt-2"><input type="checkbox"> Asia</label><br>
-                        <label class="mt-2"><input type="checkbox"> America</label><br>
-                        <label class="mt-2"><input type="checkbox"> Europe</label><br>
-                        <label class="mt-2"><input type="checkbox"> Asia</label><br>
-                        <label class="mt-2"><input type="checkbox"> America</label><br>
-                        <label class="mt-2"><input type="checkbox"> Europe</label><br>
-                        <label class="mt-2"><input type="checkbox"> Asia</label><br>
-                        <label class="mt-2"><input type="checkbox"> America</label><br>
-                        <label class="mt-2"><input type="checkbox"> America</label>
+                        <!-- <label><input type="checkbox"> Europe</label><br> -->
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
+                                class="labelcount">5</label></div>
                     </div>
                 </details>
                 <hr>
@@ -252,16 +267,31 @@
                     </div>
                 </details>
                 <hr>
-                <details open>
+                <details>
                     <summary>Budget</summary>
                     <div class="dropdown-content">
                         <input type="range" min="0" max="50" class="slider">
                     </div>
                 </details>
+                <hr>
+                <details>
+                    <summary>Trip Types</summary>
+                    <div class="dropdown-content">
+                        <!-- <label><input type="checkbox"> Europe</label><br> -->
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Backpacking Trips</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Biking Trips</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Extended Weekend
+                                Trips</label><label class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Himachal
+                                Backpacking</label><label class="labelcount">5</label></div>
+                    </div>
+                </details>
             </div>
         </div>
 
-        <div class="packages d-flex" style="width:70%; justify-content:space-evenly; flex-wrap:wrap;">
+        <div class="packages packageimg d-flex" style="width:70%; justify-content:space-evenly; flex-wrap:wrap;">
             <div class="packages-item package_sec mb-5" style="width:45%;">
                 <div class="packages-img">
                     <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
@@ -391,6 +421,15 @@
 
 
     <!-- all trip section end -->
+
+    <!-- donot do boring start.. -->
+   <div class="container-fluid my-5 dontboring">
+         <img src="img/dont_boring.webp" width="100%">
+   </div>
+
+
+
+    <!-- donot do boring start.. -->
 
 
     <!-- footer section start-->

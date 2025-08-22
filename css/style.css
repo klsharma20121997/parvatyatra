@@ -1320,7 +1320,7 @@
     position: relative;
 }
 
-@media only screen and (max-width:680px) {
+@media (max-width:680px) {
     .carousel-header .scroll-wrapper .scroll-content {
         display: inline-flex;
         animation: scroll-right-to-left 10s linear infinite;
@@ -1557,19 +1557,19 @@
 .criteria {
     width: 300px;
     border: 2px solid var(--bs-primary);
-    border-radius:10px;
+    border-radius: 10px;
 }
 
 .criteria .clearall {
     border: none;
     outline: none;
     text-decoration: underline;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.criteria .clearall:hover{
-    color:var(--bs-white);
-    background:var(--bs-primary);
+.criteria .clearall:hover {
+    color: var(--bs-white);
+    background: var(--bs-primary);
 }
 
 details {
@@ -1584,13 +1584,12 @@ summary {
 }
 
 summary::before {
-    /* content: ">"; */
-     content: "\f107";
-     font-family: "Font Awesome 5 Free";
-     font-weight: 600;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
     position: absolute;
-    /* bottom: 0.5px; */
-    left: 200px;
+    left: 85%;
+    /* left: 200px; */
     font-size: 22px;
     transform-origin: center;
     transform: rotate(360deg);
@@ -1603,24 +1602,33 @@ details[open] summary::before {
 }
 
 .dropdown-content {
-    margin-top: 8px;
+    margin-top: 12px;
     padding-left: 10px;
     transition: 0.9s ease-in;
 }
 
-.slider{
-    width:100%;
-    height:2px;
-    margin-top:20px;
+.labelst{
+    display:flex;
+    justify-content:space-between;
 }
 
-.slider-value{
-    color:var(--bs-primary);
+.labelcount{
+    margin-right:30px;
 }
 
-@media (max-width:905px){
-    .package_sec{
-        width:80% !important;
+.slider {
+    width: 100%;
+    height: 2px;
+    margin-top: 20px;
+}
+
+.slider-value {
+    color: var(--bs-primary);
+}
+
+@media (max-width:905px) {
+    .package_sec {
+        width: 80% !important;
     }
 
     /* .package_main{
@@ -1628,25 +1636,48 @@ details[open] summary::before {
     } */
 }
 
-@media (max-width:660px){
-     .package_sec{
-        width:95% !important;
+@media (max-width:660px) {
+    .package_sec {
+        width: 95% !important;
     }
 }
 
-@media (max-width:610px){
-    .package_main{
-        width:100%;
-        flex-direction:column !important;
+@media (max-width:610px) {
+    .package_main {
+        width: 100%;
+        flex-direction: column !important;
         justify-content: center !important;
-        align-items:center;
+        align-items: center;
     }
 
-    .package_sec{
-        margin-top:30px;
+    .package_sec {
+        margin-top: 30px;
+
+    }
+
+    .packageimg {
+        width: 100% !important;
+    }
+
+    .uppercriteria{
+        width:100%;
+    }
+
+    .criteria{
         width:100% !important;
     }
+
+    .labelcount{
+        margin-right:60px;
+    }
 }
+
+@media (max-width:460px){
+    .labelcount{
+        margin-right:35px;
+    }
+}
+
 /* filter criteria  end*/
 
 /* for alltrip.html page end */

@@ -130,3 +130,16 @@
 
 })(jQuery);
 
+
+
+//all-trip page start..
+
+//for slider start..
+ let inputvalue = document.getElementById("inputslide");
+ let slidedisplay = document.getElementById("sliderValue");
+
+ inputvalue.addEventListener('input', function(){
+    slidedisplay.innerText = `${this.value} day${this.value==1? '' : 's'}`;
+ })
+//for slider end..
+//all-trip page end..

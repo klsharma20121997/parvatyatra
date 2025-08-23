@@ -230,28 +230,9 @@
                 <hr>
                 <details open>
                     <summary>Destination</summary>
-                    <div class="dropdown-content">
-                        <!-- <label><input type="checkbox"> Europe</label><br> -->
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Asia</label><label
-                                class="labelcount">5</label></div>
+                    <div class="dropdown-content" id="labelcategory">
+                        <!-- <div class="labelst"><label class="mt-2"><input type="checkbox"> <label>
+                                    Asia</label></label><label class="labelcount">5</label></div> -->
                     </div>
                 </details>
                 <hr>
@@ -291,8 +272,8 @@
             </div>
         </div>
 
-        <div class="packages packageimg d-flex" style="width:70%; justify-content:space-evenly; flex-wrap:wrap;">
-            <div class="packages-item package_sec mb-5" style="width:45%;">
+        <div class="packages packageimg d-flex" id="packageTab" style="width:70%; justify-content:space-evenly; flex-wrap:wrap;">
+            <!-- <div class="packages-item package_sec mb-5">
                 <div class="packages-img">
                     <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
@@ -322,39 +303,7 @@
                     </div>
                 </div>
             </div>
-            <div class="packages-item package_sec mb-5" style="width:45%;">
-                <div class="packages-img">
-                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
-                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
-                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
-                            days, 4 Nights</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
-                    </div>
-                    <div class="packages-price py-2 px-4">
-                        <span class="fw-bold">₹30049.00</span>
-                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
-                    </div>
-
-
-                </div>
-                <div class="packages-content bg-white">
-                    <div class="p-4 pb-0">
-                        <h5 class="mb-0">Chopta Tungnath</h5>
-                        <br>
-                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
-                    </div>
-                    <div class="row bg-primary rounded-bottom mx-0">
-                        <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                        </div>
-                        <div class="col-6 text-end px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="packages-item package_sec mb-5" style="width:45%;">
+            <div class="packages-item package_sec mb-5">
                 <div class="packages-img">
                     <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
@@ -386,7 +335,7 @@
                     </div>
                 </div>
             </div>
-            <div class="packages-item package_sec mb-5" style="width:45%;">
+            <div class="packages-item package_sec mb-5">
                 <div class="packages-img">
                     <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
@@ -416,6 +365,36 @@
                     </div>
                 </div>
             </div>
+            <div class="packages-item package_sec mb-5">
+                <div class="packages-img">
+                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
+                            days, 4 Nights</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">₹30049.00</span>
+                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
+                    </div>
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">Chopta Tungnath</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 
@@ -423,9 +402,9 @@
     <!-- all trip section end -->
 
     <!-- donot do boring start.. -->
-   <div class="container-fluid my-5 dontboring">
-         <img src="img/dont_boring.webp" width="100%">
-   </div>
+    <div class="container-fluid my-5 dontboring">
+        <img src="img/dont_boring.webp" width="100%">
+    </div>
 
 
 
@@ -485,6 +464,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="js/packages.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -1,7 +1,11 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <title>All Trips</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,21 +219,199 @@
 
     </div>
 
-  <!-- all trip section start -->
-   <div class="container">
-    <div>
-        
+    <!-- all trip section start -->
+    <div class="container-fluid my-5 d-flex package_main" style="justify-content:space-evenly;">
+        <div class="uppercriteria">
+            <div class="criteria p-3">
+                <div class="d-flex justify-content-between">
+                    <h5 class="mt-1">Criteria</h5>
+                    <buttton class="btn clearall">Clear all</buttton>
+                </div>
+                <hr>
+                <details open>
+                    <summary>Destination</summary>
+                    <div class="dropdown-content" id="labelcategory">
+                        <!-- <div class="labelst"><label class="mt-2"><input type="checkbox"> <label>
+                                    Asia</label></label><label class="labelcount">5</label></div> -->
+                    </div>
+                </details>
+                <hr>
+                <details open>
+                    <summary>Duration</summary>
+                    <div class="dropdown-content">
+                        <div class="slider-value" id="sliderValue">5 days</div>
+                        <input type="range" min="1" max="10" class="slider" id="inputslide">
+                        <div class="d-flex justify-content-between mt-1" style="font-size:12px;">
+                            <span>0 days</span>
+                            <span>10 days</span>
+                        </div>
+                    </div>
+                </details>
+                <hr>
+                <details>
+                    <summary>Budget</summary>
+                    <div class="dropdown-content">
+                        <input type="range" min="0" max="50" class="slider">
+                    </div>
+                </details>
+                <hr>
+                <details>
+                    <summary>Trip Types</summary>
+                    <div class="dropdown-content">
+                        <!-- <label><input type="checkbox"> Europe</label><br> -->
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Backpacking Trips</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Biking Trips</label><label
+                                class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Extended Weekend
+                                Trips</label><label class="labelcount">5</label></div>
+                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Himachal
+                                Backpacking</label><label class="labelcount">5</label></div>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="packages packageimg d-flex" id="packageTab" style="width:70%; justify-content:space-evenly; flex-wrap:wrap;">
+            <!-- <div class="packages-item package_sec mb-5">
+                <div class="packages-img">
+                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
+                            days, 4 Nights</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">₹30049.00</span>
+                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
+                    </div>
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">Chopta Tungnath</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="packages-item package_sec mb-5">
+                <div class="packages-img">
+                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
+                            days, 4 Nights</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">₹30049.00</span>
+                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
+                    </div>
+
+
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">Chopta Tungnath</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="packages-item package_sec mb-5">
+                <div class="packages-img">
+                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
+                            days, 4 Nights</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">₹30049.00</span>
+                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
+                    </div>
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">Chopta Tungnath</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="packages-item package_sec mb-5">
+                <div class="packages-img">
+                    <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i>5
+                            days, 4 Nights</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">₹30049.00</span>
+                        <span class="text-light text-decoration-line-through me-2">₹50000.00</span>
+                    </div>
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">Chopta Tungnath</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
     </div>
 
 
-    <div></div>
-   </div>
+    <!-- all trip section end -->
+
+    <!-- donot do boring start.. -->
+    <div class="container-fluid my-5 dontboring">
+        <img src="img/dont_boring.webp" width="100%">
+    </div>
 
 
-  <!-- all trip section end -->
+
+    <!-- donot do boring start.. -->
 
 
- <!-- footer section start-->
+    <!-- footer section start-->
 
     <div class="container-fluid footer py-5">
         <div class="container py-4">
@@ -273,7 +455,7 @@
 
     <!-- footer section end-->
 
-<!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -281,7 +463,8 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
-     <!-- Template Javascript -->
+    <!-- Template Javascript -->
+    <script src="js/packages.js"></script>
     <script src="js/main.js"></script>
 </body>
 

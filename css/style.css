@@ -377,8 +377,8 @@
         bottom: 45px !important;
     }
 
-    .back-to-top{
-        bottom:110px;
+    .back-to-top {
+        bottom: 110px;
     }
 }
 
@@ -568,11 +568,12 @@
 
 /*** Packages Start ***/
 .packages-item {
-  background: #fff; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
-  transition: all 0.3s ease;
-  overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
+
 .packages .packages-item .packages-img {
     position: relative;
     overflow: hidden;
@@ -580,6 +581,7 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     z-index: 1;
+    height:300px;
 }
 
 .packages .packages-item .packages-img .packages-info {
@@ -590,6 +592,8 @@
 .packages .packages-item .packages-img .packages-info small i {
     color: var(--bs-white);
     transition: 0.5s;
+
+
 }
 
 .packages .packages-item .packages-img::after {
@@ -628,6 +632,16 @@
 
 .packages .packages-item .packages-img img {
     transition: 0.5s;
+    /* background-size:cover;
+    background-position: center; */
+    
+}
+
+.packages .packages-item .packages-img .img-fluid{
+     max-width:100%;
+     height:auto;
+     object-fit: cover;
+     object-position: center;
 }
 
 .packages .packages-item .packages-img:hover img {
@@ -1317,7 +1331,7 @@
     position: relative;
 }
 
-@media only screen and (max-width:680px) {
+@media (max-width:680px) {
     .carousel-header .scroll-wrapper .scroll-content {
         display: inline-flex;
         animation: scroll-right-to-left 10s linear infinite;
@@ -1546,3 +1560,139 @@
 }
 
 /* whatsapp section end*/
+
+
+/* for alltrip.html page start  */
+
+/* filter criteria  strat*/
+.criteria {
+    width: 350px;
+    border: 2px solid var(--bs-primary);
+    border-radius: 10px;
+}
+
+.criteria .clearall {
+    border: none;
+    outline: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.criteria .clearall:hover {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+details {
+    margin-bottom: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    position: relative;
+}
+
+summary::before {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    left: 85%;
+    /* left: 200px; */
+    font-size: 22px;
+    transform-origin: center;
+    transform: rotate(360deg);
+    transition: transform 0.6s ease;
+}
+
+details[open] summary::before {
+    transform: rotate(180deg);
+
+}
+
+.dropdown-content {
+    margin-top: 12px;
+    padding-left: 10px;
+    transition: 0.9s ease-in;
+}
+
+.labelst{
+    display:flex;
+    justify-content:space-between;
+}
+
+.labelcount{
+    margin-right:30px;
+}
+
+.slider {
+    width: 100%;
+    height: 2px;
+    margin-top: 20px;
+}
+
+.slider-value {
+    color: var(--bs-primary);
+}
+
+.package_sec{
+    width:45%;
+}
+
+@media (max-width:905px) {
+    .package_sec {
+        width: 80% !important;
+    }
+
+}
+
+
+
+@media (max-width:660px) {
+    .package_sec {
+        width: 95% !important;
+    }
+}
+
+@media (max-width:610px) {
+    .package_main {
+        width: 100%;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .package_sec {
+        margin-top: 30px;
+
+    }
+
+    .packageimg {
+        width: 100% !important;
+    }
+
+    .uppercriteria{
+        width:100%;
+    }
+
+    .criteria{
+        width:100% !important;
+    }
+
+    .labelcount{
+        margin-right:60px;
+    }
+
+}
+
+@media (max-width:460px){
+    .labelcount{
+        margin-right:35px;
+    }
+}
+
+/* filter criteria  end*/
+
+/* for alltrip.html page end */

@@ -135,13 +135,17 @@
 //all-trip page start..
 
 //for slider start..
-let inputvalue = document.getElementById("inputslide");
-let slidedisplay = document.getElementById("sliderValue");
+// let inputvalue = document.getElementById("inputslide");
+// let slidedisplay = document.getElementById("sliderValue");
 
-inputvalue.addEventListener('input', function () {
-    slidedisplay.innerText = `${this.value} day${this.value == 1 ? '' : 's'}`;
-})
+// inputvalue.addEventListener('input', function () {
+//     slidedisplay.innerText = `${this.value} day${this.value == 1 ? '' : 's'}`;
+// })
 //for slider end..
+
+let selectedCategories = [];
+let maxDuration = 15;
+let maxBudget = 50000;
 
 // for fetch the category start....
 function bindcategorydata() {
@@ -155,25 +159,30 @@ function bindcategorydata() {
         let count = arrcount.filter(el => el === pkl).length;
         const creatediv = document.createElement('div');
         creatediv.classList.add('labelst');
-        creatediv.innerHTML = `<label class="mt-3"><input type="checkbox" onchange="changeCategory()" checked> <label class="ms-1"> ${pkl}</label></label><label class="labelcount mt-3">${count}</label>`;
+        creatediv.innerHTML = `<label class="mt-3"><input type="checkbox" onchange="changeCategory()"> <label class="ms-1"> ${pkl}</label></label><label class="labelcount mt-3">${count}</label>`;
 
         labelcategory.appendChild(creatediv);
     })
 
-     
-    document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb=>{
-        cb.addEventListener('change', changeCategory);
-    })
 
-   
+    // document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb => {
+    //     cb.addEventListener('change', changeCategory);
+    // })
+
+    document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', handlecheck);
+    });
+
+
+    function handlecheck() {
+        changeCategory();
+        applyFilter();
+    }
 
     fetchPackages();
-    setTimeout( () =>{
-     changeCategory();
-   },5000);
 }
 bindcategorydata();
-// for fetch the category end...
+// for fetch the category end..
 
 function changeCategory() {
     const checkedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
@@ -200,6 +209,8 @@ function fetchPackages() {
         let pkgdiv = document.createElement('div');
         pkgdiv.classList.add("packages-item", "package_sec", "mb-4");
         pkgdiv.setAttribute("data-category", pkg.category);
+        pkgdiv.setAttribute("data-days", pkg.days);
+        pkgdiv.setAttribute("data-budget", pkg.budget);
 
         pkgdiv.innerHTML = `<div class="packages-img">
                     <img src="${pkg.image}" class="img-fluid w-100 rounded-top" alt="${pkg.alt}">
@@ -232,5 +243,116 @@ function fetchPackages() {
     })
 }
 // fetch the packages end...
+
+// for give the filter for budget and duration start...
+
+
+document.getElementById('inputslide').addEventListener('input', function () {
+    maxDuration = this.value;
+    console.log(maxDuration);
+    document.getElementById("sliderValue").innerText = `${maxDuration} day${maxDuration === 1 ? '' : 's'}`;
+    applyFilter();
+})
+
+document.getElementById('budgetslide').addEventListener('input', function () {
+    maxBudget = parseInt(this.value);
+    let getmaxBudget = parseInt(maxBudget/1000);
+    console.log(maxBudget);
+    document.getElementById('budgetValue').innerText = `${getmaxBudget} K`;
+    applyFilter();
+})
+
+
+function applyFilter() {
+    selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
+
+    const packageItems = document.querySelectorAll('#packageTab .packages-item');
+
+    packageItems.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const pkgDuration = parseInt(card.getAttribute('data-days'));
+        const pkgPrice = parseInt(card.getAttribute('data-budget'));
+
+        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
+        const matchDuration = pkgDuration <= maxDuration;
+        const matchBudget = pkgPrice <= maxBudget;
+
+        if (matchCategory && matchDuration && matchBudget) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// for clear all button
+document.querySelector('.clearall').addEventListener('click', function () {
+    selectedCategories = [];
+    maxDuration = 15;
+    maxBudget = 50000;
+
+    document.getElementById('sliderValue').innerText = "15 days";
+    document.getElementById('inputslide').value = 15;
+
+    document.getElementById('budgetValue').innerText = "50000 k";
+    document.getElementById('budgetslide').value = 50000;
+
+    Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]')).map(cb => cb.checked = false);
+    applyFilter();
+})
+
+// for give the filter for budget and duration start end
+
+// for moving the side bar dropdown smooth start...
+
+document.querySelectorAll("details").forEach((detail) => {
+    const summary = detail.querySelector("summary");
+    const content = detail.querySelector(".dropdown-content");
+
+    // 1. Set initial max-height if details is open
+    if (detail.hasAttribute("open")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+
+    summary.addEventListener("click", function (e) {
+        e.preventDefault();
+
+
+
+        // If open, collapse it smoothly
+        if (detail.hasAttribute("open")) {
+            const sectionHeight = content.scrollHeight;
+            content.style.maxHeight = sectionHeight + "px";
+
+            requestAnimationFrame(() => {
+                content.style.maxHeight = "0";
+            });
+
+            // Rotate arrow immediately
+            detail.classList.remove("open-transition");
+
+            setTimeout(() => {
+                detail.removeAttribute("open");
+                content.style.maxHeight = null;
+            }, 400); // Match your transition duration
+        } else {
+            // If closed, open it smoothly
+            detail.setAttribute("open", "");
+            detail.classList.add("open-transition");
+
+            const sectionHeight = content.scrollHeight;
+            content.style.maxHeight = "0";
+
+            requestAnimationFrame(() => {
+                content.style.maxHeight = sectionHeight + "px";
+            });
+
+            setTimeout(() => {
+                content.style.maxHeight = "none";
+            }, 400);
+        }
+    });
+});
+// for moving the side bar dropdown smooth end...
 
 //all-trip page end..

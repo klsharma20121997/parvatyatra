@@ -1567,7 +1567,7 @@
 /* filter criteria  strat*/
 .criteria {
     width: 350px;
-    border: 2px solid var(--bs-primary);
+    border: 1px solid var(--bs-primary);
     border-radius: 10px;
 }
 
@@ -1604,19 +1604,26 @@ summary::before {
     font-size: 22px;
     transform-origin: center;
     transform: rotate(360deg);
-    transition: transform 0.6s ease;
+    transition: transform 0.4s ease;
 }
 
-details[open] summary::before {
+details.open-transition summary::before {
     transform: rotate(180deg);
 
 }
 
-.dropdown-content {
+details .dropdown-content {
     margin-top: 12px;
     padding-left: 10px;
-    transition: 0.9s ease-in;
+    max-height:0px;
+    transition: max-height 0.4s ease;
+    overflow:hidden;
 }
+
+details[open] .dropdown-content{
+    overflow:hidden;
+}
+
 
 .labelst{
     display:flex;

@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tour Itinerary • Ola Maps Demo</title>
+    <!-- 1) Ola Maps Web SDK via CDN -->
+    <script src="https://www.unpkg.com/olamaps-web-sdk@latest/dist/olamaps-web-sdk.umd.js"></script>
+    
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #0e1628;
+            --text: #e6edf3;
+            --muted: #93a4b3;
+            --accent: #47c4ff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            height: 100dvh;
+        }
+
+        aside {
+            background: var(--panel);
+            border-right: 1px solid #17233b;
+            padding: 16px;
+            overflow: auto;
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 8px;
+        }
+
+        .sub {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+
+        .card {
+            background: #0b1426;
+            border: 1px solid #1c2945;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 10px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 3px rgba(71, 196, 255, .2)
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid #214064;
+            background: #0b1426;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #0a1a30;
+        }
+
+        .legend {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .legend>span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .swatch {
+            width: 14px;
+            height: 4px;
+            border-radius: 2px;
+            background: #47c4ff;
+            display: inline-block;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        code {
+            background: #0b1426;
+            padding: 2px 6px;
+            border-radius: 6px;
+            border: 1px solid #1c2945;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <aside>
+            <h1>Char Dham (Sample) — 4D/3N</h1>
+            <div class="sub">Interactive itinerary demo powered by <strong>Ola Maps Web SDK</strong>. Replace the API
+                key & style URL to run in production.</div>
+
+            <div class="card">
+                <div class="row"><span class="dot"></span><strong>Day 1: Delhi → Rishikesh</strong></div>
+                <div class="muted">Stops: NH 334 Dhaba • Har Ki Pauri • Hotel check‑in</div>
+            </div>
+            <div class="card">
+                <div class="row"><span class="dot"></span><strong>Day 2: Rishikesh → Guptkashi</strong></div>
+                <div class="muted">Stops: Devprayag • Srinagar • Rudraprayag</div>
+            </div>
+            <div class="card">
+                <div class="row"><span class="dot"></span><strong>Day 3: Kedarnath Darshan</strong></div>
+                <div class="muted">Gaurikund trek • Temple • Return to Guptkashi</div>
+            </div>
+            <div class="card">
+                <div class="row"><span class="dot"></span><strong>Day 4: Return</strong></div>
+                <div class="muted">Guptkashi → Rishikesh → Delhi</div>
+            </div>
+
+            <div class="legend" style="margin-top:12px;">
+                <span><i class="swatch"></i> Primary route</span>
+                <span><i class="dot" style="box-shadow:none"></i> Key stops</span>
+            </div>
+
+            <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+                <button class="btn" id="fit-route">Fit to route</button>
+                <button class="btn" id="toggle-traffic">Toggle traffic</button>
+                <button class="btn" id="show-pickups">Show pickups</button>
+            </div>
+
+            <p class="muted" style="margin-top:14px;">🛠️ <strong>Setup</strong>: edit <code>OLA_API_KEY</code> and
+                <code>STYLE_URL</code> in the script below. You can also swap the coordinates in <code>WAYPOINTS</code>
+                for your tour.</p>
+        </aside>
+        <main id="map"></main>
+    </div>
+
+    <script>
+        // =============================
+        // 🔑 1) REQUIRED CONFIG
+        // =============================
+        const OLA_API_KEY = "isoEpUnxEoUDxuZ8NssfqXxDcfkeWlV9CyNwtlT3"; // TODO: replace
+        // Get a style JSON URL from Ola Maps Vector Tiles (Style Editor / Styles API)
+        const STYLE_URL = "https://api.olamaps.io/tiles/vector/v1/styles/default-light-standard/style.json"; // e.g. https://tiles.olakrutrim.com/styles/xyz/style.json
+        //const STYLE_URL = 'https://api.olamaps.io/styles/streets-v1.json?key=isoEpUnxEoUDxuZ8NssfqXxDcfkeWlV9CyNwtlT3';
+
+        // Sample waypoints (Delhi → Rishikesh → Guptkashi → Gaurikund)
+        const WAYPOINTS = [
+            { name: "Delhi", coords: [77.2090, 28.6139] },
+            { name: "Rishikesh", coords: [78.2923, 30.0869] },
+            { name: "Guptkashi", coords: [79.1091, 30.4904] },
+            { name: "Gaurikund", coords: [79.0297, 30.6618] }
+        ];
+
+        // Optional pickup points to showcase B2B use-cases
+        const PICKUPS = [
+            { name: "ISBT Kashmiri Gate", coords: [77.2289, 28.6676] },
+            { name: "Haridwar Railway St.", coords: [78.1642, 29.9457] },
+            { name: "Jolly Grant Airport", coords: [78.1696, 30.1897] }
+        ];
+
+        // =============================
+        // 🗺️ 2) INIT MAP
+        // =============================
+        const olaMaps = new window.OlaMaps({ apiKey: OLA_API_KEY });
+        const map = olaMaps.init({
+            style: STYLE_URL,
+            container: "map",
+            center: WAYPOINTS[1].coords, // center near Rishikesh to start
+            zoom: 6.2
+        });
+
+        // Add basic controls (zoom/rotation)
+        // map.addControl(new olaMaps.OlaNavigationControl(), 'top-right');
+        const navigationControls = olaMaps.addNavigationControls({
+        showCompass: true,
+        showZoom: true,
+        visualizePitch: false
+        });
+
+        map.addControl(navigationControls);
+
+        // Traffic toggle (requires appropriate style/layer names in your style JSON)
+        let trafficVisible = false;
+        function setTrafficVis(show) {
+            trafficVisible = !!show;
+            // If your style has traffic layers, toggle them here by id
+            const trafficLayers = ["traffic-primary", "traffic-secondary"]; // example ids
+            trafficLayers.forEach(id => {
+                try { map.setLayoutProperty(id, 'visibility', trafficVisible ? 'visible' : 'none'); } catch (e) { }
+            });
+        }
+
+        // =============================
+        // 📍 3) MARKERS + INFO WINDOWS
+        // =============================
+       const markerColor = "#47c4ff";
+
+        WAYPOINTS.forEach((wp, idx) => {
+            // Add marker using the latest factory method
+            const marker = olaMaps.addMarker({
+                map: map,
+                coordinates: wp.coords,
+                color: markerColor
+            });
+
+            // Add popup using the latest factory method
+            const html = document.createElement('div');
+            html.innerHTML = `
+                <div style="font: 600 14px/1.3 system-ui;">${idx + 1}. ${wp.name}</div>
+                <div style="font: 12px system-ui; color:#7f8ea3">
+                    Lat: ${wp.coords[1].toFixed(4)}, Lng: ${wp.coords[0].toFixed(4)}
+                </div>
+            `;
+
+            // Attach popup to marker
+            olaMaps.addPopup({
+                map: map,
+                marker: marker,
+                offset: 12,
+                content: html
+            });
+        });
+
+
+        // Pickups layer (hidden until toggled)
+        let pickupMarkers = [];
+        function showPickups(show) {
+            if (show) {
+                if (pickupMarkers.length) return; // already shown
+                pickupMarkers = PICKUPS.map(p => new olaMaps.OlaMarker({ color: "#9cff6c" }).setLngLat(p.coords).setPopup(new olaMaps.OlaPopup().setText(p.name)).addTo(map));
+            } else {
+                pickupMarkers.forEach(m => m.remove());
+                pickupMarkers = [];
+            }
+        }
+
+        // =============================
+        // ➿ 4) DRAW A ROUTE (GeoJSON)
+        // =============================
+        // For a quick demo we create a simple LineString joining the waypoints.
+        // In production, call Ola Maps Directions API and plot the returned polyline/GeoJSON.
+        function buildLineString(points) {
+            return { type: 'FeatureCollection', features: [{ type: 'Feature', geometry: { type: 'LineString', coordinates: points }, properties: {} }] };
+        }
+
+        map.on('load', () => {
+            const line = buildLineString(WAYPOINTS.map(w => w.coords));
+            map.addSource('tour-route', { type: 'geojson', data: line });
+            map.addLayer({
+                id: 'tour-route-line',
+                type: 'line',
+                source: 'tour-route',
+                paint: {
+                    'line-width': 4,
+                    'line-color': '#47c4ff'
+                }
+            });
+
+            // Fit bounds around all waypoints
+            const b = new olaMaps.OlaLngLatBounds();
+            WAYPOINTS.forEach(w => b.extend(w.coords));
+            map.fitBounds(b, { padding: 60, duration: 500 });
+        });
+
+        // =============================
+        // 🔌 5) OPTIONAL: FETCH REAL DIRECTIONS (skeleton)
+        // =============================
+        // Example showing how you might fetch directions and update the route source.
+        // Replace ENDPOINT with Ola Maps Directions endpoint + query.
+        async function fetchRealDirections() {
+            try {
+                const origin = WAYPOINTS[0].coords; // Delhi
+                const dest = WAYPOINTS[3].coords;   // Gaurikund
+                const waypoints = WAYPOINTS.slice(1, 3).map(w => w.coords.join(",")).join(";");
+
+                // ⚠️ Replace with the actual Ola Maps Directions API endpoint & params.
+                const ENDPOINT = `YOUR_DIRECTIONS_ENDPOINT?origin=${origin[1]},${origin[0]}&destination=${dest[1]},${dest[0]}&waypoints=${waypoints}`;
+                const res = await fetch(ENDPOINT, { headers: { 'Authorization': `Bearer ${OLA_API_KEY}` } });
+                if (!res.ok) throw new Error('Directions request failed');
+                const data = await res.json();
+                // Convert response to GeoJSON LineString as needed.
+                // map.getSource('tour-route').setData(geojsonFromDirections(data));
+            } catch (err) { console.error(err); }
+        }
+
+        // =============================
+        // 🔘 6) UI HANDLERS
+        // =============================
+        document.getElementById('fit-route').addEventListener('click', () => {
+            const b = new olaMaps.OlaLngLatBounds();
+            WAYPOINTS.forEach(w => b.extend(w.coords));
+            map.fitBounds(b, { padding: 60 });
+        });
+
+        document.getElementById('toggle-traffic').addEventListener('click', () => setTrafficVis(!trafficVisible));
+        document.getElementById('show-pickups').addEventListener('click', function () {
+            const turningOn = pickupMarkers.length === 0;
+            showPickups(turningOn);
+            this.textContent = turningOn ? 'Hide pickups' : 'Show pickups';
+        });
+    </script>
+</body>
+
+</html>

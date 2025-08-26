@@ -1592,6 +1592,7 @@ summary {
     font-weight: 500;
     list-style: none;
     position: relative;
+    margin-bottom:10px;
 }
 
 summary::before {
@@ -1613,7 +1614,7 @@ details.open-transition summary::before {
 }
 
 details .dropdown-content {
-    margin-top: 12px;
+    /* margin-top: 12px; */
     padding-left: 10px;
     max-height:0px;
     transition: max-height 0.4s ease;

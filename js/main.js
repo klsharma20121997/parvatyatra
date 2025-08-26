@@ -165,10 +165,6 @@ function bindcategorydata() {
     })
 
 
-    // document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb => {
-    //     cb.addEventListener('change', changeCategory);
-    // })
-
     document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb => {
         cb.addEventListener('change', handlecheck);
     });
@@ -256,7 +252,7 @@ document.getElementById('inputslide').addEventListener('input', function () {
 
 document.getElementById('budgetslide').addEventListener('input', function () {
     maxBudget = parseInt(this.value);
-    let getmaxBudget = parseInt(maxBudget/1000);
+    let getmaxBudget = parseInt(maxBudget / 1000);
     console.log(maxBudget);
     document.getElementById('budgetValue').innerText = `${getmaxBudget} K`;
     applyFilter();
@@ -316,8 +312,6 @@ document.querySelectorAll("details").forEach((detail) => {
 
     summary.addEventListener("click", function (e) {
         e.preventDefault();
-
-
 
         // If open, collapse it smoothly
         if (detail.hasAttribute("open")) {

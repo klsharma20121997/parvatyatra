@@ -176,9 +176,94 @@ function bindcategorydata() {
     }
 
     fetchPackages();
+
+
 }
-bindcategorydata();
+// bindcategorydata();
 // for fetch the category end..
+
+function groupFunForAllTrip() {
+    document.getElementById('inputslide').addEventListener('input', function () {
+        maxDuration = this.value;
+        console.log(maxDuration);
+        document.getElementById("sliderValue").innerText = `${maxDuration} day${maxDuration === 1 ? '' : 's'}`;
+        applyFilter();
+    })
+
+    document.getElementById('budgetslide').addEventListener('input', function () {
+        maxBudget = parseInt(this.value);
+        let getmaxBudget = parseInt(maxBudget / 1000);
+        console.log(maxBudget);
+        document.getElementById('budgetValue').innerText = `${getmaxBudget} K`;
+        applyFilter();
+    })
+
+    // for clear all button
+    document.querySelector('.clearall').addEventListener('click', function () {
+        selectedCategories = [];
+        maxDuration = 15;
+        maxBudget = 50000;
+
+        document.getElementById('sliderValue').innerText = "15 days";
+        document.getElementById('inputslide').value = 15;
+
+        document.getElementById('budgetValue').innerText = "50000 k";
+        document.getElementById('budgetslide').value = 50000;
+
+        Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]')).map(cb => cb.checked = false);
+        applyFilter();
+    })
+
+    // for moving the side bar dropdown smooth start...
+
+    document.querySelectorAll("details").forEach((detail) => {
+        const summary = detail.querySelector("summary");
+        const content = detail.querySelector(".dropdown-content");
+
+        // 1. Set initial max-height if details is open
+        if (detail.hasAttribute("open")) {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+
+        summary.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // If open, collapse it smoothly
+            if (detail.hasAttribute("open")) {
+                const sectionHeight = content.scrollHeight;
+                content.style.maxHeight = sectionHeight + "px";
+
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = "0";
+                });
+
+                // Rotate arrow immediately
+                detail.classList.remove("open-transition");
+
+                setTimeout(() => {
+                    detail.removeAttribute("open");
+                    content.style.maxHeight = null;
+                }, 400); // Match your transition duration
+            } else {
+                // If closed, open it smoothly
+                detail.setAttribute("open", "");
+                detail.classList.add("open-transition");
+
+                const sectionHeight = content.scrollHeight;
+                content.style.maxHeight = "0";
+
+                requestAnimationFrame(() => {
+                    content.style.maxHeight = sectionHeight + "px";
+                });
+
+                setTimeout(() => {
+                    content.style.maxHeight = "none";
+                }, 400);
+            }
+        });
+    });
+    // for moving the side bar dropdown smooth end...
+}
 
 function changeCategory() {
     const checkedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
@@ -209,7 +294,7 @@ function fetchPackages() {
         pkgdiv.setAttribute("data-budget", pkg.budget);
 
         pkgdiv.innerHTML = `<div class="packages-img">
-                    <img src="${pkg.image}" class="img-fluid w-100 rounded-top" alt="${pkg.alt}">
+                    <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}">
                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
                         style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i> ${pkg.duration}</small>
@@ -242,23 +327,6 @@ function fetchPackages() {
 
 // for give the filter for budget and duration start...
 
-
-document.getElementById('inputslide').addEventListener('input', function () {
-    maxDuration = this.value;
-    console.log(maxDuration);
-    document.getElementById("sliderValue").innerText = `${maxDuration} day${maxDuration === 1 ? '' : 's'}`;
-    applyFilter();
-})
-
-document.getElementById('budgetslide').addEventListener('input', function () {
-    maxBudget = parseInt(this.value);
-    let getmaxBudget = parseInt(maxBudget / 1000);
-    console.log(maxBudget);
-    document.getElementById('budgetValue').innerText = `${getmaxBudget} K`;
-    applyFilter();
-})
-
-
 function applyFilter() {
     selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
 
@@ -281,72 +349,39 @@ function applyFilter() {
     });
 }
 
-// for clear all button
-document.querySelector('.clearall').addEventListener('click', function () {
-    selectedCategories = [];
-    maxDuration = 15;
-    maxBudget = 50000;
-
-    document.getElementById('sliderValue').innerText = "15 days";
-    document.getElementById('inputslide').value = 15;
-
-    document.getElementById('budgetValue').innerText = "50000 k";
-    document.getElementById('budgetslide').value = 50000;
-
-    Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]')).map(cb => cb.checked = false);
-    applyFilter();
-})
-
 // for give the filter for budget and duration start end
 
-// for moving the side bar dropdown smooth start...
+// for index.html page start....
+function destinations() {
+    let destinationmain = document.getElementById("destinationmain");
 
-document.querySelectorAll("details").forEach((detail) => {
-    const summary = detail.querySelector("summary");
-    const content = detail.querySelector(".dropdown-content");
+    tourPackages.forEach(card => {
+        let carddiv = document.createElement('div');
+        carddiv.classList.add("col-md-6", "col-lg-4");
 
-    // 1. Set initial max-height if details is open
-    if (detail.hasAttribute("open")) {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
+        carddiv.innerHTML = `<a href="package-details.html?tour=${card.tour}" target="_blank"
+                                    style="text-decoration:none">
+                                    <div class="national-item">
+                                        <img src="${card.image}" class="img-fluid w-100 rounded" alt="Image">
+                                        <div class="national-content">
+                                            <div class="national-info">
+                                                <h5 class="text-white text-uppercase mb-2">${card.title}</h5>
+                                                <span class="btn-hover text-white">View All Packages <i
+                                                        class="fa fa-arrow-right ms-2"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="national-plus-icon">
+                                            <span class="my-auto"><i class="fas fa-link fa-2x text-white"></i></span>
+                                        </div>
+                                    </div>
+                                </a>`;
 
-    summary.addEventListener("click", function (e) {
-        e.preventDefault();
+        destinationmain.appendChild(carddiv);
+    })
+}
 
-        // If open, collapse it smoothly
-        if (detail.hasAttribute("open")) {
-            const sectionHeight = content.scrollHeight;
-            content.style.maxHeight = sectionHeight + "px";
+//  destinations();
 
-            requestAnimationFrame(() => {
-                content.style.maxHeight = "0";
-            });
-
-            // Rotate arrow immediately
-            detail.classList.remove("open-transition");
-
-            setTimeout(() => {
-                detail.removeAttribute("open");
-                content.style.maxHeight = null;
-            }, 400); // Match your transition duration
-        } else {
-            // If closed, open it smoothly
-            detail.setAttribute("open", "");
-            detail.classList.add("open-transition");
-
-            const sectionHeight = content.scrollHeight;
-            content.style.maxHeight = "0";
-
-            requestAnimationFrame(() => {
-                content.style.maxHeight = sectionHeight + "px";
-            });
-
-            setTimeout(() => {
-                content.style.maxHeight = "none";
-            }, 400);
-        }
-    });
-});
-// for moving the side bar dropdown smooth end...
+// for index.html page end...
 
 //all-trip page end..

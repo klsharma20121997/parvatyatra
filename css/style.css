@@ -577,11 +577,12 @@
 .packages .packages-item .packages-img {
     position: relative;
     overflow: hidden;
-    transition: 0.5s;
+    /* transition: 0.5s; */
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    z-index: 1;
+    /* z-index: 1; */
     height:300px;
+    width:100%;
 }
 
 .packages .packages-item .packages-img .packages-info {
@@ -632,16 +633,11 @@
 
 .packages .packages-item .packages-img img {
     transition: 0.5s;
-    /* background-size:cover;
-    background-position: center; */
-    
-}
-
-.packages .packages-item .packages-img .img-fluid{
-     max-width:100%;
-     height:auto;
-     object-fit: cover;
-     object-position: center;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    border-radius:inherit;
 }
 
 .packages .packages-item .packages-img:hover img {
@@ -726,10 +722,20 @@
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    width:100%;
+    height:300px;
+   
+   
+    
 }
 
 .ExploreTour #NationalTab-1 .national-item img {
     transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    object-position:center;
+    object-fit: cover;
+    border-radius:inherit;
 }
 
 .ExploreTour #NationalTab-1 .national-item:hover img {

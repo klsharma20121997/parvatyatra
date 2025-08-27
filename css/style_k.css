@@ -26,18 +26,27 @@
     padding: .5rem 0;
 }
 
-.home .video-container video {
+/* .home .video-container video {
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     height: 75vh;
-    /* Covers half of the screen */
     width: 100%;
     object-fit: cover;
+} */
+
+.home .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 75vh;
+    width: 100%;
+    /* object-fit: cover; */
 }
 
-.home .video-container img {
+/* .home .video-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,6 +54,17 @@
     height: 75vh;
     width: 100%;
     object-fit: cover;
+} */
+
+.home .video-container img {
+     /* position: absolute;
+    top: 0;
+    left: 0;  */
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
 }
 
 .home .logo2 {

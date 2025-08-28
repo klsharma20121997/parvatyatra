@@ -286,7 +286,7 @@ function changeCategory() {
 // fetch the packages start...
 function fetchPackages() {
     let packageTab = document.getElementById("packageTab");
-    tourPackages.forEach(pkg => {
+    newTourPackages.forEach(pkg => {
         let pkgdiv = document.createElement('div');
         pkgdiv.classList.add("packages-item", "package_sec", "mb-4");
         pkgdiv.setAttribute("data-category", pkg.category);
@@ -313,7 +313,7 @@ function fetchPackages() {
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                            <a class="btn-hover btn text-white py-2 px-4" onclick="OpenPackageDetails('${pkg}');">Read More</a>
                         </div>
                         <div class="col-6 text-end px-0">
                             <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
@@ -378,6 +378,12 @@ function destinations() {
 
         destinationmain.appendChild(carddiv);
     })
+}
+
+function OpenPackageDetails(pkg)
+{
+    const url = `package-details.html?tour=${pkg.tour}`;
+    window.open(url, '_blank');
 }
 
 //  destinations();

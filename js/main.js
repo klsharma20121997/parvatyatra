@@ -149,11 +149,11 @@ let maxBudget = 50000;
 
 // for fetch the category start....
 function bindcategorydata() {
-    const categories = [...new Set(tourPackages.map(pkg => { return pkg.category; }))];
+    const categories = [...new Set(newTourPackages.map(pkg => { return pkg.category; }))];     //newTourPackages
 
 
     let labelcategory = document.getElementById("labelcategory");
-    let arrcount = tourPackages.map(pkg => { return pkg.category; });
+    let arrcount = newTourPackages.map(pkg => { return pkg.category; });                       //newTourPackages
 
     categories.forEach(pkl => {
         let count = arrcount.filter(el => el === pkl).length;
@@ -313,7 +313,7 @@ function fetchPackages() {
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a class="btn-hover btn text-white py-2 px-4" onclick="OpenPackageDetails('${pkg}');">Read More</a>
+                            <a class="btn-hover btn text-white py-2 px-4" href="package-details.html?tour=${pkg.tour}" >Read More</a>
                         </div>
                         <div class="col-6 text-end px-0">
                             <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
@@ -323,7 +323,7 @@ function fetchPackages() {
         packageTab.appendChild(pkgdiv);
     })
 }
-// fetch the packages end...
+// fetch the packages end...   onclick="OpenPackageDetails('${pkg}')"
 
 // for give the filter for budget and duration start...
 
@@ -380,11 +380,10 @@ function destinations() {
     })
 }
 
-function OpenPackageDetails(pkg)
-{
-    const url = `package-details.html?tour=${pkg.tour}`;
-    window.open(url, '_blank');
-}
+// function OpenPackageDetails(lkg) {
+//     const url = `package-details.html?tour=${lkg.tour}`;
+//     window.open(url, '_blank');
+// }
 
 //  destinations();
 

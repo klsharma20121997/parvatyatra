@@ -105,15 +105,25 @@
                 </ol>
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
+
                         <!-- <img src="img/carousel-2.jpg" class="img-fluid" alt="Image"> -->
-                        <img loading="eager"
+                        <!-- <img loading="eager"
                             src="https://img.cdnx.in/245045/4-1711968198042.jpeg?width=600&amp;format=jpeg"
                             class="img-fluid" alt="Banner" srcset="
                             https://img.cdnx.in/245045/4-1711968198042.jpeg?width=300&amp;format=jpeg 300w, 
                             https://img.cdnx.in/245045/4-1711968198042.jpeg?width=600&amp;format=jpeg 768w, 
                             https://img.cdnx.in/245045/4-1711968198042.jpeg?width=1200&amp;format=jpeg 1200w,
                             https://img.cdnx.in/245045/4-1711968198042.jpeg?width=1920&amp;format=jpeg 1400w
-                            ">
+                            "> -->
+
+
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="images/package_2.jpg">
+                            <source media="(max-width: 768px)" srcset="images/package_3.jpg">
+                            <source media="(min-width: 769px)" srcset="images/package_4.jpg">
+                            <img src="images/package_1.jpg" alt="Example" style="width:100%; height:auto; object-fit:contain; object-position:center;">
+                        </picture>
+
                         <!-- <div class="carousel-caption" style="flex-direction:column;">
                             <div class="p-3" style="max-width: 900px;">
                                 <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Explore

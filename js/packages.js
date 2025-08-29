@@ -941,6 +941,24 @@ const tourPackages = [
     }
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const newTourPackages = [
     {
         "id": 8,
@@ -2055,7 +2073,8 @@ const newTourPackages = [
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
-        "image": "images/package_kedarnath_tungnath_haridwar.jpg",
+        // "image": "images/package_kedarnath_tungnath_haridwar.jpg",
+        "image": "images/package_1.jpg",
         "alt": "Kedarnath & Tungnath - Do Dham Yatra from Haridwar",
         "place_description": "Kedarnath Temple, a revered Himalayan shrine, is over a thousand years old and dedicated to Lord Shiva. Tungnath, the highest Shiva temple in the world and part of the Panch Kedar, adds to this sacred pilgrimage with divine vibes and stunning Himalayan landscapes.",
         "itineraryDayWiseList": [
@@ -2149,7 +2168,8 @@ const newTourPackages = [
         "budget": 8999,
         "price": "₹8,999.00",
         "old_price": "₹9,999.00",
-        "image": "images/package_kedarnath_delhi.jpg",
+        // "image": "images/package_kedarnath_delhi.jpg",
+        "image": "images/package_1.jpg",
         "alt": "Kedarnath 3N/4D Yatra - Ex Delhi",
         "place_description": "Kedarnath Temple, a sacred Himalayan shrine, is one of the holiest pilgrimage sites of Lord Shiva. Nestled among majestic mountains, it offers divine blessings, spiritual peace, and a journey filled with faith and breathtaking views.",
         "itineraryDayWiseList": [
@@ -2812,7 +2832,8 @@ const newTourPackages = [
         "budget": 6500,
         "price": "₹6,500.00",
         "old_price": "₹7,500.00",
-        "image": "images/package_mcleodganj_triund.jpg",
+        // "image": "images/package_mcleodganj_triund.jpg",
+        "image": "images/package_1.jpg",
         "alt": "McLeodganj & Triund Trek Package",
         "place_description": "McLeodganj and Triund together offer a blend of Tibetan culture, spirituality, and adventure. The Triund trek is one of the most popular short treks in Himachal Pradesh, rewarding you with breathtaking panoramic views of the Dhauladhar range, peaceful camping under the stars, and vibrant cultural vibes in McLeodganj.",
         "itineraryDayWiseList": [

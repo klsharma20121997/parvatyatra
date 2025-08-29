@@ -373,7 +373,7 @@
             <!-- Package Header -->
             <div class="package-header">
                 <h4>Explore Beautiful Places</h4>
-                <p class="place-description" id="placeDescription"></p>
+                <p style="color:black;" class="place-description" id="placeDescription"></p>
             </div>
 
             <!-- Package Details Section (Responsive) -->
@@ -390,7 +390,7 @@
                     </ul>
 
                     <div class="section-titles">Exclusions</div>
-                    <ul id="ExclusionsList">
+                    <ul style="color:black;" id="ExclusionsList">
                     </ul>
                 </div>
             </div>
@@ -405,7 +405,7 @@
                             <th>Price</th>
                         </tr>
                     </thead>
-                    <tbody id="priceTableBody">
+                    <tbody style="color:black;" id="priceTableBody">
 
                     </tbody>
                 </table>
@@ -673,7 +673,7 @@
         }
 
         const id = getQueryParam('tour');
-        const pkg = tourPackages.find(p => p.tour === id);
+        const pkg = newTourPackages.find(p => p.tour === id);                  //newTourPackages
 
         if (pkg != null) {
             try {

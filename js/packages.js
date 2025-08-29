@@ -10,7 +10,7 @@ const tourPackages = [
         "budget": 7499,
         "price": "₹7499.00",
         "old_price": "₹8499.00",
-        "image": "images/package_7.jpg",
+        "image": "images/package_chopta-tungnath.jpg",
         "alt": "Chopta Tungnath - The Mini Switzerland of India Awaits!",
         "place_description": `Chopta Tungnath is a hidden gem in Uttarakhand known for its lush meadows and panoramic Himalayan views. The trek to Tungnath, the highest Shiva temple in the world, offers both spiritual peace and scenic adventure. It’s a perfect getaway for nature lovers and trekkers`,
         "itineraryDayWiseList": [
@@ -93,7 +93,7 @@ const tourPackages = [
         "budget": 8999,
         "price": "₹8999.00",
         "old_price": "₹9999.00",
-        "image": "images/package_8.jpg",
+        "image": "images/package_kedarnath.jpg",
         "alt": "Kedarnath – More Than a Trip, It's a Pilgrimage of the Soul",
         "place_description": `Nestled in the Garhwal Himalayas, Kedarnath is one of the holiest pilgrimage sites dedicated to Lord Shiva. Surrounded by snow-capped peaks and lush valleys, it offers a spiritually enriching experience. The trek to the temple is both adventurous and soul-stirring, attracting devotees and nature lovers alike.`,
         "itineraryDayWiseList": [
@@ -168,7 +168,7 @@ const tourPackages = [
         "budget": 12999,
         "price": "₹12999.00",
         "old_price": "₹13999.00",
-        "image": "images/dodham.png",
+        "image": "images/package_do-dham.png",
         "alt": "Do Dham Yatra - Kedarnath and Badrinath Pilgrimage Tour",
         "place_description": "The Do Dham Yatra is a divine journey to Kedarnath and Badrinath, two of the most sacred shrines in Uttarakhand. Nestled in the Himalayas, these temples attract lakhs of devotees every year. This spiritual trip combines devotion, natural beauty, and adventure.",
         "itineraryDayWiseList": [
@@ -263,7 +263,7 @@ const tourPackages = [
         "budget": 24999,
         "price": "₹24999.00",
         "old_price": "₹26999.00",
-        "image": "images/char_dham.png",
+        "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Char Dham Yatra - Yamunotri, Gangotri, Kedarnath & Badrinath",
         "place_description": "The Char Dham Yatra is one of the most sacred pilgrimages in India, covering Yamunotri, Gangotri, Kedarnath, and Badrinath. This spiritual journey takes you through the breathtaking Himalayas, sacred temples, and divine experiences that renew your soul.",
         "itineraryDayWiseList": [
@@ -408,7 +408,7 @@ const tourPackages = [
         "budget": 6199,
         "price": "₹6199.00",
         "old_price": "₹7199.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kasol-kheerganga.jpg",
         "alt": "Kasol Kheerganga- Best Himalayan Tour Package",
         "place_description": `Explore the serene village of Kasol nestled in the Parvati Valley. Trek through lush green trails to reach the mystical Kheerganga. Relax in natural hot springs surrounded by Himalayan beauty.`,
         "itineraryDayWiseList": [
@@ -496,7 +496,7 @@ const tourPackages = [
         "budget": 7199,
         "price": "₹7199.00",
         "old_price": "₹8199.00",
-        "image": "images/package_2.jpg",
+        "image": "images/package_manali-rohtang-kasol.jpg",
         "alt": "Manali Kasol - Best Himalayan Tour Package",
         "place_description": `Experience the charm of Manali's snow-capped peaks and lively Mall Road. Head to Kasol for a peaceful escape along the Parvati River. A perfect mix of adventure and serenity in one trip.`,
         "itineraryDayWiseList": [
@@ -584,7 +584,7 @@ const tourPackages = [
         "budget": 7999,
         "price": "₹7999.00",
         "old_price": "₹8999.00",
-        "image": "images/package_3.jpg",
+        "image": "images/package_manali-rohtang-sissu-kasol.jpg",
         "alt": "Manali Rohtang/Sissu - Best Himalayan Tour Package",
         "place_description": `Enjoy stunning drives to Rohtang Pass and the hidden beauty of Sissu. Witness snowy landscapes, waterfalls, and breathtaking views. Wrap up the journey in Kasol with peaceful vibes and riverside cafes.`,
         "itineraryDayWiseList": [
@@ -672,7 +672,7 @@ const tourPackages = [
         "budget": 6199,
         "price": "₹6199.00",
         "old_price": "₹7199.00",
-        "image": "images/package_4.jpg",
+        "image": "package_kasol-tosh.jpg",
         "alt": "Manali Solang - Best Himalayan Tour Package",
         "place_description": "Adventure meets beauty in the scenic Solang Valley. Try thrilling activities like paragliding, ATV rides, and ziplining. Soak in panoramic mountain views and enjoy snow fun in winter.",
         "itineraryDayWiseList": [
@@ -767,7 +767,7 @@ const tourPackages = [
         "budget": 6499,
         "price": "₹6499.00",
         "old_price": "₹7499.00",
-        "image": "images/package_5.jpg",
+        "image": "images/package_mcleodganj-triund.jpg",
         "alt": "McLeodganj Triund - A Himalayan Camping and Trekking Experience",
         "place_description": "McLeodganj, the spiritual hub of Himachal Pradesh, is famous for its Tibetan culture, monasteries, and cafes. Coupled with a trek to Triund, it offers a perfect blend of nature, adventure, and peace. Ideal for first-time trekkers and mountain lovers.",
         "itineraryDayWiseList": [
@@ -859,7 +859,7 @@ const tourPackages = [
         "budget": 6799,
         "price": "₹6799.00",
         "old_price": "₹7799.00",
-        "image": "images/package_6.jpg",
+        "image": "images/package_spiti-valley.jpg",
         "alt": "Tirthan Jibhi - Tranquility in the Lap of Himachal",
         "place_description": "Tirthan Valley and Jibhi are hidden treasures nestled in Himachal Pradesh, perfect for offbeat travelers and nature lovers. From crystal-clear rivers to serene pine forests and cozy wooden cottages, it’s a slice of paradise untouched by crowds.",
         "itineraryDayWiseList": [
@@ -971,7 +971,7 @@ const newTourPackages = [
         "budget": 4999,
         "price": "₹4999.00",
         "old_price": "₹5999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_chakrata-tigerfall.png",
         "alt": "Chakrata & Tigerfall - Serene Himalayan Escape",
         "place_description": "Chakrata is a serene hill station in Uttarakhand, surrounded by deodar forests and Himalayan views. The highlight of this trip is Tiger Falls, one of the highest and most beautiful waterfalls in Uttarakhand, along with Budher Caves, Moila Top, and Chirmiri Sunset Point.",
         "itineraryDayWiseList": [
@@ -1046,7 +1046,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5499.00",
         "old_price": "₹6499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_chopta-tungnath.jpg",
         "alt": "Chopta Tungnath - A Himalayan Spiritual & Adventure Escape",
         "place_description": "Chopta Tungnath, nestled in Uttarakhand’s Garhwal Himalayas, offers breathtaking views, peaceful meadows, and a spiritual trek to the world’s highest Shiva temple. It's a serene paradise for nature lovers, trekkers, and devotees seeking beauty and blessings.",
         "itineraryDayWiseList": [
@@ -1133,7 +1133,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5499.00",
         "old_price": "₹5999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_hampta-pass-trek.png",
         "alt": "Hampta Pass Trek - Crossover from Kullu to Lahaul",
         "place_description": "Hampta Pass Trek is a stunning crossover trek connecting lush Kullu Valley to barren Lahaul, offering dramatic landscapes, river crossings, alpine meadows, snowfields, and panoramic Himalayan views — a paradise for trekkers.",
         "itineraryDayWiseList": [
@@ -1375,7 +1375,7 @@ const newTourPackages = [
         "budget": 6499,
         "price": "₹6499.00",
         "old_price": "₹7499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kasol-tosh.jpg",
         "alt": "Kasol & Tosh - Himalayan Escape with Treks & Cafes",
         "place_description": "Kasol-Tosh is a serene Himalayan escape, known for scenic treks, riverside cafes, hot springs, pine forests, and a peaceful vibe—perfect for backpackers, nature lovers, and spiritual seekers.",
         "itineraryDayWiseList": [
@@ -1464,7 +1464,7 @@ const newTourPackages = [
         "budget": 6499,
         "price": "₹6499.00",
         "old_price": "₹7499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kasol-kheerganga.jpg",
         "alt": "Kasol & Kheerganga - Trek, Hot Springs & Himalayan Escape",
         "place_description": "Kasol-Kheerganga is a serene Himalayan escape, known for scenic treks, riverside cafes, hot springs, pine forests, and a peaceful vibe — perfect for backpackers, nature lovers, and spiritual seekers.",
         "itineraryDayWiseList": [
@@ -1552,7 +1552,7 @@ const newTourPackages = [
         "budget": 14999,
         "price": "₹14,999.00",
         "old_price": "₹16,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Kedarnath & Badrinath with Tungnath - Sacred Do Dham Yatra",
         "place_description": "Embark on a divine Do Dham Yatra covering Kedarnath, Badrinath, and Tungnath. Experience spiritual bliss, Himalayan landscapes, and the serenity of sacred shrines. A journey of faith, devotion, and adventure in Uttarakhand.",
         "itineraryDayWiseList": [
@@ -1657,7 +1657,7 @@ const newTourPackages = [
         "budget": 14999,
         "price": "₹14,999.00",
         "old_price": "₹16,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_do-dham.png",
         "alt": "Kedarnath & Badrinath - Divine Do Dham Yatra from Delhi",
         "place_description": "Embark on a sacred Do Dham Yatra covering Kedarnath and Badrinath from Delhi. Experience spiritual bliss, majestic Himalayan landscapes, and the divine energy of two of Uttarakhand’s holiest shrines.",
         "itineraryDayWiseList": [
@@ -1765,7 +1765,7 @@ const newTourPackages = [
         "budget": 10999,
         "price": "₹10,999.00",
         "old_price": "₹12,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_do-dham.png",
         "alt": "Kedarnath & Badrinath - Sacred Do Dham Yatra 4N/5D",
         "place_description": "Embark on a sacred Do Dham Yatra covering Kedarnath and Badrinath. Experience divine darshan, the Ganga Aarti at Haridwar, the holy confluences, and serene Himalayan landscapes on this spiritual journey.",
         "itineraryDayWiseList": [
@@ -1871,7 +1871,7 @@ const newTourPackages = [
         "budget": 10999,
         "price": "₹10,999.00",
         "old_price": "₹12,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_do-dham.png",
         "alt": "Kedarnath & Badrinath - Divine Do Dham Yatra (4N/5D)",
         "place_description": "Embark on a divine Do Dham Yatra covering Kedarnath and Badrinath. Experience spiritual bliss, darshan of sacred shrines, breathtaking Himalayan landscapes, and the serenity of Uttarakhand’s holiest places.",
         "itineraryDayWiseList": [
@@ -1972,7 +1972,7 @@ const newTourPackages = [
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Kedarnath & Tungnath - Sacred Himalayan Pilgrimage",
         "place_description": "Kedarnath Temple, over a thousand years old, offers a divine Himalayan experience as one of Lord Shiva’s most revered shrines. Tungnath, the highest Shiva temple in the world, completes this spiritual journey with breathtaking views and profound devotion.",
         "itineraryDayWiseList": [
@@ -2073,8 +2073,7 @@ const newTourPackages = [
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
-        // "image": "images/package_kedarnath_tungnath_haridwar.jpg",
-        "image": "images/package_1.jpg",
+         "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Kedarnath & Tungnath - Do Dham Yatra from Haridwar",
         "place_description": "Kedarnath Temple, a revered Himalayan shrine, is over a thousand years old and dedicated to Lord Shiva. Tungnath, the highest Shiva temple in the world and part of the Panch Kedar, adds to this sacred pilgrimage with divine vibes and stunning Himalayan landscapes.",
         "itineraryDayWiseList": [
@@ -2168,8 +2167,7 @@ const newTourPackages = [
         "budget": 8999,
         "price": "₹8,999.00",
         "old_price": "₹9,999.00",
-        // "image": "images/package_kedarnath_delhi.jpg",
-        "image": "images/package_1.jpg",
+         "image": "images/package_kedarnath.jpg",
         "alt": "Kedarnath 3N/4D Yatra - Ex Delhi",
         "place_description": "Kedarnath Temple, a sacred Himalayan shrine, is one of the holiest pilgrimage sites of Lord Shiva. Nestled among majestic mountains, it offers divine blessings, spiritual peace, and a journey filled with faith and breathtaking views.",
         "itineraryDayWiseList": [
@@ -2269,7 +2267,7 @@ const newTourPackages = [
         "budget": 8999,
         "price": "₹8,999.00",
         "old_price": "₹9,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kedarnath.jpg",
         "alt": "Kedarnath 3N/4D Yatra - Ex Haridwar",
         "place_description": "Kedarnath, one of the holiest temples of Lord Shiva, is located in the lap of the majestic Himalayas. This spiritual journey combines devotion with the serenity of nature, offering peace, blessings, and unforgettable mountain experiences.",
         "itineraryDayWiseList": [
@@ -2453,7 +2451,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5,499.00",
         "old_price": "₹6,499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_manali-rohtang-kasol.jpg",
         "alt": "Manali, Rohtang & Kasol - A Himalayan Escape",
         "place_description": "Manali, the heart of the Himalayas, is surrounded by snow-capped peaks, lush valleys, and serene rivers. A blend of adventure and peace, this trip includes Rohtang Pass, Solang Valley, Atal Tunnel, Kullu, Manikaran Sahib, and Kasol — offering breathtaking landscapes, thrilling adventure sports, and soulful experiences.",
         "itineraryDayWiseList": [
@@ -2541,7 +2539,7 @@ const newTourPackages = [
         "budget": 6499,
         "price": "₹6,499.00",
         "old_price": "₹7,499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_manali-rohtang-kasol.jpg",
         "alt": "Manali, Rohtang & Kasol - Himalayan Bliss 3N/4D",
         "place_description": "Manali, the heart of the Himalayas, is a paradise of snow-capped peaks, lush valleys, and serene rivers. This 3N/4D trip covers Rohtang Pass, Solang Valley, Atal Tunnel, Kullu, Kasol, Manikaran Sahib, and Chalal Village — combining adventure, snow sports, spiritual retreats, and the unique vibe of Himachali culture.",
         "itineraryDayWiseList": [
@@ -2642,7 +2640,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5,499.00",
         "old_price": "₹6,499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_manali-rohtang-sissu-kasol.jpg",
         "alt": "Manali, Sissu & Kasol - Himalayan Escape 2N/3D",
         "place_description": "Manali, the heart of the Himalayas, offers snow-capped peaks, lush valleys, and serene rivers. This 2N/3D trip covers Manali local sightseeing, Solang Valley, Atal Tunnel, Sissu Village, Kullu, Manikaran, and Kasol. Experience the perfect blend of snow adventure, spirituality, and Himachali culture.",
         "itineraryDayWiseList": [
@@ -2731,7 +2729,7 @@ const newTourPackages = [
         "budget": 6499,
         "price": "₹6,499.00",
         "old_price": "₹7,499.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_manali-rohtang-sissu-kasol.jpg",
         "alt": "Manali, Sissu & Kasol - Himalayan Escape 3N/4D",
         "place_description": "Manali, nestled in the heart of the Himalayas, is a paradise of snow-capped peaks, valleys, and rivers. This 3N/4D package covers Manali local sightseeing, Solang Valley, Atal Tunnel, Sissu Village, Kullu, Manikaran, and Kasol. A perfect mix of snow adventure, spirituality, and Himachali culture.",
         "itineraryDayWiseList": [
@@ -2832,8 +2830,7 @@ const newTourPackages = [
         "budget": 6500,
         "price": "₹6,500.00",
         "old_price": "₹7,500.00",
-        // "image": "images/package_mcleodganj_triund.jpg",
-        "image": "images/package_1.jpg",
+         "image": "images/package_mcleodganj-triund.jpg",
         "alt": "McLeodganj & Triund Trek Package",
         "place_description": "McLeodganj and Triund together offer a blend of Tibetan culture, spirituality, and adventure. The Triund trek is one of the most popular short treks in Himachal Pradesh, rewarding you with breathtaking panoramic views of the Dhauladhar range, peaceful camping under the stars, and vibrant cultural vibes in McLeodganj.",
         "itineraryDayWiseList": [
@@ -3004,7 +3001,7 @@ const newTourPackages = [
         "budget": 12999,
         "price": "₹12,999.00",
         "old_price": "₹13,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_spiti-valley.jpg",
         "alt": "Spiti Valley Adventure Package",
         "place_description": "Spiti Valley is a remote, high-altitude desert located in Himachal Pradesh. Known for its stark landscapes, blue skies, ancient monasteries, Tibetan culture, and rugged terrain, it offers a blend of adventure and spirituality. From crossing high passes like Kunzum La to visiting the world’s highest villages, Spiti is a once-in-a-lifetime Himalayan experience.",
         "itineraryDayWiseList": [

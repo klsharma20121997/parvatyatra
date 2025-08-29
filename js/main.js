@@ -355,17 +355,17 @@ function applyFilter() {
 function destinations() {
     let destinationmain = document.getElementById("destinationmain");
 
-    tourPackages.forEach(card => {
+    arrDestinations.forEach(card => {
         let carddiv = document.createElement('div');
         carddiv.classList.add("col-md-6", "col-lg-4");
 
-        carddiv.innerHTML = `<a href="package-details.html?tour=${card.tour}" target="_blank"
+        carddiv.innerHTML = `<a href="package-details.html?destination=${card.destination_id}" target="_blank"
                                     style="text-decoration:none">
                                     <div class="national-item">
-                                        <img src="${card.image}" class="img-fluid w-100 rounded" alt="Image">
+                                        <img src="${card.image}" class="img-fluid w-100 rounded" "${card.alt}">
                                         <div class="national-content">
                                             <div class="national-info">
-                                                <h5 class="text-white text-uppercase mb-2">${card.title}</h5>
+                                                <h5 class="text-white text-uppercase mb-2">${card.destination_name}</h5>
                                                 <span class="btn-hover text-white">View All Packages <i
                                                         class="fa fa-arrow-right ms-2"></i></span>
                                             </div>

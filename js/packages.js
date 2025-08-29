@@ -672,7 +672,7 @@ const tourPackages = [
         "budget": 6199,
         "price": "₹6199.00",
         "old_price": "₹7199.00",
-        "image": "package_kasol-tosh.jpg",
+        "image": "images/package_kasol-tosh.jpg",
         "alt": "Manali Solang - Best Himalayan Tour Package",
         "place_description": "Adventure meets beauty in the scenic Solang Valley. Try thrilling activities like paragliding, ATV rides, and ziplining. Soak in panoramic mountain views and enjoy snow fun in winter.",
         "itineraryDayWiseList": [
@@ -1218,7 +1218,7 @@ const newTourPackages = [
         "budget": 7999,
         "price": "₹7999.00",
         "old_price": "₹8999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_harshil-valley-gartang-gali.png",
         "alt": "Harshil Valley & Gartang Gali - A Serene Himalayan Escape",
         "place_description": "Harshil Valley, nestled in Uttarakhand, is a serene Himalayan paradise with rivers, pine forests, and mountain views. Gartang Gali, a historic wooden bridge trail, offers thrilling walks, cultural heritage, and unforgettable adventure near the Indo-China border.",
         "itineraryDayWiseList": [
@@ -1305,7 +1305,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5499.00",
         "old_price": "₹5899.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_kanatal-tehri-lake.jpg",
         "alt": "Kanatal & Tehri Lake - Adventure & Serenity in Uttarakhand",
         "place_description": "Kanatal, nestled in Uttarakhand, offers serene mountain views, pine forests, and peaceful vibes. Nearby Tehri Lake invites adventure with boating, jet skiing, and camping by the turquoise waters amidst nature’s charm.",
         "itineraryDayWiseList": [
@@ -2360,7 +2360,7 @@ const newTourPackages = [
         "budget": 6999,
         "price": "₹6,999.00",
         "old_price": "₹7,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_madmaheshwar.webp",
         "alt": "Madmaheshwar Yatra - Trek to the Sacred Himalayan Temple",
         "place_description": "Madmaheshwar, one of the revered Panch Kedar temples dedicated to Lord Shiva, is located in the Garhwal Himalayas. Surrounded by alpine meadows and snow-capped peaks, the temple offers a spiritual trekking experience filled with peace, devotion, and natural beauty.",
         "itineraryDayWiseList": [
@@ -2921,7 +2921,7 @@ const newTourPackages = [
         "budget": 5499,
         "price": "₹5,499.00",
         "old_price": "₹5,899.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_mukteshwar-kainchi-dham.jpg",
         "alt": "Mukteshwar & Kainchi Dham Package",
         "place_description": "Mukteshwar and Kainchi Dham offer a perfect mix of spirituality and natural charm. Mukteshwar is famous for its serene views, temples, and short hikes, while Kainchi Dham Ashram is a highly revered spiritual site attracting thousands of devotees seeking peace and blessings. This trip gives you Himalayan beauty and soulful experiences together.",
         "itineraryDayWiseList": [
@@ -3115,7 +3115,7 @@ const newTourPackages = [
         "budget": 6999,
         "price": "₹6,999.00",
         "old_price": "₹7,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_udaipur-mount-abu.jpg",
         "alt": "Udaipur & Mount Abu Tour Package",
         "place_description": "Udaipur and Mount Abu together offer the perfect blend of royal heritage and natural beauty. Explore palaces, serene lakes, ancient temples, hilltops, and vibrant markets. Experience the charm of Rajasthan’s romantic city along with the cool, spiritual vibes of Mount Abu.",
         "itineraryDayWiseList": [
@@ -3208,7 +3208,7 @@ const newTourPackages = [
         "budget": 6999,
         "price": "₹6,999.00",
         "old_price": "₹7,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_udaipur-kumbhalgarh.jpg",
         "alt": "Udaipur & Kumbhalgarh Tour Package",
         "place_description": "Udaipur and Kumbhalgarh bring together Rajasthan’s royal charm and historic grandeur. Explore the serene lakes and palaces of Udaipur along with the mighty Kumbhalgarh Fort, Nathdwara Temple, scenic landscapes, and cultural richness of this heritage region.",
         "itineraryDayWiseList": [
@@ -3300,7 +3300,7 @@ const newTourPackages = [
         "budget": 7999,
         "price": "₹7,999.00",
         "old_price": "₹8,999.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_valley-of-flower.jpeg",
         "alt": "Valley of Flowers Trek Package",
         "place_description": "Valley of Flowers, a UNESCO World Heritage Site, is a vibrant national park in Uttarakhand. Famous for its alpine meadows, rare Himalayan flora, and breathtaking landscapes, it offers a serene trekking experience, especially during the monsoon bloom.",
         "itineraryDayWiseList": [
@@ -3406,7 +3406,7 @@ const newTourPackages = [
         "budget": 7999,
         "price": "₹7,999.00",
         "old_price": "₹8,599.00",
-        "image": "images/package_1.jpg",
+        "image": "images/package_yulla-kanda-trek.webp",
         "alt": "Yulla Kanda Trek Package",
         "place_description": "Yulla Kanda Trek is a hidden Himalayan gem in Himachal Pradesh, offering scenic trails, alpine meadows, ancient lake views, and panoramic vistas of the Kinnaur and Spiti valleys. A spiritual adventure with the world's highest Krishna temple.",
         "itineraryDayWiseList": [

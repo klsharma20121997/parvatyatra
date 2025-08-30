@@ -823,7 +823,7 @@
     left: 0;
     border-radius: 10px;
     padding: 20px;
-    background: rgba(0, 0, 0, .3);
+    /* background: rgba(0, 0, 0, .3); */
     display: flex;
     align-items: end;
     justify-content: center;

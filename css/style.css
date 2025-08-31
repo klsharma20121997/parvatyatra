@@ -283,7 +283,7 @@
     .navbar-light {
         position: absolute;
         width: 100%;
-        top: 0;
+        top: 45px;
         left: 0;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
         z-index: 999;
@@ -291,7 +291,7 @@
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: var(--bs-light);
+        background: var(--bs-white);
     }
 
     .navbar-light .navbar-nav .nav-link::before {
@@ -432,14 +432,32 @@
 
 
 /*** Single Page Hero Header Start ***/
-.bg-breadcrumb {
+/* .bg-breadcrumb {
     background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/breadcrumb-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     padding: 150px 0 50px 0;
+} */
+.bg-breadcrumb {
+    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)),
+                url(../img/IMG-20250225-WA0230.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Force the section to take 70% of viewport height */
+    height: 70vh;
+
+    /* Optional: keep text/content centered */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 20px; /* keep small padding left/right */
 }
+
 
 .bg-breadcrumb .breadcrumb-item a {
     color: var(--bs-secondary) !important;

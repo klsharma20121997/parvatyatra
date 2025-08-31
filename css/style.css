@@ -1414,6 +1414,7 @@
     cursor: pointer;
     font-weight: bold;
     border: 1px solid #1a73e8;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .Reviewbtn:hover {

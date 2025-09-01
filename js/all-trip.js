@@ -14,31 +14,127 @@ function bindcategorydata() {
         let destobj = arrDestinations.find(d => d.destination_id === pkl);
 
         let count = newTourPackages.filter(p => p.destination_id === pkl).length;
-        // let count = arrcount.filter(el => el === pkl).length;
+
         const creatediv = document.createElement('div');
         creatediv.classList.add('labelst');
-        creatediv.innerHTML = `<label class="mt-3"><input type="checkbox" onchange="changeCategory()"> <label class="ms-1"> ${destobj.destination_name}</label></label><label class="labelcount mt-3">${count}</label>`;
+        creatediv.innerHTML = `<label class="mt-3"><input type="checkbox" value="${pkl}" checked> <label class="ms-1"> ${destobj?.destination_name ?? pkl}</label></label><label class="labelcount mt-3">${count}</label>`;
 
         labelcategory.appendChild(creatediv);
     })
 
 
     document.querySelectorAll('#labelcategory input[type="checkbox"]').forEach(cb => {
-        cb.addEventListener('change', handlecheck);
+        cb.addEventListener('change', () => {
+            applyFilter();
+        });
     });
 
-
-    function handlecheck() {
-        changeCategory();
-        applyFilter();
-    }
-
     fetchPackages();
-
-
+    applyFilter();
 }
 bindcategorydata();
 // for fetch the category end..
+
+// bindtriptype start...
+function bindTripType() {
+    let tripcategory = [...new Set(arrTripTypes.map(ct => ct.category))];
+
+    let triptype = document.getElementById("triptype");
+    triptype.innerHTML = "";
+
+    tripcategory.forEach((trips) => {
+        let daytrip = arrTripTypes.find((fp) => fp.category === trips);
+
+        let newtrips = newTourPackages.filter((kl) => kl.category === trips).length;
+
+        let tripdiv = document.createElement('div');
+        tripdiv.classList.add("labelst");
+
+        tripdiv.innerHTML = `<label class="mt-2"><input type="checkbox" value="${trips}"> ${daytrip?.category_name ?? trips}</label><label class="labelcount">${newtrips}</label>`;
+
+        triptype.appendChild(tripdiv);
+    })
+
+    document.querySelectorAll('#triptype input[type="checkbox"]').forEach(bc => {
+        bc.addEventListener('change', () => {
+            console.log("that is trip ");
+            applyFilter();
+        });
+    });
+
+    applyFilter();
+}
+bindTripType();
+
+// bindtriptype end...
+
+// fetch the packages start...
+function fetchPackages() {
+    let packageTab = document.getElementById("packageTab");
+    newTourPackages.forEach(pkg => {
+        let pkgdiv = document.createElement('div');
+        pkgdiv.classList.add("packages-item", "package_sec", "mb-4");
+        pkgdiv.setAttribute("data-category", pkg.destination_id);
+        pkgdiv.setAttribute("data-days", pkg.days);
+        pkgdiv.setAttribute("data-budget", pkg.budget);
+
+        pkgdiv.innerHTML = `<div class="packages-img">
+                    <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}">
+                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i> ${pkg.duration}</small>
+                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
+                    </div>
+                    <div class="packages-price py-2 px-4">
+                        <span class="fw-bold">${pkg.price}</span>
+                        <span class="text-light text-decoration-line-through me-2">${pkg.old_price}</span>
+                    </div>
+                </div>
+                <div class="packages-content bg-white">
+                    <div class="p-4 pb-0">
+                        <h5 class="mb-0">${pkg.title}</h5>
+                        <br>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                    </div>
+                    <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="col-6 text-start px-0">
+                            <a class="btn-hover btn text-white py-2 px-4" href="package-details.html?tour=${pkg.tour}" >Read More</a>
+                        </div>
+                        <div class="col-6 text-end px-0">
+                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                        </div>
+                    </div>
+                </div>`;
+        packageTab.appendChild(pkgdiv);
+    })
+}
+// fetch the packages end...  
+
+// for give the filter for budget and duration start...
+
+function applyFilter() {
+    selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => cb.value);
+
+    const packageItems = document.querySelectorAll('#packageTab .packages-item');
+
+    packageItems.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const pkgDuration = parseInt(card.getAttribute('data-days'));
+        const pkgPrice = parseInt(card.getAttribute('data-budget'));
+
+        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
+        const matchDuration = pkgDuration <= maxDuration;
+        const matchBudget = pkgPrice <= maxBudget;
+
+        if (matchCategory && matchDuration && matchBudget) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// for give the filter for budget and duration end
 
 
 document.getElementById('inputslide').addEventListener('input', function () {
@@ -123,89 +219,3 @@ document.querySelectorAll("details").forEach((detail) => {
 // for moving the side bar dropdown smooth end...
 
 
-function changeCategory() {
-    const checkedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
-
-    console.log(checkedCategories);
-
-    const packageItems = document.querySelectorAll('#packageTab .packages-item');
-
-    packageItems.forEach(card => {
-        const cardcategory = card.getAttribute('data-category');
-
-        if (checkedCategories.length === 0 || checkedCategories.includes(cardcategory)) {
-            card.style.display = '';
-        } else {
-            card.style.display = 'none';
-        }
-    })
-}
-
-// fetch the packages start...
-function fetchPackages() {
-    let packageTab = document.getElementById("packageTab");
-    newTourPackages.forEach(pkg => {
-        let pkgdiv = document.createElement('div');
-        pkgdiv.classList.add("packages-item", "package_sec", "mb-4");
-        pkgdiv.setAttribute("data-category", pkg.destination_id);
-        pkgdiv.setAttribute("data-days", pkg.days);
-        pkgdiv.setAttribute("data-budget", pkg.budget);
-
-        pkgdiv.innerHTML = `<div class="packages-img">
-                    <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}">
-                    <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
-                        style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i> ${pkg.duration}</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-users me-2"></i>Group</small>
-                    </div>
-                    <div class="packages-price py-2 px-4">
-                        <span class="fw-bold">${pkg.price}</span>
-                        <span class="text-light text-decoration-line-through me-2">${pkg.old_price}</span>
-                    </div>
-                </div>
-                <div class="packages-content bg-white">
-                    <div class="p-4 pb-0">
-                        <h5 class="mb-0">${pkg.title}</h5>
-                        <br>
-                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
-                    </div>
-                    <div class="row bg-primary rounded-bottom mx-0">
-                        <div class="col-6 text-start px-0">
-                            <a class="btn-hover btn text-white py-2 px-4" href="package-details.html?tour=${pkg.tour}" >Read More</a>
-                        </div>
-                        <div class="col-6 text-end px-0">
-                            <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                        </div>
-                    </div>
-                </div>`;
-        packageTab.appendChild(pkgdiv);
-    })
-}
-// fetch the packages end...  
-
-// for give the filter for budget and duration start...
-
-function applyFilter() {
-    selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => { return cb.closest('label').textContent.trim() });
-
-    const packageItems = document.querySelectorAll('#packageTab .packages-item');
-
-    packageItems.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        const pkgDuration = parseInt(card.getAttribute('data-days'));
-        const pkgPrice = parseInt(card.getAttribute('data-budget'));
-
-        const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
-        const matchDuration = pkgDuration <= maxDuration;
-        const matchBudget = pkgPrice <= maxBudget;
-
-        if (matchCategory && matchDuration && matchBudget) {
-            card.style.display = '';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-// for give the filter for budget and duration end
-//all-trip page end..

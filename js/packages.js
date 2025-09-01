@@ -3550,7 +3550,15 @@ const arrTopSellingTrips = [
 
 const arrTripTypes = [
     {
-        id: "",
-        name: ""
+        "category": "extended_weekend_trips",
+        "category_name": "Extende Weekend Trips"
+    },
+    {
+        "category": "weekend_trips",
+        "category_name": "Weekend Trips"
+    },
+    {
+        "category": "backpacking_trips",
+        "category_name": "Backpacking Trips"
     }
 ]

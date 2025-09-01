@@ -941,29 +941,12 @@ const tourPackages = [
     }
 ];
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const newTourPackages = [
     {
         "id": 8,
         "tour": "chakrata-tigerfall",
-        "category": "Himalayan Getaways",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "CHAKRATA TIGERFALL",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -1038,7 +1021,8 @@ const newTourPackages = [
     {
         "id": 9,
         "tour": "chopta-tungnath-2n3d",
-        "category": "Spiritual & Himalayan Retreats",
+        "category": "weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "CHOPTA TUNGNATH 2N/3D",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -1125,7 +1109,8 @@ const newTourPackages = [
     {
         "id": 10,
         "tour": "hampta-pass-trek",
-        "category": "Himalayan Treks",
+        "category": "backpacking_trips",
+        "destination_id": "himachal_pradesh",
         "title": "HAMPTA PASS TREK",
         "duration": "5 Days, 4 Nights",
         "days": 5,
@@ -1210,7 +1195,8 @@ const newTourPackages = [
     {
         "id": 11,
         "tour": "harshil-valley-gartang-gali",
-        "category": "Himalayan Getaways",
+        "category": "weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "HARSHIL VALLEY & GARTANG GALI 2N/3D",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -1297,7 +1283,8 @@ const newTourPackages = [
     {
         "id": 12,
         "tour": "kanatal-tehri-lake",
-        "category": "Himalayan Getaways",
+        "category": "weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "KANATAL & TEHRI LAKE",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -1367,7 +1354,8 @@ const newTourPackages = [
     {
         "id": 13,
         "tour": "kasol-tosh-2n3d",
-        "category": "Himalayan Getaways",
+        "category": "weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "KASOL & TOSH 2N/3D",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -1456,7 +1444,8 @@ const newTourPackages = [
     {
         "id": 14,
         "tour": "kasol-kheerganga-2n3d",
-        "category": "Himalayan Treks",
+        "category": "weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "KASOL & KHEERGANGA 2N/3D",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -1544,7 +1533,8 @@ const newTourPackages = [
     {
         "id": 15,
         "tour": "kedarnath-badrinath-tungnath-6d5n",
-        "category": "Spiritual Pilgrimages",
+        "category": "backpacking_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH & BADRINATH with TUNGNATH (Do Dham Yatra)",
         "duration": "6 Days, 5 Nights",
         "days": 6,
@@ -1649,7 +1639,8 @@ const newTourPackages = [
     {
         "id": 16,
         "tour": "kedarnath-badrinath-delhi",
-        "category": "Spiritual Pilgrimages",
+        "category": "backpacking_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH & BADRINATH (Delhi to Delhi)",
         "duration": "6 Days, 5 Nights",
         "days": 6,
@@ -1757,7 +1748,8 @@ const newTourPackages = [
     {
         "id": 17,
         "tour": "kedarnath-badrinath-4n5d-delhi",
-        "category": "Spiritual Pilgrimages",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH & BADRINATH (Delhi to Delhi)",
         "duration": "5 Days, 4 Nights",
         "days": 5,
@@ -1863,7 +1855,8 @@ const newTourPackages = [
     {
         "id": 18,
         "tour": "kedarnath-badrinath-4n5d-haridwar",
-        "category": "Spiritual Pilgrimages",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH & BADRINATH (4N/5D) Yatra",
         "duration": "5 Days, 4 Nights",
         "days": 5,
@@ -1964,8 +1957,9 @@ const newTourPackages = [
     {
         "id": 19,
         "tour": "kedarnath-tungnath-3n4d",
-        "category": "Spiritual Pilgrimages",
-        "title": "KEDARNATH & TUNGNATH (3N/4D)",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
+        "title": "KEDARNATH & TUNGNATH (3N/4D) | Ex - Delhi",
         "duration": "4 Days, 3 Nights",
         "days": 4,
         "nights": 3,
@@ -2065,15 +2059,16 @@ const newTourPackages = [
     {
         "id": 20,
         "tour": "kedarnath-tungnath-3n4d-haridwar",
-        "category": "Spiritual Pilgrimages",
-        "title": "KEDARNATH & TUNGNATH (3N/4D)",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
+        "title": "KEDARNATH & TUNGNATH (3N/4D) | Ex - Haridwar",
         "duration": "4 Days, 3 Nights",
         "days": 4,
         "nights": 3,
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
-         "image": "images/package_kedarnath-badrinath-tungnath.png",
+        "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Kedarnath & Tungnath - Do Dham Yatra from Haridwar",
         "place_description": "Kedarnath Temple, a revered Himalayan shrine, is over a thousand years old and dedicated to Lord Shiva. Tungnath, the highest Shiva temple in the world and part of the Panch Kedar, adds to this sacred pilgrimage with divine vibes and stunning Himalayan landscapes.",
         "itineraryDayWiseList": [
@@ -2159,7 +2154,8 @@ const newTourPackages = [
     {
         "id": 21,
         "tour": "kedarnath-3n4d-delhi",
-        "category": "Spiritual Pilgrimages",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH (3N/4D) Yatra",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -2167,7 +2163,7 @@ const newTourPackages = [
         "budget": 8999,
         "price": "₹8,999.00",
         "old_price": "₹9,999.00",
-         "image": "images/package_kedarnath.jpg",
+        "image": "images/package_kedarnath.jpg",
         "alt": "Kedarnath 3N/4D Yatra - Ex Delhi",
         "place_description": "Kedarnath Temple, a sacred Himalayan shrine, is one of the holiest pilgrimage sites of Lord Shiva. Nestled among majestic mountains, it offers divine blessings, spiritual peace, and a journey filled with faith and breathtaking views.",
         "itineraryDayWiseList": [
@@ -2259,7 +2255,8 @@ const newTourPackages = [
     {
         "id": 22,
         "tour": "kedarnath-3n4d-haridwar",
-        "category": "Spiritual Pilgrimages",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "KEDARNATH (3N/4D) Yatra",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -2352,7 +2349,8 @@ const newTourPackages = [
     {
         "id": 23,
         "tour": "madhmaheshwar-3n4d",
-        "category": "Spiritual & Trekking Pilgrimages",
+        "category": "extended_weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "MADHMAHESHWAR (3N/4D) Yatra",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -2443,7 +2441,8 @@ const newTourPackages = [
     {
         "id": 24,
         "tour": "manali-rohtang-kasol-2n3d",
-        "category": "Himalayan Adventures",
+        "category": "weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Manali, Rohtang & Kasol (2N/3D)",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -2531,7 +2530,8 @@ const newTourPackages = [
     {
         "id": 25,
         "tour": "manali-rohtang-kasol-3n4d",
-        "category": "Himalayan Adventures",
+        "category": "extended_weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Manali, Rohtang & Kasol (3N/4D)",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -2632,7 +2632,8 @@ const newTourPackages = [
     {
         "id": 26,
         "tour": "manali-sissu-kasol-2n3d",
-        "category": "Himalayan Adventures",
+        "category": "weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Manali, Sissu & Kasol (2N/3D)",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -2721,7 +2722,8 @@ const newTourPackages = [
     {
         "id": 27,
         "tour": "manali-sissu-kasol-3n4d",
-        "category": "Himalayan Adventures",
+        "category": "extended_weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Manali, Sissu & Kasol (3N/4D)",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -2822,7 +2824,8 @@ const newTourPackages = [
     {
         "id": 28,
         "tour": "mcleodganj-triund-2n3d",
-        "category": "Himalayan Treks",
+        "category": "weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "McLeodganj & Triund Trek (2N/3D)",
         "duration": "3 Nights, 2 Days",
         "days": 3,
@@ -2830,7 +2833,7 @@ const newTourPackages = [
         "budget": 6500,
         "price": "₹6,500.00",
         "old_price": "₹7,500.00",
-         "image": "images/package_mcleodganj-triund.jpg",
+        "image": "images/package_mcleodganj-triund.jpg",
         "alt": "McLeodganj & Triund Trek Package",
         "place_description": "McLeodganj and Triund together offer a blend of Tibetan culture, spirituality, and adventure. The Triund trek is one of the most popular short treks in Himachal Pradesh, rewarding you with breathtaking panoramic views of the Dhauladhar range, peaceful camping under the stars, and vibrant cultural vibes in McLeodganj.",
         "itineraryDayWiseList": [
@@ -2913,7 +2916,8 @@ const newTourPackages = [
     {
         "id": 29,
         "tour": "mukteshwar-kainchi-dham-2n3d",
-        "category": "Uttarakhand Tours",
+        "category": "weekend_trips",
+        "destination_id": "uttarakhand",
         "title": "Mukteshwar & Kainchi Dham (2N/3D)",
         "duration": "3 Nights, 2 Days",
         "days": 3,
@@ -2993,7 +2997,8 @@ const newTourPackages = [
     {
         "id": 30,
         "tour": "spiti-valley-6n7d",
-        "category": "Himachal Tours",
+        "category": "backpacking_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Spiti Valley (6N/7D)",
         "duration": "7 Days, 6 Nights",
         "days": 7,
@@ -3107,7 +3112,8 @@ const newTourPackages = [
     {
         "id": 31,
         "tour": "udaipur-mount-abu-3n4d",
-        "category": "Rajasthan Tours",
+        "category": "backpacking_trips",
+        "destination_id": "rajasthan",
         "title": "Udaipur & Mount Abu (3N/4D)",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -3200,7 +3206,8 @@ const newTourPackages = [
     {
         "id": 32,
         "tour": "udaipur-kumbhalgarh-3n4d",
-        "category": "Rajasthan Tours",
+        "category": "backpacking_trips",
+        "destination_id": "rajasthan",
         "title": "Udaipur & Kumbhalgarh (3N/4D)",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -3292,7 +3299,8 @@ const newTourPackages = [
     {
         "id": 33,
         "tour": "valley-of-flowers-6d5n",
-        "category": "Uttarakhand Treks",
+        "category": "backpacking_trips",
+        "destination_id": "uttarakhand",
         "title": "Valley of Flowers Trek (6D/5N)",
         "duration": "6 Days, 5 Nights",
         "days": 6,
@@ -3398,7 +3406,8 @@ const newTourPackages = [
     {
         "id": 34,
         "tour": "yulla-kanda-trek-5d4n",
-        "category": "Himachal Treks",
+        "category": "extended_weekend_trips",
+        "destination_id": "himachal_pradesh",
         "title": "Yulla Kanda Trek (5D/4N)",
         "duration": "5 Days, 4 Nights",
         "days": 5,
@@ -3487,3 +3496,61 @@ const newTourPackages = [
         ]
     }
 ];
+
+const arrDestinations = [
+    {
+        "id": 1,
+        "destination_id": "himachal_pradesh",
+        "destination_name": "Himachal Pradesh",
+        "image": "images/package_mcleodganj-triund.jpg",
+        "alt": "McLeodganj Triund - A Himalayan Camping and Trekking Experience",
+    },
+    {
+        "id": 2,
+        "destination_id": "uttarakhand",
+        "destination_name": "Uttarakhand",
+        "image": "images/package_valley-of-flower.jpeg",
+        "alt": "Valley of Flowers Trek Package",
+    },
+    {
+        "id": 3,
+        "destination_id": "rajasthan",
+        "destination_name": "Rajasthan",
+        "image": "images/package_udaipur-mount-abu.jpg",
+        "alt": "Udaipur & Mount Abu Tour Package",
+    }
+];
+
+const arrTopSellingTrips = [
+    {
+        "id": 1,
+        "top_selling_trip_id": "chopta-tungnath-2n3d"
+    },
+    {
+        "id": 2,
+        "top_selling_trip_id": "kasol-tosh-2n3d"
+    },
+    {
+        "id": 3,
+        "top_selling_trip_id": "manali-rohtang-kasol-2n3d"
+    },
+    {
+        "id": 4,
+        "top_selling_trip_id": "manali-sissu-kasol-2n3d"
+    },
+    {
+        "id": 5,
+        "top_selling_trip_id": "kedarnath-tungnath-3n4d"
+    },
+    {
+        "id": 6,
+        "top_selling_trip_id": "udaipur-kumbhalgarh-3n4d"
+    }
+];
+
+const arrTripTypes = [
+    {
+        id: "",
+        name: ""
+    }
+]

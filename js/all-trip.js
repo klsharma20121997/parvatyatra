@@ -1,4 +1,5 @@
 let selectedCategories = [];
+let tripCategories = [];
 let maxDuration = 15;
 let maxBudget = 50000;
 
@@ -31,6 +32,7 @@ function bindcategorydata() {
 
     fetchPackages();
     applyFilter();
+    bindTripType();
 }
 bindcategorydata();
 // for fetch the category end..
@@ -50,7 +52,7 @@ function bindTripType() {
         let tripdiv = document.createElement('div');
         tripdiv.classList.add("labelst");
 
-        tripdiv.innerHTML = `<label class="mt-2"><input type="checkbox" value="${trips}"> ${daytrip?.category_name ?? trips}</label><label class="labelcount">${newtrips}</label>`;
+        tripdiv.innerHTML = `<label class="mt-3"><input type="checkbox" value="${trips}" checked><label class="ms-2"> ${daytrip?.category_name ?? trips}</label> </label><label class="labelcount">${newtrips}</label>`;
 
         triptype.appendChild(tripdiv);
     })
@@ -64,7 +66,8 @@ function bindTripType() {
 
     applyFilter();
 }
-bindTripType();
+// bindTripType();
+
 
 // bindtriptype end...
 
@@ -77,6 +80,7 @@ function fetchPackages() {
         pkgdiv.setAttribute("data-category", pkg.destination_id);
         pkgdiv.setAttribute("data-days", pkg.days);
         pkgdiv.setAttribute("data-budget", pkg.budget);
+        pkgdiv.setAttribute("trip-category", pkg.category);
 
         pkgdiv.innerHTML = `<div class="packages-img">
                     <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}">
@@ -115,18 +119,22 @@ function fetchPackages() {
 function applyFilter() {
     selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => cb.value);
 
+     tripCategories = Array.from(document.querySelectorAll('#triptype input[type="checkbox"]:checked')).map(bb => bb.value);
+
     const packageItems = document.querySelectorAll('#packageTab .packages-item');
 
     packageItems.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         const pkgDuration = parseInt(card.getAttribute('data-days'));
         const pkgPrice = parseInt(card.getAttribute('data-budget'));
+        const pkgcategory = card.getAttribute('trip-category');
 
         const matchCategory = selectedCategories.length === 0 || selectedCategories.includes(cardCategory);
         const matchDuration = pkgDuration <= maxDuration;
         const matchBudget = pkgPrice <= maxBudget;
+        const pfdCategory = tripCategories.length === 0 || tripCategories.includes(pkgcategory);
 
-        if (matchCategory && matchDuration && matchBudget) {
+        if (matchCategory && matchDuration && matchBudget && pfdCategory) {
             card.style.display = '';
         } else {
             card.style.display = 'none';
@@ -165,6 +173,7 @@ document.querySelector('.clearall').addEventListener('click', function () {
     document.getElementById('budgetslide').value = 50000;
 
     Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]')).map(cb => cb.checked = false);
+    Array.from(document.querySelectorAll('#triptype input[type="checkbox"]')).map(bb=>bb.checked=false);
     applyFilter();
 })
 

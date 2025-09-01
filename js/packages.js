@@ -1355,7 +1355,7 @@ const newTourPackages = [
         "id": 13,
         "tour": "kasol-tosh-2n3d",
         "category": "weekend_trips",
-         "destination_id": "himachal_pradesh",
+        "destination_id": "himachal_pradesh",
         "title": "KASOL & TOSH 2N/3D",
         "duration": "3 Days, 2 Nights",
         "days": 3,
@@ -2068,7 +2068,7 @@ const newTourPackages = [
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
-         "image": "images/package_kedarnath-badrinath-tungnath.png",
+        "image": "images/package_kedarnath-badrinath-tungnath.png",
         "alt": "Kedarnath & Tungnath - Do Dham Yatra from Haridwar",
         "place_description": "Kedarnath Temple, a revered Himalayan shrine, is over a thousand years old and dedicated to Lord Shiva. Tungnath, the highest Shiva temple in the world and part of the Panch Kedar, adds to this sacred pilgrimage with divine vibes and stunning Himalayan landscapes.",
         "itineraryDayWiseList": [
@@ -2163,7 +2163,7 @@ const newTourPackages = [
         "budget": 8999,
         "price": "₹8,999.00",
         "old_price": "₹9,999.00",
-         "image": "images/package_kedarnath.jpg",
+        "image": "images/package_kedarnath.jpg",
         "alt": "Kedarnath 3N/4D Yatra - Ex Delhi",
         "place_description": "Kedarnath Temple, a sacred Himalayan shrine, is one of the holiest pilgrimage sites of Lord Shiva. Nestled among majestic mountains, it offers divine blessings, spiritual peace, and a journey filled with faith and breathtaking views.",
         "itineraryDayWiseList": [
@@ -2825,7 +2825,7 @@ const newTourPackages = [
         "id": 28,
         "tour": "mcleodganj-triund-2n3d",
         "category": "weekend_trips",
-         "destination_id": "himachal_pradesh",
+        "destination_id": "himachal_pradesh",
         "title": "McLeodganj & Triund Trek (2N/3D)",
         "duration": "3 Nights, 2 Days",
         "days": 3,
@@ -2833,7 +2833,7 @@ const newTourPackages = [
         "budget": 6500,
         "price": "₹6,500.00",
         "old_price": "₹7,500.00",
-         "image": "images/package_mcleodganj-triund.jpg",
+        "image": "images/package_mcleodganj-triund.jpg",
         "alt": "McLeodganj & Triund Trek Package",
         "place_description": "McLeodganj and Triund together offer a blend of Tibetan culture, spirituality, and adventure. The Triund trek is one of the most popular short treks in Himachal Pradesh, rewarding you with breathtaking panoramic views of the Dhauladhar range, peaceful camping under the stars, and vibrant cultural vibes in McLeodganj.",
         "itineraryDayWiseList": [
@@ -2917,7 +2917,7 @@ const newTourPackages = [
         "id": 29,
         "tour": "mukteshwar-kainchi-dham-2n3d",
         "category": "weekend_trips",
-         "destination_id": "uttarakhand",
+        "destination_id": "uttarakhand",
         "title": "Mukteshwar & Kainchi Dham (2N/3D)",
         "duration": "3 Nights, 2 Days",
         "days": 3,
@@ -2998,7 +2998,7 @@ const newTourPackages = [
         "id": 30,
         "tour": "spiti-valley-6n7d",
         "category": "backpacking_trips",
-         "destination_id": "himachal_pradesh",
+        "destination_id": "himachal_pradesh",
         "title": "Spiti Valley (6N/7D)",
         "duration": "7 Days, 6 Nights",
         "days": 7,
@@ -3207,6 +3207,7 @@ const newTourPackages = [
         "id": 32,
         "tour": "udaipur-kumbhalgarh-3n4d",
         "category": "backpacking_trips",
+        "destination_id": "rajasthan",
         "title": "Udaipur & Kumbhalgarh (3N/4D)",
         "duration": "4 Days, 3 Nights",
         "days": 4,
@@ -3533,7 +3534,7 @@ const arrTopSellingTrips = [
         "id": 3,
         "top_selling_trip_id": "manali-rohtang-kasol-2n3d"
     },
-     {
+    {
         "id": 4,
         "top_selling_trip_id": "manali-sissu-kasol-2n3d"
     },
@@ -3546,3 +3547,10 @@ const arrTopSellingTrips = [
         "top_selling_trip_id": "udaipur-kumbhalgarh-3n4d"
     }
 ];
+
+const arrTripTypes = [
+    {
+        id: "",
+        name: ""
+    }
+]

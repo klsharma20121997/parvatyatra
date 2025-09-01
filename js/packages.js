@@ -3561,4 +3561,4 @@ const arrTripTypes = [
         "category": "backpacking_trips",
         "category_name": "Backpacking Trips"
     }
-]
+];

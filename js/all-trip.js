@@ -14,6 +14,7 @@ function bindcategorydata() {
     categories.forEach(pkl => {
         let destobj = arrDestinations.find(d => d.destination_id === pkl);
 
+
         let count = newTourPackages.filter(p => p.destination_id === pkl).length;
 
         const creatediv = document.createElement('div');
@@ -82,8 +83,8 @@ function fetchPackages() {
         pkgdiv.setAttribute("data-budget", pkg.budget);
         pkgdiv.setAttribute("trip-category", pkg.category);
 
-        pkgdiv.innerHTML = `<div class="packages-img">
-                    <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}">
+        pkgdiv.innerHTML = `<div class="packages-img" style="cursor:pointer">
+                    <img src="${pkg.image}" class="img-fluid rounded-top" alt="${pkg.alt}"> 
                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
                         style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                         <small class="flex-fill text-center border-end py-2"><i class="fa fa-calendar-alt me-2"></i> ${pkg.duration}</small>
@@ -102,16 +103,24 @@ function fetchPackages() {
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">
-                            <a class="btn-hover btn text-white py-2 px-4" href="package-details.html?tour=${pkg.tour}" >Read More</a>
+                            <a class="btn-hover btn text-white py-2 px-4" href="package-details.html?tour=${pkg.tour}" target="_blank">Read More</a>
                         </div>
                         <div class="col-6 text-end px-0">
                             <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
                         </div>
                     </div>
                 </div>`;
+
+        pkgdiv.querySelector(".packages-img").addEventListener('click', () => {
+            // window.location.href=`package-details.html?tour=${pkg.tour}`;
+            let url = `package-details.html?tour=${pkg.tour}`;
+            window.open(url, '_blank');
+        })
+
         packageTab.appendChild(pkgdiv);
     })
 }
+
 // fetch the packages end...  
 
 // for give the filter for budget and duration start...
@@ -119,7 +128,7 @@ function fetchPackages() {
 function applyFilter() {
     selectedCategories = Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]:checked')).map(cb => cb.value);
 
-     tripCategories = Array.from(document.querySelectorAll('#triptype input[type="checkbox"]:checked')).map(bb => bb.value);
+    tripCategories = Array.from(document.querySelectorAll('#triptype input[type="checkbox"]:checked')).map(bb => bb.value);
 
     const packageItems = document.querySelectorAll('#packageTab .packages-item');
 
@@ -160,12 +169,7 @@ document.getElementById('budgetslide').addEventListener('input', function () {
     applyFilter();
 })
 
-// for clear all button
-document.querySelector('.clearall').addEventListener('click', function () {
-    selectedCategories = [];
-    maxDuration = 15;
-    maxBudget = 50000;
-
+function cleardata() {
     document.getElementById('sliderValue').innerText = "15 days";
     document.getElementById('inputslide').value = 15;
 
@@ -173,9 +177,16 @@ document.querySelector('.clearall').addEventListener('click', function () {
     document.getElementById('budgetslide').value = 50000;
 
     Array.from(document.querySelectorAll('#labelcategory input[type="checkbox"]')).map(cb => cb.checked = false);
-    Array.from(document.querySelectorAll('#triptype input[type="checkbox"]')).map(bb=>bb.checked=false);
+    Array.from(document.querySelectorAll('#triptype input[type="checkbox"]')).map(bb => bb.checked = false);
     applyFilter();
+}
+
+// for clear all button
+document.querySelector('.clearall').addEventListener('click', function () {
+    cleardata();
 })
+
+
 
 // for moving the side bar dropdown smooth start...
 
@@ -206,7 +217,8 @@ document.querySelectorAll("details").forEach((detail) => {
             setTimeout(() => {
                 detail.removeAttribute("open");
                 content.style.maxHeight = null;
-            }, 400); // Match your transition duration
+            }, 400); // Match your transition duration.
+
         } else {
             // If closed, open it smoothly
             detail.setAttribute("open", "");
@@ -225,6 +237,31 @@ document.querySelectorAll("details").forEach((detail) => {
         }
     });
 });
+
 // for moving the side bar dropdown smooth end...
 
+// fetch the destination(statewise) from url  start... 
+function destinationparam(param) {
+    let urlsearch = new URLSearchParams(window.location.search);
+    return urlsearch.get(param);
+}
 
+    let destination = destinationparam('destination');
+    
+    if (destination) {
+        cleardata();
+
+      let cb =  document.querySelector(`#labelcategory input[type='checkbox'][value="${destination}"]`);
+      if(cb){
+        cb.checked = true;
+      }
+        applyFilter();
+    }
+
+
+
+
+// console.log(destination);
+
+
+// fetch the destination(statewise) from url  end... 

@@ -294,8 +294,8 @@
                                 <img src="img/weekend-trips.jpg" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="international-content">
                                     <div class="international-info">
-                                        <a href="#" class="btn-hover text-white">View All Packages <i
-                                                class="fa fa-arrow-right ms-2"></i></a>
+                                        <span class="btn-hover text-white">View All Packages <i
+                                                class="fa fa-arrow-right ms-2"></i></span>
                                     </div>
                                 </div>
                                 <!-- <div class="tour-offer bg-success">30% Off</div> -->
@@ -377,7 +377,7 @@
                         </a>
                     </li>
                 </ul>
-                
+
                 <div class="tab-content">
                     <div id="NationalTab-1" class="tab-pane fade show p-0 active">
                         <div class="row g-4" id="destinationmain">
@@ -397,12 +397,13 @@
                 <h5 class="section-title px-3"> Trips </h5>
                 <h1 class="mb-0">Most Booked Trips</h1>
                 <div class="d-flex justify-content-end" style="margin-bottom:55px; padding:0;">
-                    <a href="all-trip.html" type="button" class="seeallbtn btn btn-outline-primary px-2">See
+                    <a href="all-trip.html" target="_blank" type="button"
+                        class="seeallbtn btn btn-outline-primary px-2">See
                         All <span class="btnarrow ms-2 h5">&gt</span></a>
                 </div>
             </div>
-            <div class="packages-carousel owl-carousel">
-                <div class="packages-item">
+            <div class="packages-carousel owl-carousel" id="topSelling">
+                <!-- <div class="packages-item">
                     <div class="packages-img">
                         <img src="img/packages-4.jpg" class="img-fluid w-100 rounded-top" alt="Image">
                         <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
@@ -549,7 +550,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -576,7 +577,8 @@
                         <span style="color:#888; font-size:14px;">(144)</span>
                     </div>
                 </div>
-                <button type="button" class="btn Reviewbtn" onclick="window.open('https://share.google/B7Bg4CrIRf0PBikWS', '_blank')">
+                <button type="button" class="btn Reviewbtn"
+                    onclick="window.open('https://share.google/B7Bg4CrIRf0PBikWS', '_blank')">
                     Review us on Google
                 </button>
 
@@ -800,23 +802,29 @@
                         ladakh, Spiti Valley, Kerala and Goa.</p>
                     <div class="row gy-2 gx-4 mb-4">
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>Customized Trips</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2"
+                                    style="color:var(--bs-primary);"></i>Customized Trips</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>Personalized Planning</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2"
+                                    style="color:var(--bs-primary);"></i>Personalized Planning</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>24/7 Professional Support
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2" style="color:var(--bs-primary);"></i>24/7
+                                Professional Support
                             </p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>Diverse Destinations</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2"
+                                    style="color:var(--bs-primary);"></i>Diverse Destinations</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>Pilgrimage Tours</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2"
+                                    style="color:var(--bs-primary);"></i>Pilgrimage Tours</p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right me-2"  style="color:var(--bs-primary);"></i>Char Dham Yatra</p>
+                            <p class="mb-0"><i class="fa fa-arrow-right me-2" style="color:var(--bs-primary);"></i>Char
+                                Dham Yatra</p>
                         </div>
                     </div>
                 </div>
@@ -972,6 +980,14 @@
 
     <!-- popupbox on book now end -->
 
+    <script src="js/packages.js"></script>
+
+
+
+    <!-- Bootstrap JS & Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -983,13 +999,15 @@
 
 
     <!-- Template Javascript -->
-    <script src="js/packages.js"></script>
 
-    <script src="js/main.js"></script>
-
+   <script src="js/main.js"></script>
     <script>
         destinations();
+        mostBookedTour();
     </script>
+   
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </body>
 
 </html>

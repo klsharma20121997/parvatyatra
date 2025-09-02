@@ -170,32 +170,27 @@ function destinations() {
         let topSelling = document.getElementById("topSelling");
 
         topSelling.innerHTML = "";
-
-        let arrtopselling = [...new Set(arrTopSellingTrips.map(pl => pl.top_selling_trip_id))];
-
-        arrtopselling.forEach((mosttour) => {
-            let topobj = arrTopSellingTrips.find((bl) => bl.top_selling_trip_id === mosttour);
-
-            let topfilteredobj = newTourPackages.filter((gb) => gb.tour === mosttour);
-
-            let creatediv = document.createElement('div');
+        
+        arrTopSellingTrips.forEach((topSellTour) => {
+           let topfilteredobj = newTourPackages.find((gb) => gb.tour === topSellTour.top_selling_trip_id);
+           let creatediv = document.createElement('div');
             creatediv.classList.add("packages-item");
 
             creatediv.innerHTML = `<div class="packages-img">
-                        <img src="${topfilteredobj[0].image}" class="img-fluid w-100 rounded-top" alt="Image">
+                        <img src="${topfilteredobj.image}" class="img-fluid w-100 rounded-top" alt="Image">
                         <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
                             style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                             <small class="flex-fill text-center border-end py-2"><i
                                     class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-calendar-alt me-2"></i>${topfilteredobj[0].days} days</small>
+                                    class="fa fa-calendar-alt me-2"></i>${topfilteredobj.days} days</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
                         </div>
-                        <div class="packages-price py-2 px-4">${topfilteredobj[0].price}</div>
+                        <div class="packages-price py-2 px-4">${topfilteredobj.price}</div>
                     </div>
                     <div class="packages-content bg-light">
                         <div class="p-4 pb-0">
-                            <h5 class="mb-0">${topfilteredobj[0].title}</h5>
+                            <h5 class="mb-0">${topfilteredobj.title}</h5>
                             <small class="text-uppercase">Hotel Deals</small>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
@@ -218,8 +213,6 @@ function destinations() {
                     </div>`;
 
             topSelling.appendChild(creatediv);
-            // console.log(topobj);
-            // console.log(arrtopfilteredobj);
         });
     }
 

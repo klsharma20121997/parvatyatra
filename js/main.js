@@ -166,62 +166,55 @@ function destinations() {
 
 //fetch the most booked tour start...     <a href="package-details.html?destination=${card.destination_id}" target="_blank"  style = "text-decoration:none" >
 
-    function mostBookedTour() {
-        let topSelling = document.getElementById("topSelling");
+    // function mostBookedTour() {
+    //     let topSelling = document.getElementById("topSelling");
 
-        topSelling.innerHTML = "";
+    //     topSelling.innerHTML = "";
+        
+    //     arrTopSellingTrips.forEach((topSellTour) => {
+    //        let topfilteredobj = newTourPackages.find((gb) => gb.tour === topSellTour.top_selling_trip_id);
+    //        let creatediv = document.createElement('div');
+    //         creatediv.classList.add("packages-item");
 
-        let arrtopselling = [...new Set(arrTopSellingTrips.map(pl => pl.top_selling_trip_id))];
+    //         creatediv.innerHTML = `<div class="packages-img">
+    //                     <img src="${topfilteredobj.image}" class="img-fluid w-100 rounded-top" alt="Image">
+    //                     <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
+    //                         style="width: 100%; bottom: 0; left: 0; z-index: 5;">
+    //                         <small class="flex-fill text-center border-end py-2"><i
+    //                                 class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
+    //                         <small class="flex-fill text-center border-end py-2"><i
+    //                                 class="fa fa-calendar-alt me-2"></i>${topfilteredobj.days} days</small>
+    //                         <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
+    //                     </div>
+    //                     <div class="packages-price py-2 px-4">${topfilteredobj.price}</div>
+    //                 </div>
+    //                 <div class="packages-content bg-light">
+    //                     <div class="p-4 pb-0">
+    //                         <h5 class="mb-0">${topfilteredobj.title}</h5>
+    //                         <small class="text-uppercase">Hotel Deals</small>
+    //                         <div class="mb-3">
+    //                             <small class="fa fa-star text-primary"></small>
+    //                             <small class="fa fa-star text-primary"></small>
+    //                             <small class="fa fa-star text-primary"></small>
+    //                             <small class="fa fa-star text-primary"></small>
+    //                             <small class="fa fa-star text-primary"></small>
+    //                         </div>
+    //                         <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
+    //                             quae illum aperiam fugiat voluptatem repellat</p>
+    //                     </div>
+    //                     <div class="row bg-primary rounded-bottom mx-0">
+    //                         <div class="col-6 text-start px-0">
+    //                             <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+    //                         </div>
+    //                         <div class="col-6 text-end px-0">
+    //                             <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+    //                         </div>
+    //                     </div>
+    //                 </div>`;
 
-        arrtopselling.forEach((mosttour) => {
-            let topobj = arrTopSellingTrips.find((bl) => bl.top_selling_trip_id === mosttour);
-
-            let topfilteredobj = newTourPackages.filter((gb) => gb.tour === mosttour);
-
-            let creatediv = document.createElement('div');
-            creatediv.classList.add("packages-item");
-
-            creatediv.innerHTML = `<div class="packages-img">
-                        <img src="${topfilteredobj[0].image}" class="img-fluid w-100 rounded-top" alt="Image">
-                        <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
-                            style="width: 100%; bottom: 0; left: 0; z-index: 5;">
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-calendar-alt me-2"></i>${topfilteredobj[0].days} days</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
-                        </div>
-                        <div class="packages-price py-2 px-4">${topfilteredobj[0].price}</div>
-                    </div>
-                    <div class="packages-content bg-light">
-                        <div class="p-4 pb-0">
-                            <h5 class="mb-0">${topfilteredobj[0].title}</h5>
-                            <small class="text-uppercase">Hotel Deals</small>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                            </div>
-                            <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt nemo quia
-                                quae illum aperiam fugiat voluptatem repellat</p>
-                        </div>
-                        <div class="row bg-primary rounded-bottom mx-0">
-                            <div class="col-6 text-start px-0">
-                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
-                            </div>
-                            <div class="col-6 text-end px-0">
-                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
-                            </div>
-                        </div>
-                    </div>`;
-
-            topSelling.appendChild(creatediv);
-            // console.log(topobj);
-            // console.log(arrtopfilteredobj);
-        });
-    }
+    //         topSelling.appendChild(creatediv);
+    //     });
+    // }
 
 
 //fetch the most booked tour end...

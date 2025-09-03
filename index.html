@@ -290,7 +290,8 @@
                 <div class="tab-content">
                     <div id="InternationalTab-2" class="tab-pane fade show p-0 active">
                         <div class="InternationalTour-carousel owl-carousel">
-                            <div style="cursor:pointer;" class="international-item" onclick="window.location.href='all-trip.html?triptype=weekend-trips'">
+                            <div style="cursor:pointer;" class="international-item"
+                                onclick="window.open('all-trip.html?triptype=weekend_trips', '_blank')">
                                 <img src="img/weekend-trips.jpg" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="international-content">
                                     <div class="international-info">
@@ -303,7 +304,8 @@
                                     <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                 </div>
                             </div>
-                            <div class="international-item">
+                            <div class="international-item"
+                                onclick="window.open('all-trip.html?triptype=extended_weekend_trips','_blank')">
                                 <img src="img/extend-weekend-trips.jpg" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="international-content">
                                     <div class="international-info">
@@ -315,7 +317,8 @@
                                     <a href="#" class="my-auto"><i class="fas fa-link fa-2x text-white"></i></a>
                                 </div>
                             </div>
-                            <div class="international-item">
+                            <div class="international-item"
+                                onclick="window.open('all-trip.html?triptype=backpacking_trips')">
                                 <img src="img/backpacking-trips.jpg" class="img-fluid w-100 rounded" alt="Image">
                                 <div class="international-content">
                                     <div class="international-info">
@@ -989,17 +992,16 @@
 
             arrTopSellingTrips.forEach((topSellTour) => {
                 let topfilteredobj = newTourPackages.find((gb) => gb.tour === topSellTour.top_selling_trip_id);
+                console.log(topfilteredobj);
                 let creatediv = document.createElement('div');
                 creatediv.classList.add("packages-item");
 
-                creatediv.innerHTML = `<div class="packages-img">
+                creatediv.innerHTML = `<div class="packages-img" style="cursor:pointer;">
                         <img src="${topfilteredobj.image}" class="img-fluid w-100 rounded-top" alt="Image">
                         <div class="packages-info d-flex border border-start-0 border-end-0 position-absolute"
                             style="width: 100%; bottom: 0; left: 0; z-index: 5;">
                             <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-map-marker-alt me-2"></i>Venice - Italy</small>
-                            <small class="flex-fill text-center border-end py-2"><i
-                                    class="fa fa-calendar-alt me-2"></i>${topfilteredobj.days} days</small>
+                                    class="fa fa-calendar-alt me-2"></i>${topfilteredobj.duration}</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-user me-2"></i>2 Person</small>
                         </div>
                         <div class="packages-price py-2 px-4">${topfilteredobj.price}</div>
@@ -1019,13 +1021,18 @@
                         </div>
                         <div class="row bg-primary rounded-bottom mx-0">
                             <div class="col-6 text-start px-0">
-                                <a href="#" class="btn-hover btn text-white py-2 px-4">Read More</a>
+                                <a href="package-details.html?tour=${topfilteredobj.tour}" target="_blank" class="btn-hover btn text-white py-2 px-4">Read More</a>
                             </div>
                             <div class="col-6 text-end px-0">
-                                <a href="#" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                                <button class="btn-hover btn text-white py-2 px-4" data-bs-toggle="modal"
+                    data-bs-target="#bookingmodal">Book Now</button>
                             </div>
                         </div>
                     </div>`;
+
+                creatediv.querySelector('.packages-img').addEventListener('click', () => {
+                    window.open(`package-details.html?tour=${topfilteredobj.tour}`, '_blank');
+                })
 
                 topSelling.appendChild(creatediv);
             });

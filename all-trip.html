@@ -247,18 +247,10 @@
                     </div>
                 </details>
                 <hr>
-                <details>
+                <details id="tripdrop" open>
                     <summary>Trip Types</summary>
                     <div class="dropdown-content" id="triptype">
-                        <!-- <label><input type="checkbox"> Europe</label><br> -->
-                        <!-- <div class="labelst"><label class="mt-2"><input type="checkbox"> Backpacking Trips</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Biking Trips</label><label
-                                class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Extended Weekend
-                                Trips</label><label class="labelcount">5</label></div>
-                        <div class="labelst"><label class="mt-2"><input type="checkbox"> Himachal
-                                Backpacking</label><label class="labelcount">5</label></div> -->
+                       <!-- dynamic trip type will insert here.. -->
                     </div>
                 </details>
             </div>
@@ -331,6 +323,69 @@
     </div>
 
     <!-- footer section end-->
+
+     <!-- popupbox on book now start -->
+
+    <div id="bookingmodal" class="mt-5 bookingmod modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg"> <!-- Adjust size with modal-lg or modal-xl -->
+            <div class="text-center modal-content booking p-2 ">
+                <h3 class="booktourH text-white mb-3">Book A Tour Deals</h3>
+                <button type="button" style="position:absolute; right:10px; top:10px;" class="btn-close btn-close-white"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+                <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure
+                    Trip With Travela. Get More Deal Offers Here.</p>
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control bg-white border-0" id="name"
+                                    placeholder="Your Name">
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control bg-white border-0" id="email"
+                                    placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating date" id="date3" data-target-input="nearest">
+                                <input type="text" class="form-control bg-white border-0" id="datetime"
+                                    placeholder="Mobile Number" data-target="#date3" data-toggle="datetimepicker"
+                                    required pattern="^[6-9]\d{9}$" title="Plz Enter Correct Mobile Number" />
+                                <label for="datetime">Mobile Number</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-select bg-white border-0" id="select1">
+                                    <option value="1">Destination 1</option>
+                                    <option value="2">Destination 2</option>
+                                    <option value="3">Destination 3</option>
+                                </select>
+                                <label for="select1">Destination</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control bg-white border-0" placeholder="Special Request"
+                                    id="message" style="height: 70px"></textarea>
+                                <label for="message">Special Request</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary text-white w-100 py-3" type="submit">Book Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- popupbox on book now end -->
+
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

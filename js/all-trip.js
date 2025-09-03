@@ -53,7 +53,7 @@ function bindTripType() {
         let tripdiv = document.createElement('div');
         tripdiv.classList.add("labelst");
 
-        tripdiv.innerHTML = `<label class="mt-3"><input type="checkbox" value="${trips}" checked><label class="ms-2"> ${daytrip?.category_name ?? trips}</label> </label><label class="labelcount">${newtrips}</label>`;
+        tripdiv.innerHTML = `<label class="mt-3"><input type="checkbox" value="${trips}" checked><label class="ms-2"> ${daytrip?.category_name ?? trips}</label> </label><label class="labelcount mt-3">${newtrips}</label>`;
 
         triptype.appendChild(tripdiv);
     })
@@ -246,17 +246,30 @@ function destinationparam(param) {
     return urlsearch.get(param);
 }
 
-    let destination = destinationparam('destination');
-    
-    if (destination) {
-        cleardata();
+let destination = destinationparam('destination');
+let triptype = destinationparam('triptype');
 
-      let cb =  document.querySelector(`#labelcategory input[type='checkbox'][value="${destination}"]`);
-      if(cb){
+let detailopen = document.getElementById('tripdrop');
+detailopen.toggleAttribute("open", false);
+if (destination) {
+    cleardata();
+
+    let cb = document.querySelector(`#labelcategory input[type='checkbox'][value="${destination}"]`);
+    if (cb) {
         cb.checked = true;
-      }
-        applyFilter();
     }
+    applyFilter();
+} else if (triptype) {
+    document.addEventListener("DOMContentLoaded", () => {
+        detailopen.toggleAttribute("open", true);
+        cleardata();
+        let db = document.querySelector(`#triptype input[type="checkbox"][value="${triptype}"]`);
+        if (db) {
+            db.checked = true;
+        }
+        applyFilter();
+    })
+}
 
 
 

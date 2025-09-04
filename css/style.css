@@ -364,7 +364,12 @@
 
 .carousel-header .carousel-inner .carousel-item {
     position: relative;
-    min-height: 75vh;
+    min-height: 88vh;
+}
+
+.py-1 {
+    padding-top: 1rem !important;
+    padding-bottom: 3rem !important;
 }
 
 @media (max-width:768px) {

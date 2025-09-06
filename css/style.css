@@ -1565,7 +1565,7 @@
 /* for seeall button arrow start */
 
 .btnarrow {
-    color: blue;
+    color: var(--bs-primary);
 }
 
 .seeallbtn .btnarrow {
@@ -1737,3 +1737,21 @@ details[open] .dropdown-content{
 /* filter criteria  end*/
 
 /* for alltrip.html page end */
+
+/* tour.html page start.. */
+ .enquirenow{
+    border-radius:40px;
+    background: var(--bs-primary);
+    color: var(--bs-white);
+    font-size:18px;
+    transition:0.9s ease;
+ }
+
+ .enquirenow:hover{
+    background: var(--bs-white);
+    color: var(--bs-primary);
+    outline:1px solid var(--bs-primary);
+ }
+
+
+/* tour.html page end.. */

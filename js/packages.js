@@ -3562,3 +3562,30 @@ const arrTripTypes = [
         "category_name": "Backpacking Trips"
     }
 ];
+
+const arrPlaces = [
+    {
+        "tour_places":"MANALI",
+        "tour_image":"images/package_manali-rohtang-sissu-kasol.jpg"
+    },
+    {
+        "tour_places":"SPITI",
+        "tour_image":"images/package_spiti-valley.jpg"
+    },
+    {
+        "tour_places":"MADHMAHESHWAR",
+        "tour_image":"images/package_madmaheshwar.webp"
+    },
+    {
+        "tour_places":"VALLEY OF FLOWERS",
+        "tour_image":"images/package_valley-of-flower.jpeg"
+    },
+    {
+        "tour_places":"MOUNT ABU",
+        "tour_image":"images/package_udaipur-mount-abu.jpg"
+    },
+    {
+        "tour_places":"KUMBHALGARH",
+        "tour_image":"images/package_udaipur-kumbhalgarh.jpg"
+    },
+]

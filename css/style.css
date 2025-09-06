@@ -446,7 +446,7 @@
     padding: 150px 0 50px 0;
 } */
 .bg-breadcrumb {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, 0.5)),
                 url(../img/IMG-20250225-WA0230.jpg);
     background-position: center center;
     background-repeat: no-repeat;

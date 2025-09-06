@@ -1959,7 +1959,7 @@ const newTourPackages = [
         "tour": "kedarnath-tungnath-3n4d",
         "category": "extended_weekend_trips",
         "destination_id": "uttarakhand",
-        "title": "KEDARNATH & TUNGNATH (3N/4D) | Ex - Delhi",
+        "title": "Kedarnath & Tungnath(3N/4D) Ex-Delhi",
         "duration": "4 Days, 3 Nights",
         "days": 4,
         "nights": 3,
@@ -3497,6 +3497,8 @@ const newTourPackages = [
     }
 ];
 
+//KEDARNATH & TUNGNATH (3N/4D) | Ex - Delhi
+
 const arrDestinations = [
     {
         "id": 1,
@@ -3588,4 +3590,31 @@ const arrPlaces = [
         "tour_places":"KUMBHALGARH",
         "tour_image":"images/package_udaipur-kumbhalgarh.jpg"
     },
+]
+
+const customerGallery = [
+    {
+      Gallery_name : "",
+      image:"images/package_valley-of-flower.jpeg"
+    },
+     {
+      Gallery_name : "",
+      image:"images/package_udaipur-mount-abu.jpg"
+    },
+     {
+      Gallery_name : "",
+      image:"images/package_spiti-valley.jpg"
+    },
+     {
+      Gallery_name : "",
+      image:"images/package_madmaheshwar.webp"
+    },
+     {
+      Gallery_name : "",
+      image:"images/package_harshil-valley-gartang-gali.png"
+    },
+     {
+      Gallery_name : "",
+      image:"images/package_chakrata-tigerfall.png"
+    }
 ]

@@ -240,7 +240,7 @@ document.querySelectorAll("details").forEach((detail) => {
 
 // for moving the side bar dropdown smooth end...
 
-// fetch the destination(statewise) from url  start... 
+// fetch the destination(statewise & triptype) from url  start...
 function destinationparam(param) {
     let urlsearch = new URLSearchParams(window.location.search);
     return urlsearch.get(param);
@@ -250,7 +250,10 @@ let destination = destinationparam('destination');
 let triptype = destinationparam('triptype');
 
 let detailopen = document.getElementById('tripdrop');
+let destinationopen = document.getElementById("Destinationdrop");
+
 detailopen.toggleAttribute("open", false);
+destinationopen.toggleAttribute("open", true);
 if (destination) {
     cleardata();
 
@@ -262,6 +265,7 @@ if (destination) {
 } else if (triptype) {
     document.addEventListener("DOMContentLoaded", () => {
         detailopen.toggleAttribute("open", true);
+        destinationopen.toggleAttribute("open", false);
         cleardata();
         let db = document.querySelector(`#triptype input[type="checkbox"][value="${triptype}"]`);
         if (db) {

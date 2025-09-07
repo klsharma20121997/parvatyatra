@@ -1,3 +1,24 @@
+/*** Theme Color Start ***/
+:root {
+    --bs-primary: #B5B892 !important;
+    --bs-footer: var(--bs-dark) !important;
+    /* --bs-white: #444444 !important; */
+    --bs-navbar : #FFFFFF;
+}
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+.btn-primary {
+    color: #FFFFFF;
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+/*** Theme Color End ***/
+
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -291,7 +312,7 @@
 
     .sticky-top.navbar-light {
         position: fixed;
-        background: var(--bs-white);
+        background: var(--bs-navbar);
     }
 
     .navbar-light .navbar-nav .nav-link::before {
@@ -1332,7 +1353,7 @@
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-dark);
+    background: var(--bs-footer);
 }
 
 .footer .footer-item a {
@@ -1351,7 +1372,7 @@
 /*** copyright Start ***/
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark) !important;
+    background: var(--bs-footer) !important;
 }
 
 /*** copyright end ***/

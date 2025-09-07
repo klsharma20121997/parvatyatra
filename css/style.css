@@ -1563,9 +1563,20 @@
 /* google review end */
 
 /* for seeall button arrow start */
+.seeallbtn{
+   outline: 1px solid var(--bs-primary);
+   border-radius:30px;
+   transition: 0.7s ease;
+}
+
+.seeallbtn:hover{
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
 
 .btnarrow {
     color: var(--bs-primary);
+   
 }
 
 .seeallbtn .btnarrow {

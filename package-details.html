@@ -446,9 +446,9 @@
             <div class="mx-auto text-center mb-5">
                 <h5 class="section-title px-3"> Trips </h5>
                 <h1 class="mb-0">Related Trips</h1>
-                <div class="d-flex justify-content-end" style="margin-bottom:55px; padding:0;">
-                    <button type="button" class="seeallbtn btn btn-outline-primary px-2">See
-                        All <span class="btnarrow ms-2 h5">&gt</span></button>
+                <div class="d-flex justify-content-end mt-1" style="margin-bottom:55px; padding:0;">
+                    <a href="all-trip.html" target="_blank" class="seeallbtn px-3 py-2">See
+                        All <span class="btnarrow ms-2 h5">&gt</span></a>
                 </div>
             </div>
             <div class="packages-carousel owl-carousel" id="relatedtrips">
@@ -969,7 +969,7 @@
                                 <small class="fa fa-star text-primary"></small>
                             </div>
                         </div>
-                        <div class="row bg-primary rounded-bottom mx-0">
+                        <div class="row rounded-bottom mx-0" style="background:var(--bs-primary);">
                             <div class="col-6 text-start px-0">
                                 <a href="package-details.html?tour=${g.tour}" class="btn-hover btn text-white py-2 px-4">Read More</a>
                             </div>
@@ -980,6 +980,11 @@
                     </div>`;
 
                 Relatedtrips.appendChild(creatediv);
+
+                creatediv.querySelector(".packages-img").addEventListener('click', () => {
+                    window.open(`package-details.html?tour=${g.tour}`, '_blank');
+                })
+
             })
         }
         relatedtrips();

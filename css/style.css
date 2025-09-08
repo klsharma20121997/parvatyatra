@@ -1787,3 +1787,21 @@ details[open] .dropdown-content{
 
 
 /* tour.html page end.. */
+
+@media (max-width:400px){
+   .mostBookedDescription{
+    height:220px !important;
+}
+}
+
+@media (max-width:345px){
+       .mostBookedDescription{
+    height:250px !important;
+}
+}
+
+@media (max-width:322px){
+       .mostBookedDescription{
+    height:270px !important;
+}
+}

@@ -2999,10 +2999,10 @@ const newTourPackages = [
         "tour": "spiti-valley-6n7d",
         "category": "backpacking_trips",
         "destination_id": "himachal_pradesh",
-        "title": "Spiti Valley (6N/7D)",
-        "duration": "7 Days, 6 Nights",
-        "days": 7,
-        "nights": 6,
+        "title": "Spiti Valley (4N/5D)",
+        "duration": "5 Days, 4 Nights",
+        "days": 5,
+        "nights": 4,
         "budget": 12999,
         "price": "₹12,999.00",
         "old_price": "₹13,999.00",
@@ -3014,86 +3014,72 @@ const newTourPackages = [
                 "day": "Day 1",
                 "title": "Departure from Delhi/Chandigarh",
                 "points": [
-                    "Assemble at Majnu Ka Tila, Delhi (tentative) by 8 PM",
+                    "Assemble at Majnu Ka Tila, Delhi by evening (tentative)",
                     "Chandigarh pickup from Suhana Gurudwara (tentative)",
                     "Overnight journey towards Manali"
                 ]
             },
             {
                 "day": "Day 2",
-                "title": "Arrival in Manali",
+                "title": "Manali – Atal Tunnel – Kaza",
                 "points": [
-                    "Reach Manali by morning and check into hotel",
-                    "Relax, freshen up and leisure time for cafe hopping & Mall Road",
-                    "Explore local sights and markets in Manali",
-                    "Evening bonfire & music session",
-                    "Dinner & overnight stay in hotel"
+                    "Early morning arrival in Manali",
+                    "Breakfast and short rest",
+                    "Departure towards Lahaul & Spiti Valley",
+                    "Cross the Atal Tunnel – an engineering marvel",
+                    "Scenic drive through high-altitude desert landscapes",
+                    "Arrival in Kaza by evening",
+                    "Dinner & overnight stay in hotel/homestay"
                 ]
             },
             {
                 "day": "Day 3",
-                "title": "Manali – Atal Tunnel – Kunzum La – Kaza",
+                "title": "Spiti Sightseeing – Hikkim, Komic, Langza & Key Monastery",
                 "points": [
-                    "Early breakfast and departure towards Lahaul & Spiti",
-                    "Cross the Atal Tunnel – engineering marvel",
-                    "Drive through high-altitude desert landscapes",
-                    "Cross Kunzum La (14,931 ft), gateway to Spiti Valley",
-                    "Arrive in Kaza by evening",
-                    "Dinner and overnight stay in hotel"
+                    "Breakfast at hotel",
+                    "Visit Hikkim – world’s highest post office",
+                    "Explore Komic – highest motorable village",
+                    "Visit Langza – Buddha statue & fossil village",
+                    "Explore Key Monastery – spiritual center of Spiti",
+                    "Return to Kaza",
+                    "Dinner & overnight stay"
                 ]
             },
             {
                 "day": "Day 4",
-                "title": "Spiti Exploration – Hikkim, Komic, Langza & Key Monastery",
+                "title": "Kaza – Kibber – Chicham Bridge – Chandrataal",
                 "points": [
-                    "Visit Hikkim – home to the world’s highest post office",
-                    "Drive to Komic – highest motorable village in the world (4600m)",
-                    "Visit Langza – famous for giant Buddha statue & fossils",
-                    "Explore Key Monastery – known for murals, thangkas & ancient relics",
-                    "Return to Kaza for dinner & overnight stay"
+                    "Breakfast and checkout from Kaza",
+                    "Visit Kibber village",
+                    "Cross Asia’s highest Chicham Bridge",
+                    "Cross Kunzum Pass",
+                    "Visit Chandrataal Lake (Moon Lake)",
+                    "Check-in to camps near Chandrataal/Batal",
+                    "Dinner & overnight stay at camps"
                 ]
             },
             {
                 "day": "Day 5",
-                "title": "Kaza – Kibber – Chicham Bridge – Chandrataal",
-                "points": [
-                    "Breakfast and checkout from Kaza",
-                    "Drive to Kibber village and Asia’s highest Chicham Bridge",
-                    "Cross Kunzum Pass once again en route",
-                    "Visit Chandrataal Lake – the moon lake of Spiti",
-                    "Check-in to camps near Chandrataal/Batal",
-                    "Dinner & overnight stay under starry skies"
-                ]
-            },
-            {
-                "day": "Day 6",
                 "title": "Chandrataal – Manali – Departure",
                 "points": [
-                    "Morning visit Chandrataal Lake once more for stunning sunrise views",
+                    "Early morning visit to Chandrataal Lake",
                     "Drive back towards Manali",
                     "Evening departure from Manali towards Delhi/Chandigarh",
                     "Overnight journey"
-                ]
-            },
-            {
-                "day": "Day 7",
-                "title": "Arrival in Delhi",
-                "points": [
-                    "Reach Delhi/Chandigarh early morning",
-                    "Trip ends with unforgettable memories of Spiti Valley"
                 ]
             }
         ],
         "inclusions": [
             "Delhi to Delhi/Chandigarh to Chandigarh transportation by Tempo Traveller/Volvo/Cab",
-            "4 Nights Hotel/Homestay + 2 Nights Camp accommodation",
-            "Meals: 4 Dinners + 4 Breakfasts",
+            "3 Nights Hotel/Homestay + 1 Night Camps (Total 4 Nights)",
+            "Meals: 4 Breakfasts + 4 Dinners",
             "Sightseeing as per itinerary",
             "Dedicated cab for Spiti sightseeing",
             "24x7 Trip Captain assistance",
             "All tolls, taxes, and parking charges",
             "No hidden charges"
         ],
+
         "exclusions": [
             "5% GST",
             "Lunch throughout the trip",
@@ -3567,54 +3553,54 @@ const arrTripTypes = [
 
 const arrPlaces = [
     {
-        "tour_places":"MANALI",
-        "tour_image":"images/package_manali-rohtang-sissu-kasol.jpg"
+        "tour_places": "MANALI",
+        "tour_image": "images/package_manali-rohtang-sissu-kasol.jpg"
     },
     {
-        "tour_places":"SPITI",
-        "tour_image":"images/package_spiti-valley.jpg"
+        "tour_places": "SPITI",
+        "tour_image": "images/package_spiti-valley.jpg"
     },
     {
-        "tour_places":"MADHMAHESHWAR",
-        "tour_image":"images/package_madmaheshwar.webp"
+        "tour_places": "MADHMAHESHWAR",
+        "tour_image": "images/package_madmaheshwar.webp"
     },
     {
-        "tour_places":"VALLEY OF FLOWERS",
-        "tour_image":"images/package_valley-of-flower.jpeg"
+        "tour_places": "VALLEY OF FLOWERS",
+        "tour_image": "images/package_valley-of-flower.jpeg"
     },
     {
-        "tour_places":"MOUNT ABU",
-        "tour_image":"images/package_udaipur-mount-abu.jpg"
+        "tour_places": "MOUNT ABU",
+        "tour_image": "images/package_udaipur-mount-abu.jpg"
     },
     {
-        "tour_places":"KUMBHALGARH",
-        "tour_image":"images/package_udaipur-kumbhalgarh.jpg"
+        "tour_places": "KUMBHALGARH",
+        "tour_image": "images/package_udaipur-kumbhalgarh.jpg"
     },
 ]
 
 const customerGallery = [
     {
-      Gallery_name : "",
-      image:"images/package_valley-of-flower.jpeg"
+        Gallery_name: "",
+        image: "images/package_valley-of-flower.jpeg"
     },
-     {
-      Gallery_name : "",
-      image:"images/package_udaipur-mount-abu.jpg"
+    {
+        Gallery_name: "",
+        image: "images/package_udaipur-mount-abu.jpg"
     },
-     {
-      Gallery_name : "",
-      image:"images/package_spiti-valley.jpg"
+    {
+        Gallery_name: "",
+        image: "images/package_spiti-valley.jpg"
     },
-     {
-      Gallery_name : "",
-      image:"images/package_madmaheshwar.webp"
+    {
+        Gallery_name: "",
+        image: "images/package_madmaheshwar.webp"
     },
-     {
-      Gallery_name : "",
-      image:"images/package_harshil-valley-gartang-gali.png"
+    {
+        Gallery_name: "",
+        image: "images/package_harshil-valley-gartang-gali.png"
     },
-     {
-      Gallery_name : "",
-      image:"images/package_chakrata-tigerfall.png"
+    {
+        Gallery_name: "",
+        image: "images/package_chakrata-tigerfall.png"
     }
 ]

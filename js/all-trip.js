@@ -99,7 +99,7 @@ function fetchPackages() {
                     <div class="p-4 pb-0">
                         <h6 class="mb-0" style="height:38px; overflow:hidden;">${pkg.title}</h6>
                         <br>
-                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>Multiple Departures Every Month</p>
+                        <p class="mb-4"><i class="fa fa-calendar-alt me-2"></i>${pkg.departure_schedule}</p>
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">
                         <div class="col-6 text-start px-0">

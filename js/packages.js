@@ -944,13 +944,13 @@ const tourPackages = [
 const newTourPackages = [
     {
         "id": 8,
-        "tour": "chakrata-tigerfall",
+        "tour": "chakrata-tigerfall-2d1n",
         "category": "extended_weekend_trips",
         "destination_id": "uttarakhand",
-        "title": "Chakrata Tigerfall",
-        "duration": "4 Days, 3 Nights",
-        "days": 4,
-        "nights": 3,
+        "title": "Chakrata & Tiger Falls (2D/1N)",
+        "duration": "2 Days, 1 Night",
+        "days": 2,
+        "nights": 1,
         "budget": 4999,
         "price": "₹4999.00",
         "old_price": "₹5999.00",
@@ -960,45 +960,49 @@ const newTourPackages = [
         "itineraryDayWiseList": [
             {
                 "day": "Day 0",
-                "title": "Delhi to Chakrata",
+                "title": "Departure from Delhi",
                 "points": [
                     "Report at Preet Vihar Metro Station Gate No. 3 at 10 PM",
-                    "Meet the trip captain and board the bus",
+                    "Meet the trip captain and board the vehicle",
                     "Overnight journey from Delhi to Chakrata"
                 ]
             },
             {
                 "day": "Day 1",
-                "title": "Arrival & Exploration",
+                "title": "Chakrata Exploration",
                 "points": [
-                    "Reach Chakrata early morning, check-in and freshen up",
-                    "Enjoy breakfast with a scenic view",
-                    "Excursion to Budher Caves & Moila Top (easy trek from Lokhandi Snow View Point)",
-                    "Return to resort in evening, enjoy bonfire, music & dinner"
+                    "Reach Chakrata early morning and check-in to hotel/resort",
+                    "Freshen up and enjoy breakfast with scenic views",
+                    "Visit Budher Caves & Moila Top (easy trek via Lokhandi)",
+                    "Return to stay by evening",
+                    "Bonfire, music, dinner & overnight stay"
                 ]
             },
             {
                 "day": "Day 2",
-                "title": "Tiger Falls & Chirmiri Sunset Point",
+                "title": "Tiger Falls & Return",
                 "points": [
-                    "Morning breakfast and check-out from resort",
-                    "Drive 20 km and trek 1 km to Tiger Falls",
-                    "Visit Chirmiri Sunset Point for breathtaking Himalayan views",
-                    "Explore Chakrata market and depart back to Delhi in evening"
+                    "Morning breakfast and check-out",
+                    "Visit Tiger Falls (short trek involved)",
+                    "Head to Chirmiri Sunset Point for panoramic views",
+                    "Explore local market (if time permits)",
+                    "Depart for Delhi by evening",
+                    "Overnight journey"
                 ]
             },
             {
                 "day": "Day 3",
-                "title": "Return to Delhi",
+                "title": "Arrival in Delhi",
                 "points": [
-                    "Reach Delhi by early morning with unforgettable memories"
+                    "Reach Delhi early morning",
+                    "Trip ends with beautiful memories"
                 ]
             }
         ],
         "inclusions": [
             "Transportation from Delhi to Delhi in Tempo Traveller/Cab",
             "Accommodation for 1 night in Resort/Hotel",
-            "Meals: 1 Dinner + 2 Breakfast",
+            "Meals: 1 Dinner + 1 Breakfast",
             "All sightseeing as per itinerary",
             "24x7 onboard assistance",
             "All taxes included"
@@ -1016,7 +1020,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "5999" },
             { "sharing_type": "Triple sharing", "rate": "5499" },
             { "sharing_type": "Quad sharing", "rate": "4999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays"
     },
     {
         "id": 9,
@@ -1104,7 +1109,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "6499" },
             { "sharing_type": "Triple sharing", "rate": "5999" },
             { "sharing_type": "Quad sharing", "rate": "5499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 10,
@@ -1190,7 +1196,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "5999" },
             { "sharing_type": "Triple sharing", "rate": "5799" },
             { "sharing_type": "Quad sharing", "rate": "5499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 11,
@@ -1278,17 +1285,18 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "8999" },
             { "sharing_type": "Triple sharing", "rate": "8499" },
             { "sharing_type": "Quad sharing", "rate": "7999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 12,
-        "tour": "kanatal-tehri-lake",
+        "tour": "kanatal-tehri-lake-2d1n",
         "category": "weekend_trips",
         "destination_id": "uttarakhand",
-        "title": "Kantal & Tehri Lake",
-        "duration": "3 Days, 2 Nights",
-        "days": 3,
-        "nights": 2,
+        "title": "Kanatal & Tehri Lake (2D/1N)",
+        "duration": "2 Days, 1 Night",
+        "days": 2,
+        "nights": 1,
         "budget": 5499,
         "price": "₹5499.00",
         "old_price": "₹5899.00",
@@ -1298,7 +1306,7 @@ const newTourPackages = [
         "itineraryDayWiseList": [
             {
                 "day": "Day 0",
-                "title": "Delhi to Kanatal",
+                "title": "Departure from Delhi",
                 "points": [
                     "Depart from Delhi at 11:00 PM",
                     "Overnight journey to Kanatal"
@@ -1306,31 +1314,39 @@ const newTourPackages = [
             },
             {
                 "day": "Day 1",
-                "title": "Kanatal Arrival & Local Excursion",
+                "title": "Kanatal Sightseeing",
                 "points": [
-                    "Arrive at Kanatal and have breakfast",
-                    "Check-in to rooms and freshen up",
-                    "Visit Dhanaulti Eco Park & Surkanda Devi Mandir",
-                    "Evening snacks, tea, bonfire, and light music",
-                    "Dinner and overnight stay"
+                    "Arrive in Kanatal, check-in to hotel/homestay and freshen up",
+                    "Enjoy breakfast with scenic mountain views",
+                    "Visit Dhanaulti Eco Park & Surkanda Devi Temple",
+                    "Return by evening and relax",
+                    "Bonfire, music, dinner & overnight stay"
                 ]
             },
             {
                 "day": "Day 2",
-                "title": "Tehri Lake & Rishikesh",
+                "title": "Tehri Lake & Return",
                 "points": [
-                    "Wake up early and enjoy morning views of Kanatal",
-                    "Breakfast and departure for Tehri Lake (1-hour drive)",
-                    "Adventure activities at Tehri Lake: Jet Skiing, Banana Ride, Speed Boat, etc. (on direct payment basis)",
-                    "Depart for Rishikesh for Ganga Aarti (time permitting) & local sightseeing",
-                    "Late-night/early morning arrival in Delhi"
+                    "Morning breakfast and check-out",
+                    "Drive to Tehri Lake (approx. 1 hour)",
+                    "Enjoy adventure activities (jet ski, speed boat, banana ride – direct payment)",
+                    "Depart for Delhi by afternoon",
+                    "Overnight journey"
+                ]
+            },
+            {
+                "day": "Day 3",
+                "title": "Arrival in Delhi",
+                "points": [
+                    "Reach Delhi early morning",
+                    "Trip ends with memorable experiences"
                 ]
             }
         ],
         "inclusions": [
             "Transportation from Delhi to Delhi in Tempo Traveller/Cab",
             "Accommodation for 1 night in Homestay/Hotel",
-            "Meals: 2 Breakfast + 1 Dinner",
+            "Meals: 1 Breakfast + 1 Dinner",
             "All sightseeing as per itinerary",
             "24x7 onboard assistance",
             "All taxes included"
@@ -1349,7 +1365,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "5899" },
             { "sharing_type": "Triple sharing", "rate": "5699" },
             { "sharing_type": "Quad sharing", "rate": "5499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 13,
@@ -1439,7 +1456,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "7499" },
             { "sharing_type": "Triple sharing", "rate": "6999" },
             { "sharing_type": "Quad sharing", "rate": "6499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 14,
@@ -1528,7 +1546,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "7499" },
             { "sharing_type": "Triple sharing", "rate": "6999" },
             { "sharing_type": "Quad sharing", "rate": "6499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 15,
@@ -1634,7 +1653,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "15999" },
             { "sharing_type": "Triple sharing", "rate": "14999" },
             { "sharing_type": "Quad sharing", "rate": "14999" }
-        ]
+        ],
+        "departure_schedule": "Everyday from Delhi or Haridwar"
     },
     {
         "id": 16,
@@ -1743,7 +1763,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "16999" },
             { "sharing_type": "Triple sharing", "rate": "15999" },
             { "sharing_type": "Quad sharing", "rate": "14999" }
-        ]
+        ],
+        "departure_schedule": "Everyday from Delhi to Delhi"
     },
     {
         "id": 17,
@@ -1850,7 +1871,8 @@ const newTourPackages = [
             { "sharing_type": "Double sharing", "rate": "11999" },
             { "sharing_type": "Triple sharing", "rate": "10999" },
             { "sharing_type": "Quad sharing", "rate": "9999" }
-        ]
+        ],
+        "departure_schedule": "Priourity Daily Departures from Delhi, Haridwar, or Rishikesh"
     },
     {
         "id": 18,
@@ -1952,17 +1974,18 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "10999" },
             { "sharing_type": "Triple sharing", "rate": "11999" },
             { "sharing_type": "Double sharing", "rate": "12999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 19,
         "tour": "kedarnath-tungnath-3n4d",
         "category": "extended_weekend_trips",
         "destination_id": "uttarakhand",
-        "title": "Kedarnath & Tungnath(3N/4D) Delhi",
-        "duration": "4 Days, 3 Nights",
-        "days": 4,
-        "nights": 3,
+        "title": "Kedarnath & Tungnath(4N/5D) Delhi",
+        "duration": "5 Days, 4 Nights",
+        "days": 5,
+        "nights": 4,
         "budget": 9499,
         "price": "₹9,499.00",
         "old_price": "₹10,499.00",
@@ -2054,102 +2077,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "9499" },
             { "sharing_type": "Triple sharing", "rate": "9999" },
             { "sharing_type": "Double sharing", "rate": "10499" }
-        ]
-    },
-    {
-        "id": 20,
-        "tour": "kedarnath-tungnath-3n4d-haridwar",
-        "category": "extended_weekend_trips",
-        "destination_id": "uttarakhand",
-        "title": "Kedarnath & Tungnath (3n/4d) Haridwar",
-        "duration": "4 Days, 3 Nights",
-        "days": 4,
-        "nights": 3,
-        "budget": 9499,
-        "price": "₹9,499.00",
-        "old_price": "₹10,499.00",
-        "image": "images/package_kedarnath-badrinath-tungnath.png",
-        "alt": "Kedarnath & Tungnath - Do Dham Yatra from Haridwar",
-        "place_description": "Kedarnath Temple, a revered Himalayan shrine, is over a thousand years old and dedicated to Lord Shiva. Tungnath, the highest Shiva temple in the world and part of the Panch Kedar, adds to this sacred pilgrimage with divine vibes and stunning Himalayan landscapes.",
-        "itineraryDayWiseList": [
-            {
-                "day": "Day 1",
-                "title": "Haridwar/Rishikesh to Guptkashi",
-                "points": [
-                    "Departure from Haridwar/Rishikesh at 5:00–6:00 AM",
-                    "Visit Devprayag (confluence of Bhagirathi & Alaknanda forming the Ganga)",
-                    "Visit Dhara Devi Temple at Kalyasaur",
-                    "Arrive in Guptkashi by afternoon, check-in at hotel",
-                    "Dinner and overnight stay at hotel"
-                ]
-            },
-            {
-                "day": "Day 2",
-                "title": "Guptkashi to Kedarnath",
-                "points": [
-                    "Breakfast and check-out from hotel",
-                    "Drive to Sitapur parking, take taxi from Sonprayag to Gaurikund (own cost)",
-                    "Start 18 km trek to Kedarnath with scenic views",
-                    "Arrive by evening, check-in at hotel near temple",
-                    "Attend evening Aarti at Kedarnath Temple",
-                    "Dinner and overnight stay"
-                ]
-            },
-            {
-                "day": "Day 3",
-                "title": "Kedarnath Darshan & Return",
-                "points": [
-                    "Morning darshan at Kedarnath Temple",
-                    "Visit Bhairav Temple, Bhimshila & Shankaracharya Cave",
-                    "Breakfast and trek down to Gaurikund",
-                    "Take taxi to Sonprayag and return to Guptkashi",
-                    "Check-in at hotel, dinner and overnight stay"
-                ]
-            },
-            {
-                "day": "Day 4",
-                "title": "Guptkashi to Tungnath & Return to Haridwar",
-                "points": [
-                    "Breakfast and check-out from hotel",
-                    "Drive to Chopta, trek to Tungnath Temple (highest Shiva temple in the world)",
-                    "Depart Chopta by evening (around 5 PM)",
-                    "Drive back towards Haridwar/Rishikesh",
-                    "Arrival in Haridwar by night (depending on traffic)"
-                ]
-            },
-            {
-                "day": "Day 5",
-                "title": "Trip Ends",
-                "points": [
-                    "You have safely reached home with lifetime memories of Kedarnath & Tungnath Yatra"
-                ]
-            }
         ],
-        "inclusions": [
-            "Transportation from Haridwar to Haridwar by Tempo Traveller/Cab",
-            "2 Nights stay in Guptkashi/Phatta hotel",
-            "1 Night Kedarnath stay (Basic room/camp on sharing basis)",
-            "Meals: 3 Breakfast + 3 Dinner",
-            "Tour coordinator throughout the trip",
-            "All sightseeing as per itinerary",
-            "All tolls and taxes included",
-            "No hidden charges"
-        ],
-        "exclusions": [
-            "5% GST",
-            "Lunch throughout the trip",
-            "Personal expenses",
-            "Entry tickets to temples/monuments",
-            "Jeep fare, pony, palki, doli, or helicopter tickets",
-            "Travel insurance",
-            "Anything not mentioned in 'Inclusions'"
-        ],
-        "upcommingDates": ["Every Friday", "Long weekends", "Special holidays"],
-        "costing": [
-            { "sharing_type": "Quad sharing", "rate": "9499" },
-            { "sharing_type": "Triple sharing", "rate": "9999" },
-            { "sharing_type": "Double sharing", "rate": "10499" }
-        ]
+        "departure_schedule": "Multiple Departures Daily from Delhi, Haridwar, or Rishikesh"
     },
     {
         "id": 21,
@@ -2250,7 +2179,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "8999" },
             { "sharing_type": "Triple sharing", "rate": "9499" },
             { "sharing_type": "Double sharing", "rate": "9999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures daily from Delhi, Haridwar, or Rishikesh"
     },
     {
         "id": 22,
@@ -2344,7 +2274,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "8999" },
             { "sharing_type": "Triple sharing", "rate": "9499" },
             { "sharing_type": "Double sharing", "rate": "9999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 23,
@@ -2436,14 +2367,15 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "6999" },
             { "sharing_type": "Triple sharing", "rate": "7499" },
             { "sharing_type": "Double sharing", "rate": "7999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 24,
         "tour": "manali-rohtang-kasol-2n3d",
         "category": "weekend_trips",
         "destination_id": "himachal_pradesh",
-        "title": "Manali, Rohtang & Kasol (2N/3D)",
+        "title": "Manali,Sissu, Rohtang & Kasol (2N/3D)",
         "duration": "3 Days, 2 Nights",
         "days": 3,
         "nights": 2,
@@ -2525,7 +2457,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "5499" },
             { "sharing_type": "Triple sharing", "rate": "5999" },
             { "sharing_type": "Double sharing", "rate": "6499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 25,
@@ -2627,7 +2560,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "6499" },
             { "sharing_type": "Triple sharing", "rate": "6999" },
             { "sharing_type": "Double sharing", "rate": "7499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 26,
@@ -2717,7 +2651,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "5499" },
             { "sharing_type": "Triple sharing", "rate": "5999" },
             { "sharing_type": "Double sharing", "rate": "6499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 27,
@@ -2819,7 +2754,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "6499" },
             { "sharing_type": "Triple sharing", "rate": "6999" },
             { "sharing_type": "Double sharing", "rate": "7499" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 28,
@@ -2911,17 +2847,18 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "6500" },
             { "sharing_type": "Triple sharing", "rate": "7000" },
             { "sharing_type": "Double sharing", "rate": "7500" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 29,
         "tour": "mukteshwar-kainchi-dham-2n3d",
         "category": "weekend_trips",
         "destination_id": "uttarakhand",
-        "title": "Mukteshwar & Kainchi Dham (2N/3D)",
-        "duration": "3 Days, 2 Nights ",
-        "days": 3,
-        "nights": 2,
+        "title": "Mukteshwar & Kainchi Dham (2D/1N)",
+        "duration": "2 Days, 1 Night",
+        "days": 2,
+        "nights": 1,
         "budget": 5499,
         "price": "₹5,499.00",
         "old_price": "₹5,899.00",
@@ -2930,7 +2867,7 @@ const newTourPackages = [
         "place_description": "Mukteshwar and Kainchi Dham offer a perfect mix of spirituality and natural charm. Mukteshwar is famous for its serene views, temples, and short hikes, while Kainchi Dham Ashram is a highly revered spiritual site attracting thousands of devotees seeking peace and blessings. This trip gives you Himalayan beauty and soulful experiences together.",
         "itineraryDayWiseList": [
             {
-                "day": "Day 1",
+                "day": "Day 0",
                 "title": "Departure from Delhi",
                 "points": [
                     "Report at Mayur Vihar Metro Station, Delhi at 10:00 PM",
@@ -2939,29 +2876,31 @@ const newTourPackages = [
                 ]
             },
             {
-                "day": "Day 2",
-                "title": "Mukteshwar Sightseeing & Activities",
+                "day": "Day 1",
+                "title": "Mukteshwar Sightseeing & Stay",
                 "points": [
                     "Arrive in Mukteshwar in the morning and check into camps/rooms",
-                    "Go for a 1.5 km short hike to a local waterfall",
+                    "Freshen up and relax",
+                    "Go for a 1–1.5 km short hike to a local waterfall",
                     "Visit Chauli Ki Jali and Mukteshwar Temple for scenic views & cultural vibes",
+                    "Enjoy sunset views in the hills",
                     "Evening bonfire & music session",
                     "Dinner and overnight stay at accommodation"
                 ]
             },
             {
-                "day": "Day 3",
-                "title": "Kainchi Dham & Nainital/Bhimtal",
+                "day": "Day 2",
+                "title": "Kainchi Dham & Return",
                 "points": [
                     "After breakfast, check out from hotel/camp",
-                    "Enjoy optional adventure activities",
-                    "Visit the famous Kainchi Dham Ashram (spiritual site of Neem Karoli Baba)",
+                    "Visit Kainchi Dham Ashram (Neem Karoli Baba Ashram)",
                     "Later explore Nainital or Bhimtal for local sightseeing",
-                    "Evening departure for Delhi at 9:00 PM"
+                    "Evening departure for Delhi",
+                    "Overnight journey"
                 ]
             },
             {
-                "day": "Day 4",
+                "day": "Day 3",
                 "title": "Arrival in Delhi",
                 "points": [
                     "Reach Delhi early morning",
@@ -2992,7 +2931,8 @@ const newTourPackages = [
             { "sharing_type": "Quad sharing", "rate": "5499" },
             { "sharing_type": "Triple sharing", "rate": "5699" },
             { "sharing_type": "Double sharing", "rate": "5899" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 30,
@@ -3093,17 +3033,18 @@ const newTourPackages = [
         "costing": [
             { "sharing_type": "Triple Sharing", "rate": "12999" },
             { "sharing_type": "Double Sharing", "rate": "13999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 31,
-        "tour": "udaipur-mount-abu-3n4d",
+        "tour": "udaipur-mount-abu-2n3d",
         "category": "backpacking_trips",
         "destination_id": "rajasthan",
-        "title": "Udaipur & Mount Abu (3N/4D)",
-        "duration": "4 Days, 3 Nights",
-        "days": 4,
-        "nights": 3,
+        "title": "Udaipur & Mount Abu (2N/3D)",
+        "duration": "3 Days, 2 Nights",
+        "days": 3,
+        "nights": 2,
         "budget": 6999,
         "price": "₹6,999.00",
         "old_price": "₹7,999.00",
@@ -3113,11 +3054,10 @@ const newTourPackages = [
         "itineraryDayWiseList": [
             {
                 "day": "Day 0",
-                "title": "Departure from Gurgaon/Delhi",
+                "title": "Departure from Delhi/Gurgaon",
                 "points": [
                     "Assemble at Gurgaon IFFCO Chowk Metro Station by 08:00 PM",
                     "Board Tempo Traveller/Bus (depending on group size)",
-                    "Enjoy views of Aravalli Range & glimpses of rural Rajasthan",
                     "Overnight journey to Udaipur"
                 ]
             },
@@ -3134,24 +3074,24 @@ const newTourPackages = [
             },
             {
                 "day": "Day 2",
-                "title": "Mount Abu Excursion",
+                "title": "Mount Abu Day Trip",
                 "points": [
-                    "Breakfast at hotel, then depart for Mount Abu",
+                    "Early breakfast and depart for Mount Abu",
                     "Visit Nakki Lake, Toad Rock, Dilwara Jain Temple",
-                    "Explore Brahma Kumaris Ashram & Sunset Point",
+                    "Explore Sunset Point & local market",
                     "Return to Udaipur by evening",
                     "Dinner & overnight stay in hotel"
                 ]
             },
             {
                 "day": "Day 3",
-                "title": "Udaipur & Nearby Sightseeing",
+                "title": "Udaipur Local & Departure",
                 "points": [
-                    "Morning breakfast & checkout from hotel",
-                    "Visit Saheliyo Ki Bari, Vintage Car Museum, Fateh Sagar Lake",
-                    "Explore Maharana Pratap Memorial, Badi Lake, Bahubali Hill",
-                    "Optional visit to Nathdwara Temple or Chittorgarh Fort (time permitting)",
-                    "Evening departure for Delhi"
+                    "Breakfast & checkout from hotel",
+                    "Visit Fateh Sagar Lake, Saheliyon Ki Bari",
+                    "Optional visit to nearby attractions (time permitting)",
+                    "Depart for Delhi by afternoon/evening",
+                    "Overnight journey"
                 ]
             },
             {
@@ -3159,7 +3099,7 @@ const newTourPackages = [
                 "title": "Arrival in Delhi",
                 "points": [
                     "Reach Delhi early morning",
-                    "Trip concludes with wonderful memories of Udaipur & Mount Abu"
+                    "Trip concludes with wonderful memories"
                 ]
             }
         ],
@@ -3167,7 +3107,6 @@ const newTourPackages = [
             "Delhi/Gurgaon to Delhi/Gurgaon transportation by Tempo Traveller/Bus",
             "2 Nights hotel/resort accommodation",
             "Meals: 2 Breakfasts & 2 Dinners",
-            "Pool Party & Indoor Games",
             "All sightseeing as per itinerary",
             "24x7 Trip Captain assistance",
             "All tolls, taxes, and parking charges",
@@ -3187,64 +3126,65 @@ const newTourPackages = [
             { "sharing_type": "Quad Sharing", "rate": "6999" },
             { "sharing_type": "Triple Sharing", "rate": "7499" },
             { "sharing_type": "Double Sharing", "rate": "7999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
-        "id": 32,
-        "tour": "udaipur-kumbhalgarh-3n4d",
+        "id": 31,
+        "tour": "udaipur-mount-abu-2n3d",
         "category": "backpacking_trips",
         "destination_id": "rajasthan",
-        "title": "Udaipur & Kumbhalgarh (3N/4D)",
-        "duration": "4 Days, 3 Nights",
-        "days": 4,
-        "nights": 3,
+        "title": "Udaipur & Mount Abu (2N/3D)",
+        "duration": "3 Days, 2 Nights",
+        "days": 3,
+        "nights": 2,
         "budget": 6999,
         "price": "₹6,999.00",
         "old_price": "₹7,999.00",
-        "image": "images/package_udaipur-kumbhalgarh.jpg",
-        "alt": "Udaipur & Kumbhalgarh Tour Package",
-        "place_description": "Udaipur and Kumbhalgarh bring together Rajasthan’s royal charm and historic grandeur. Explore the serene lakes and palaces of Udaipur along with the mighty Kumbhalgarh Fort, Nathdwara Temple, scenic landscapes, and cultural richness of this heritage region.",
+        "image": "images/package_udaipur-mount-abu.jpg",
+        "alt": "Udaipur & Mount Abu Tour Package",
+        "place_description": "Udaipur and Mount Abu together offer the perfect blend of royal heritage and natural beauty. Explore palaces, serene lakes, ancient temples, hilltops, and vibrant markets. Experience the charm of Rajasthan’s romantic city along with the cool, spiritual vibes of Mount Abu.",
         "itineraryDayWiseList": [
             {
                 "day": "Day 0",
-                "title": "Departure from Gurgaon/Delhi",
+                "title": "Departure from Delhi/Gurgaon",
                 "points": [
                     "Assemble at Gurgaon IFFCO Chowk Metro Station by 08:00 PM",
                     "Board Tempo Traveller/Bus (depending on group size)",
-                    "Enjoy views of Aravalli Range, traditional Rajasthani villages and glimpses of rural life",
                     "Overnight journey to Udaipur"
                 ]
             },
             {
                 "day": "Day 1",
-                "title": "Explore Udaipur",
-                "points": [
-                    "Arrive in Udaipur by morning/afternoon, check-in to hotel",
-                    "Visit Lake Pichola, City Palace, Jag Mandir",
-                    "Explore Bagore Ki Haveli, Gangaur Ghat, Ambrai Ghat",
-                    "Stroll through local markets",
-                    "Dinner & overnight stay at the hotel"
-                ]
-            },
-            {
-                "day": "Day 2",
                 "title": "Udaipur Sightseeing",
                 "points": [
-                    "Breakfast at hotel, then head for sightseeing",
-                    "Visit Saheliyo Ki Bari, Vintage Car Museum, Bada Bazaar",
-                    "Explore Fateh Sagar Lake, Maharana Pratap Memorial, Badi Lake, Bahubali Hill",
-                    "Return to hotel in the evening",
+                    "Arrive in Udaipur, check-in to hotel and freshen up",
+                    "Visit Lake Pichola, City Palace, Jagdish Temple",
+                    "Explore Bagore ki Haveli, Gangaur Ghat, Ambrai Ghat",
+                    "Evening stroll in local markets",
                     "Dinner & overnight stay in Udaipur"
                 ]
             },
             {
-                "day": "Day 3",
-                "title": "Kumbhalgarh Excursion",
+                "day": "Day 2",
+                "title": "Mount Abu Day Trip",
                 "points": [
-                    "Morning breakfast, then check-out from hotel",
-                    "Visit Kumbhalgarh Fort (UNESCO World Heritage site)",
-                    "Optional visit to Nathdwara Temple (time permitting)",
-                    "Evening departure for Delhi"
+                    "Early breakfast and depart for Mount Abu",
+                    "Visit Nakki Lake, Toad Rock, Dilwara Jain Temple",
+                    "Explore Sunset Point & local market",
+                    "Return to Udaipur by evening",
+                    "Dinner & overnight stay in hotel"
+                ]
+            },
+            {
+                "day": "Day 3",
+                "title": "Udaipur Local & Departure",
+                "points": [
+                    "Breakfast & checkout from hotel",
+                    "Visit Fateh Sagar Lake, Saheliyon Ki Bari",
+                    "Optional visit to nearby attractions (time permitting)",
+                    "Depart for Delhi by afternoon/evening",
+                    "Overnight journey"
                 ]
             },
             {
@@ -3252,7 +3192,7 @@ const newTourPackages = [
                 "title": "Arrival in Delhi",
                 "points": [
                     "Reach Delhi early morning",
-                    "Trip concludes with cherished memories of Udaipur & Kumbhalgarh"
+                    "Trip concludes with wonderful memories"
                 ]
             }
         ],
@@ -3260,7 +3200,6 @@ const newTourPackages = [
             "Delhi/Gurgaon to Delhi/Gurgaon transportation by Tempo Traveller/Bus",
             "2 Nights hotel/resort accommodation",
             "Meals: 2 Breakfasts & 2 Dinners",
-            "Pool Party & Indoor Games",
             "All sightseeing as per itinerary",
             "24x7 Trip Captain assistance",
             "All tolls, taxes, and parking charges",
@@ -3272,7 +3211,7 @@ const newTourPackages = [
             "Entry tickets & activity charges",
             "Travel Insurance",
             "Personal expenses",
-            "Expenses due to natural calamities, accidents, or landslides",
+            "Expenses due to natural calamities, roadblocks, accidents, landslides",
             "Anything not mentioned in 'Inclusions'"
         ],
         "upcommingDates": ["Available on Weekends & Group Departures"],
@@ -3280,7 +3219,8 @@ const newTourPackages = [
             { "sharing_type": "Quad Sharing", "rate": "6999" },
             { "sharing_type": "Triple Sharing", "rate": "7499" },
             { "sharing_type": "Double Sharing", "rate": "7999" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     },
     {
         "id": 33,
@@ -3387,80 +3327,72 @@ const newTourPackages = [
             { "sharing_type": "Quad Sharing", "rate": "7999" },
             { "sharing_type": "Triple Sharing", "rate": "8499" },
             { "sharing_type": "Double Sharing", "rate": "8999" }
-        ]
+        ],
+        "departure_schedule": "Only allowed in rainy season to 45 days, multiple departures on weekends and long holidays"
     },
     {
         "id": 34,
-        "tour": "yulla-kanda-trek-5d4n",
+        "tour": "yulla-kanda-trek-3d2n",
         "category": "extended_weekend_trips",
         "destination_id": "himachal_pradesh",
-        "title": "Yulla Kanda Trek (5D/4N)",
-        "duration": "5 Days, 4 Nights",
-        "days": 5,
-        "nights": 4,
+        "title": "Yulla Kanda Trek (3D/2N)",
+        "duration": "3 Days, 2 Nights",
+        "days": 3,
+        "nights": 2,
         "budget": 7999,
         "price": "₹7,999.00",
         "old_price": "₹8,599.00",
         "image": "images/package_yulla-kanda-trek.webp",
         "alt": "Yulla Kanda Trek Package",
-        "place_description": "Yulla Kanda Trek is a hidden Himalayan gem in Himachal Pradesh, offering scenic trails, alpine meadows, ancient lake views, and panoramic vistas of the Kinnaur and Spiti valleys. A spiritual adventure with the world's highest Krishna temple.",
+        "place_description": "Yulla Kanda Trek is a hidden Himalayan gem in Himachal Pradesh, offering scenic trails, alpine meadows, ancient lake views, and panoramic vistas of the Kinnaur and Spiti valleys. A spiritual adventure featuring the world’s highest Krishna temple.",
         "itineraryDayWiseList": [
             {
-                "day": "Day 1",
-                "title": "Delhi to Tapri/Yulla (Overnight Journey)",
+                "day": "Day 0",
+                "title": "Departure from Delhi",
                 "points": [
                     "Depart from Delhi at night by Tempo Traveller/Volvo",
-                    "Overnight journey to Tapri/Yulla in Kinnaur district"
+                    "Overnight journey towards Tapri/Yulla (Kinnaur)"
+                ]
+            },
+            {
+                "day": "Day 1",
+                "title": "Arrival & Trek to Base Camp",
+                "points": [
+                    "Reach Tapri/Yulla by morning and freshen up",
+                    "Short drive to Yulla Village",
+                    "Begin trek to Yulla Base Camp (8–10 km, 4–6 hours)",
+                    "Packed lunch enroute",
+                    "Dinner & overnight stay at campsite"
                 ]
             },
             {
                 "day": "Day 2",
-                "title": "Arrival at Tapri/Yulla",
+                "title": "Summit Trek & Return",
                 "points": [
-                    "Reach Tapri/Yulla by late morning",
-                    "Check into hotel, rest and freshen up",
-                    "Afternoon free to relax or explore nearby areas",
-                    "Dinner & overnight stay at hotel in Tapri/Yulla"
+                    "Early morning trek to the highest Krishna Temple at Yulla Kanda",
+                    "Explore the alpine lake and summit views",
+                    "Return to campsite for breakfast",
+                    "Trek down to Yulla Village",
+                    "Drive to Tapri and depart for Delhi by evening",
+                    "Overnight journey"
                 ]
             },
             {
                 "day": "Day 3",
-                "title": "Tapri/Yulla to Yulla Base Camp",
-                "points": [
-                    "Breakfast at hotel, check out",
-                    "Drive to Yulla Village (30 min)",
-                    "Trek begins: 10 km trek (4-6 hours)",
-                    "Packed lunch enroute or at camp",
-                    "Evening dinner & overnight stay at Yulla Base Camp (camping)"
-                ]
-            },
-            {
-                "day": "Day 4",
-                "title": "Trek to Krishna Temple – Return Journey",
-                "points": [
-                    "Early morning trek to the world’s highest Krishna Temple",
-                    "Explore serene surroundings & return to campsite for breakfast",
-                    "Trek back to Yulla Village",
-                    "Drive back to Tapri, freshen up at hotel",
-                    "Evening departure for Delhi"
-                ]
-            },
-            {
-                "day": "Day 5",
                 "title": "Arrival in Delhi",
                 "points": [
-                    "Reach Delhi by early morning",
-                    "Trip concludes with beautiful memories"
+                    "Reach Delhi early morning",
+                    "Trip concludes with adventurous memories"
                 ]
             }
         ],
         "inclusions": [
             "Transportation from Delhi to Delhi by Tempo Traveller/Cab",
-            "2 Nights accommodation (Hotel + Camp)",
-            "Meals: 2 Breakfasts & 2 Dinners",
+            "1 Night camping accommodation",
+            "Meals: 1 Breakfast & 1 Dinner",
             "All treks & sightseeing as per itinerary",
             "Onboard assistance (Trip Captain/Trek Leader)",
-            "All sightseeing transfers as per itinerary",
+            "All transfers as per itinerary",
             "All tolls, taxes & parking charges",
             "No hidden charges"
         ],
@@ -3479,7 +3411,8 @@ const newTourPackages = [
             { "sharing_type": "Quad Sharing", "rate": "7999" },
             { "sharing_type": "Triple Sharing", "rate": "8299" },
             { "sharing_type": "Double Sharing", "rate": "8599" }
-        ]
+        ],
+        "departure_schedule": "Multiple Departures Fridays, Long Weekends, and Special Holidays"
     }
 ];
 
